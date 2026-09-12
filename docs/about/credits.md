@@ -176,10 +176,11 @@ This training benefits from broader open science communities:
 
 ## Institutional support
 
-DUST 2026 is written for trainees of two NIEHS Superfund Research Program centers:
+DUST 2026 is written for trainees of three NIEHS Superfund Research Program centers:
 
 - **University of New Mexico** - home of the author and of the UNM METALS Superfund Research Center, *Metal Exposure and Toxicity Assessment on Tribal Lands in the Southwest* (NIEHS P42ES025589): [hsc.unm.edu/pharmacy/research/areas/metals](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank}
 - **University of Arizona** - home of the UA Superfund Research Center, *Hazardous Dust in Drylands: Exposure, Health Impacts, and Mitigation*: [superfund.arizona.edu](https://superfund.arizona.edu/){target=_blank}
+- **Texas A&M University** - home of the Texas A&M Superfund Research Center, *Comprehensive tools and models for addressing exposure to mixtures during environmental emergency-related contamination events*: [superfund.tamu.edu](https://superfund.tamu.edu/){target=_blank}
 
 Development of the source materials was supported by:
 

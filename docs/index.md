@@ -1,7 +1,7 @@
 ---
 okf_version: "0.2"
 title: "DUST 2026: Open Science Training"
-description: "Three 50-minute lessons on open science, research data management, and the ethics of artificial intelligence for NIEHS Superfund Research Program trainees at the University of Arizona DUST Center and the UNM METALS Center."
+description: "Three 50-minute lessons on open science, research data management, and the ethics of artificial intelligence for NIEHS Superfund Research Program trainees at the University of Arizona DUST Center, the UNM METALS Center, and the Texas A&M Superfund Research Center."
 hide:
   - navigation
   - toc
@@ -24,13 +24,14 @@ hide:
 
 </div>
 
-!!! info "For Superfund Research Program trainees in Arizona and New Mexico"
-    This training is written for graduate students and early-career researchers in two NIEHS Superfund Research Program centers:
+!!! info "For Superfund Research Program trainees in Arizona, New Mexico, and Texas"
+    This training is written for graduate students and early-career researchers in three NIEHS Superfund Research Program centers:
 
     - The **University of Arizona DUST Center** ([superfund.arizona.edu](https://superfund.arizona.edu/){target=_blank}) studies hazardous dust in drylands: arsenic and metal exposure from mine tailings, lung injury, and phytoremediation.
     - The **UNM METALS Center** ([hsc.unm.edu/pharmacy/research/areas/metals](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank}) studies uranium and metal-mixture exposure from abandoned mines on tribal lands, in partnership with Navajo Nation communities and the Pueblo of Laguna.
+    - The **Texas A&M Superfund Research Center** ([superfund.tamu.edu](https://superfund.tamu.edu/){target=_blank}) studies exposure to chemical mixtures released during weather-related and human-caused emergencies, with Houston-area community partners.
 
-    Examples throughout the lessons draw on both: environmental chemistry, toxicology, community-engaged exposure science, and Indigenous data sovereignty.
+    Examples throughout the lessons draw on the Arizona and New Mexico centers: environmental chemistry, toxicology, community-engaged exposure science, and Indigenous data sovereignty.
 
 <div class="grid cards" markdown>
 
@@ -126,6 +127,7 @@ Use the top navigation to move between lessons and resources. Each lesson stands
 <div class="carc-partners" markdown>
 [University of Arizona DUST Center](https://superfund.arizona.edu/){target=_blank}
 [UNM METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank}
+[Texas A&M Superfund Research Center](https://superfund.tamu.edu/){target=_blank}
 [UNM Center for Advanced Research Computing](https://carc.unm.edu/){target=_blank}
 [NIEHS Superfund Research Program](https://www.niehs.nih.gov/research/supported/centers/srp){target=_blank}
 </div>

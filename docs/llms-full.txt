@@ -1981,14 +1981,15 @@ status: stable
 
 ## Overview
 
-DUST 2026: Open Science Training is an educational resource for trainees of two NIEHS Superfund Research Program (SRP) centers in the Southwest:
+DUST 2026: Open Science Training is an educational resource for trainees of three NIEHS Superfund Research Program (SRP) centers in the Southwest and Texas:
 
 - **[University of Arizona DUST Center](https://superfund.arizona.edu/){target=_blank}** - "Hazardous Dust in Drylands – Exposure, Health Impacts, and Mitigation", studying arsenic exposure, mine tailings, phytoremediation, and lung injury in Arizona-Sonora mining communities.
 - **[UNM METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank}** - "Metal Exposure and Toxicity Assessment on Tribal Lands in the Southwest", studying uranium and metal mixtures from abandoned mines in partnership with the Pueblo of Laguna and Navajo Nation communities.
+- **[Texas A&M Superfund Research Center](https://superfund.tamu.edu/){target=_blank}** - "Comprehensive tools and models for addressing exposure to mixtures during environmental emergency-related contamination events", studying chemical-mixture exposure after weather-related and human-caused emergencies, with Houston-area community partners.
 
-Both centers share a focus on inhaled mine dust and on communities living with legacy contamination. The three lessons equip environmental health researchers with essential skills for conducting modern, transparent, and reproducible science in the context of mine waste contamination, toxicology, and environmental remediation research.
+The Arizona and New Mexico centers share a focus on inhaled mine dust and on communities living with legacy contamination; the Texas center brings disaster research response and exposure to complex mixtures. All three face the same open-science, data-management, and AI questions. The three lessons equip environmental health researchers with essential skills for conducting modern, transparent, and reproducible science in the context of mine waste contamination, toxicology, and environmental remediation research.
 
-These materials were first written in 2025 for the University of Arizona DUST Center. We are now based at the [UNM Center for Advanced Research Computing](https://carc.unm.edu/){target=_blank}, and the 2026 edition is written for trainees at both centers, with examples from Arizona and New Mexico side by side.
+These materials were first written in 2025 for the University of Arizona DUST Center. We are now based at the [UNM Center for Advanced Research Computing](https://carc.unm.edu/){target=_blank}, and the 2026 edition is written for trainees at all three centers, with examples from Arizona and New Mexico side by side.
 
 ## Why Open Science Matters for Superfund Research
 
@@ -2272,6 +2273,7 @@ This page provides curated resources for deeper learning in open science, data m
 - [GA4GH Human Exposome Data Standards](https://www.ga4gh.org/product/human-exposome-data-standards/){target=_blank} - Standards for exposure and biomonitoring data
 - [Northeastern SRP Data Dictionaries](https://manati.ece.neu.edu/dictionary/){target=_blank} - Shared variable definitions for Superfund datasets
 - [SRP Tox Data Commons](https://toxdatacommons.com/){target=_blank} - Superfund Research Program toxicology data
+- [Texas A&M Superfund Research Center](https://superfund.tamu.edu/){target=_blank} - Data Management and Analysis Core, disaster research response tools, and Houston-area community engagement
 - [NIEHS SRP data sharing](https://tools.niehs.nih.gov/srp/data/index.cfm){target=_blank} - Program data-sharing expectations
 - [SRP Data Management and Analysis Cores](https://tools.niehs.nih.gov/srp/data/dmac.cfm){target=_blank} - DMAC requirement and active cores
 
@@ -2713,10 +2715,11 @@ This training benefits from broader open science communities:
 
 ## Institutional support
 
-DUST 2026 is written for trainees of two NIEHS Superfund Research Program centers:
+DUST 2026 is written for trainees of three NIEHS Superfund Research Program centers:
 
 - **University of New Mexico** - home of the author and of the UNM METALS Superfund Research Center, *Metal Exposure and Toxicity Assessment on Tribal Lands in the Southwest* (NIEHS P42ES025589): [hsc.unm.edu/pharmacy/research/areas/metals](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank}
 - **University of Arizona** - home of the UA Superfund Research Center, *Hazardous Dust in Drylands: Exposure, Health Impacts, and Mitigation*: [superfund.arizona.edu](https://superfund.arizona.edu/){target=_blank}
+- **Texas A&M University** - home of the Texas A&M Superfund Research Center, *Comprehensive tools and models for addressing exposure to mixtures during environmental emergency-related contamination events*: [superfund.tamu.edu](https://superfund.tamu.edu/){target=_blank}
 
 Development of the source materials was supported by:
 
@@ -2898,6 +2901,7 @@ guess.
 
 ## 2026-09-11
 
+* **Update**: Added the [Texas A&M Superfund Research Center](https://superfund.tamu.edu/){target=_blank} as a third supported center alongside the University of Arizona DUST Center and the UNM METALS Center on the [landing page](index.md), [About this training](about/training.md), [Credits](about/credits.md), and [Additional resources](about/resources.md), and in the site description and repository README. Lesson examples still pair Arizona and New Mexico items; Texas examples are a follow-up.
 * **Creation**: Built DUST 2026 from [DUST 2025](https://github.com/tyson-swetnam/dust-2025){target=_blank} (commit `29027db`, 2025-10-29), moving from MkDocs Material to [Zensical](https://zensical.org){target=_blank}, structured as an Open Knowledge Format (OKF v0.2) bundle, and restyled after the [UNM CARC documentation](https://carc.unm.edu/docs/){target=_blank}. Every page carries provenance frontmatter (`generated`, `sources` with per-file `last_modified`) and a source footer; all rewritten pages are unverified pending the author's review. Contact and repository details moved to UNM (tswetnam@unm.edu, tyson-swetnam/dust-2026).
 * **Creation**: Reorganized the site into [Lessons](lessons/index.md) 1–3 and [About](about/index.md) (training overview, resources, credits, guidance for AI agents, this log) with kebab-case URLs; `MIGRATION.md` in the repository maps every 2025 URL to its 2026 location. Wrote the landing page, section listings, and [For AI agents](about/ai-agents.md), and added the `llms.txt` / `llms-full.txt` agent indexes, the Markdown mirror, `okf:*` meta tags, and `robots.txt`.
 * **Update**: Reframed the whole training for a joint audience: the University of Arizona DUST Center and the UNM METALS Center. Every "DUST Example" became an "SRP Example" pairing an Arizona item (arsenic, mine tailings, phytoremediation, lung injury) with a New Mexico item (uranium and metal mixtures from abandoned mines, Navajo Nation and Pueblo of Laguna partners). Examples name centers, partner communities, and project topics, never individual investigators.

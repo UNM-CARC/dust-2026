@@ -2,8 +2,8 @@
 
 This repository is DUST 2026, three 50-minute lessons on open science,
 research data management, and the ethics of artificial intelligence for NIEHS
-Superfund Research Program trainees at the University of Arizona DUST Center
-and the UNM METALS Center. It is built with [Zensical](https://zensical.org),
+Superfund Research Program trainees at the University of Arizona DUST Center,
+the UNM METALS Center, and the Texas A&M Superfund Research Center. It is built with [Zensical](https://zensical.org),
 styled after the [UNM CARC documentation](https://carc.unm.edu/docs/), and
 published at <https://tyson-swetnam.github.io/dust-2026/>. The `docs/` tree
 is an **Open Knowledge Format (OKF) v0.2 knowledge bundle**

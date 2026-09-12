@@ -33,14 +33,15 @@ status: stable
 
 ## Overview
 
-DUST 2026: Open Science Training is an educational resource for trainees of two NIEHS Superfund Research Program (SRP) centers in the Southwest:
+DUST 2026: Open Science Training is an educational resource for trainees of three NIEHS Superfund Research Program (SRP) centers in the Southwest and Texas:
 
 - **[University of Arizona DUST Center](https://superfund.arizona.edu/){target=_blank}** - "Hazardous Dust in Drylands – Exposure, Health Impacts, and Mitigation", studying arsenic exposure, mine tailings, phytoremediation, and lung injury in Arizona-Sonora mining communities.
 - **[UNM METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank}** - "Metal Exposure and Toxicity Assessment on Tribal Lands in the Southwest", studying uranium and metal mixtures from abandoned mines in partnership with the Pueblo of Laguna and Navajo Nation communities.
+- **[Texas A&M Superfund Research Center](https://superfund.tamu.edu/){target=_blank}** - "Comprehensive tools and models for addressing exposure to mixtures during environmental emergency-related contamination events", studying chemical-mixture exposure after weather-related and human-caused emergencies, with Houston-area community partners.
 
-Both centers share a focus on inhaled mine dust and on communities living with legacy contamination. The three lessons equip environmental health researchers with essential skills for conducting modern, transparent, and reproducible science in the context of mine waste contamination, toxicology, and environmental remediation research.
+The Arizona and New Mexico centers share a focus on inhaled mine dust and on communities living with legacy contamination; the Texas center brings disaster research response and exposure to complex mixtures. All three face the same open-science, data-management, and AI questions. The three lessons equip environmental health researchers with essential skills for conducting modern, transparent, and reproducible science in the context of mine waste contamination, toxicology, and environmental remediation research.
 
-These materials were first written in 2025 for the University of Arizona DUST Center. We are now based at the [UNM Center for Advanced Research Computing](https://carc.unm.edu/){target=_blank}, and the 2026 edition is written for trainees at both centers, with examples from Arizona and New Mexico side by side.
+These materials were first written in 2025 for the University of Arizona DUST Center. We are now based at the [UNM Center for Advanced Research Computing](https://carc.unm.edu/){target=_blank}, and the 2026 edition is written for trainees at all three centers, with examples from Arizona and New Mexico side by side.
 
 ## Why Open Science Matters for Superfund Research
 

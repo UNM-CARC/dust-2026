@@ -4,8 +4,9 @@
 [![Built with Zensical](https://img.shields.io/badge/built%20with-Zensical-ba0c2f)](https://zensical.org)
 
 Three 50-minute lessons for NIEHS Superfund Research Program trainees at the
-[University of Arizona DUST Center](https://superfund.arizona.edu/) and the
-[UNM METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/):
+[University of Arizona DUST Center](https://superfund.arizona.edu/), the
+[UNM METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/), and the
+[Texas A&M Superfund Research Center](https://superfund.tamu.edu/):
 
 1. **Foundations of Open Science** — principles, the six pillars, and the 2026
    US public-access and publication-cost landscape

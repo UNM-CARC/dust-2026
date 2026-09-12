@@ -121,6 +121,7 @@ This page provides curated resources for deeper learning in open science, data m
 - [GA4GH Human Exposome Data Standards](https://www.ga4gh.org/product/human-exposome-data-standards/){target=_blank} - Standards for exposure and biomonitoring data
 - [Northeastern SRP Data Dictionaries](https://manati.ece.neu.edu/dictionary/){target=_blank} - Shared variable definitions for Superfund datasets
 - [SRP Tox Data Commons](https://toxdatacommons.com/){target=_blank} - Superfund Research Program toxicology data
+- [Texas A&M Superfund Research Center](https://superfund.tamu.edu/){target=_blank} - Data Management and Analysis Core, disaster research response tools, and Houston-area community engagement
 - [NIEHS SRP data sharing](https://tools.niehs.nih.gov/srp/data/index.cfm){target=_blank} - Program data-sharing expectations
 - [SRP Data Management and Analysis Cores](https://tools.niehs.nih.gov/srp/data/dmac.cfm){target=_blank} - DMAC requirement and active cores
 
