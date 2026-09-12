@@ -19,7 +19,7 @@ hide:
 [:material-rocket-launch: Start Lesson 1](lessons/01-open-science.md){ .md-button .md-button--primary }
 [:material-format-list-numbered: All lessons](lessons/index.md){ .md-button }
 [:material-bookshelf: Resources](about/resources.md){ .md-button }
-[:material-github: Source on GitHub](https://github.com/tyson-swetnam/dust-2026){ .md-button target=_blank }
+[:material-github: Source on GitHub](https://github.com/UNM-CARC/dust-2026){ .md-button target=_blank }
 </div>
 
 </div>

@@ -15,7 +15,7 @@ Three 50-minute lessons for NIEHS Superfund Research Program trainees at the
 3. **Ethics and Artificial Intelligence** — bias, responsible and agentic AI
    use, NIH and journal AI rules, energy and water costs, regulation
 
-**Website:** <https://tyson-swetnam.github.io/dust-2026/>
+**Website:** <https://unm-carc.github.io/dust-2026/>
 
 This is the 2026 edition of [DUST 2025](https://tyson-swetnam.github.io/dust-2025/).
 It is built with [Zensical](https://zensical.org), styled after the
@@ -101,7 +101,7 @@ courses, adapt it to your discipline, remix it, with attribution. Suggested
 attribution:
 
 > Adapted from "DUST 2026: Open Science Training" by Tyson L. Swetnam
-> (<https://tyson-swetnam.github.io/dust-2026/>), CC BY 4.0, which builds on
+> (<https://unm-carc.github.io/dust-2026/>), CC BY 4.0, which builds on
 > DUST 2025, CyVerse FOSS, and the GPT 101 workshop.
 
 **Citation (BibTeX):**
@@ -111,7 +111,7 @@ attribution:
   title        = {DUST 2026: Open Science Training},
   author       = {Swetnam, Tyson L.},
   year         = {2026},
-  howpublished = {\url{https://tyson-swetnam.github.io/dust-2026/}},
+  howpublished = {\url{https://unm-carc.github.io/dust-2026/}},
   note         = {Licensed under CC BY 4.0}
 }
 ```
@@ -133,4 +133,4 @@ once.
 - **Author:** Tyson L. Swetnam, UNM Center for Advanced Research Computing
 - **Email:** <tswetnam@unm.edu>
 - **ORCID:** [0000-0002-6639-7181](https://orcid.org/0000-0002-6639-7181)
-- **Issues and suggestions:** <https://github.com/tyson-swetnam/dust-2026/issues>
+- **Issues and suggestions:** <https://github.com/UNM-CARC/dust-2026/issues>

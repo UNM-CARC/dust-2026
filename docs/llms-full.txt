@@ -2,7 +2,7 @@
 
 Each page below begins with its canonical URL followed by its original Markdown, OKF frontmatter included. Relative links have been rewritten to absolute URLs.
 
----8<--- https://tyson-swetnam.github.io/dust-2026/lessons/01-open-science/
+---8<--- https://unm-carc.github.io/dust-2026/lessons/01-open-science/
 
 ---
 title: "Lesson 1: Foundations of Open Science"
@@ -126,7 +126,7 @@ The collapsed block below is reference material for proposal writing; skim it no
         * [NSF Gold Standard Science](https://www.nsf.gov/policies/gold-standard-science){target=_blank} and [EPA Gold Standard Science](https://www.epa.gov/scientific-leadership/gold-standard-science){target=_blank}
         * [OSTP: Science: A New Golden Age, July 21, 2026](https://www.whitehouse.gov/releases/2026/07/45470/){target=_blank}
         * [AIP FYI: scholarly publishing costs under scrutiny](https://www.aip.org/fyi/scholarly-publishing-costs-under-scrutiny-by-trump-administration){target=_blank} and [STM: OSTP to review potential repeal of the Nelson memo](https://stm-assoc.org/ostp-to-review-potential-repeal-of-nelson-memo/){target=_blank}
-        * The 2025-26 federal AI executive orders and policy are covered in [Lesson 3](https://tyson-swetnam.github.io/dust-2026/lessons/03-ai-ethics/)
+        * The 2025-26 federal AI executive orders and policy are covered in [Lesson 3](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/)
 
     !!! warning "Verify before you cite"
         This block describes the landscape as of September 2026. The OMB rule, the NIH APC cap and the Nelson memo review were all still moving. Check the primary sources and ask your program officer before relying on any of it in a proposal, a budget or a paper.
@@ -256,7 +256,7 @@ Data are the foundation of science. The **FAIR Principles** guide data managemen
 
     **SRP Context (Arizona):** Mine site locations near Tribal lands may require consultation with Indigenous communities. Biomarker data from residents near contaminated sites must protect participant privacy while enabling public health research. Precise GPS coordinates of endangered plant species used in phytoremediation studies should be aggregated or restricted.
 
-    **SRP Context (New Mexico):** Research on the Navajo Nation requires approval from the [Navajo Nation Human Research Review Board (NNHRRB)](http://nnhrrb.navajo-nsn.gov/){target=_blank} before collection and before results are shared; data are returned to the community, and chapter-level exposure data are not released without community authority. Pueblo of Laguna partners have their own review. See the [UNM IRB guidance on research with American Indian communities](https://irb.unm.edu/library/documents/guidance/research-with-american-indian-communities.pdf){target=_blank} and the [METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank} Community Engagement Core. [Lesson 2](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/) covers this in depth.
+    **SRP Context (New Mexico):** Research on the Navajo Nation requires approval from the [Navajo Nation Human Research Review Board (NNHRRB)](http://nnhrrb.navajo-nsn.gov/){target=_blank} before collection and before results are shared; data are returned to the community, and chapter-level exposure data are not released without community authority. Pueblo of Laguna partners have their own review. See the [UNM IRB guidance on research with American Indian communities](https://irb.unm.edu/library/documents/guidance/research-with-american-indian-communities.pdf){target=_blank} and the [METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank} Community Engagement Core. [Lesson 2](https://unm-carc.github.io/dust-2026/lessons/02-data-management/) covers this in depth.
 
 #### :material-pillar: Open Educational Resources
 
@@ -296,7 +296,7 @@ Data are the foundation of science. The **FAIR Principles** guide data managemen
 - **Pre-registration** - Documenting analysis plans before data collection
 
 <figure markdown>
-  ![Preregistration](https://tyson-swetnam.github.io/dust-2026/assets/cycle_prereg.png){ width="300" }
+  ![Preregistration](https://unm-carc.github.io/dust-2026/assets/cycle_prereg.png){ width="300" }
   <figcaption>Pre-registration distinguishes hypothesis-generating from hypothesis-testing research</figcaption>
 </figure>
 
@@ -382,7 +382,7 @@ We add a sixth:
 6. **Compliance** - Meeting requirements from funders and institutions
 
 <figure markdown>
-  ![Five schools of open science](https://tyson-swetnam.github.io/dust-2026/assets/five_schools.png){ width="600" }
+  ![Five schools of open science](https://unm-carc.github.io/dust-2026/assets/five_schools.png){ width="600" }
   <figcaption>The five schools of thought in Open Science show its multidisciplinary nature</figcaption>
 </figure>
 
@@ -521,15 +521,15 @@ In Lesson 2, we will put these principles into practice by learning how to:
 - [Barcelona Declaration on Open Research Information](https://barcelona-declaration.org/){target=_blank}
 - [openRxiv](https://openrxiv.org/2025-year-in-review/){target=_blank} - home of bioRxiv and medRxiv
 - [Retraction Watch data in Crossref](https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/){target=_blank} - check whether a paper you cite has been retracted
-- More in [Resources](https://tyson-swetnam.github.io/dust-2026/about/resources/)
+- More in [Resources](https://unm-carc.github.io/dust-2026/about/resources/)
 
 ---
 
-**Next:** [Lesson 2: Modern Data Management →](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/)
+**Next:** [Lesson 2: Modern Data Management →](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson1_open_science/index.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson1_open_science/index.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
 
----8<--- https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/
+---8<--- https://unm-carc.github.io/dust-2026/lessons/02-data-management/
 
 ---
 title: "Lesson 2: Modern Data Management for Computational Research"
@@ -653,7 +653,7 @@ stale_after: "2027-03-01T00:00:00Z"
 
     - **[NOT-OD-26-046](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-046.html){target=_blank}** - for due dates on or after 25 May 2026, plans use a pilot [format page](https://grants.nih.gov/grants-process/write-application/forms-directory/data-management-and-sharing-plan-format-page){target=_blank}: a set of **Yes/No commitments**, a justification of up to **300 words** for any limitation on sharing, and a **100-word table** of data types and repositories (details under Data Management Plans below)
     - **[NOT-OD-26-100](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-100.html){target=_blank}** - no prior approval is needed to change a plan; compliance is reported in RPPR section C.5.c starting 1 Oct 2026; all awards move to the 2026 format in FY2027
-    - **Gold Standard Science** - NIH's implementation plan (22 Aug 2025) adds data-sharing compliance, replication, and training to its tenets ([NIH OSP](https://osp.od.nih.gov/nih-releases-implementation-plan-to-drive-gold-standard-science/){target=_blank}); the executive order itself is covered in [Lesson 1](https://tyson-swetnam.github.io/dust-2026/lessons/01-open-science/)
+    - **Gold Standard Science** - NIH's implementation plan (22 Aug 2025) adds data-sharing compliance, replication, and training to its tenets ([NIH OSP](https://osp.od.nih.gov/nih-releases-implementation-plan-to-drive-gold-standard-science/){target=_blank}); the executive order itself is covered in [Lesson 1](https://unm-carc.github.io/dust-2026/lessons/01-open-science/)
     - **Superfund Research Program** - a Data Management and Analysis Core (DMAC) has been mandatory for P42 centers since RFA-ES-23-001, RFA-ES-27-004 (due 25 Sep 2026) continues the requirement, and 19 DMACs are currently active ([SRP data sharing](https://tools.niehs.nih.gov/srp/data/index.cfm){target=_blank}, [DMAC pages](https://tools.niehs.nih.gov/srp/data/dmac.cfm){target=_blank}, [NIEHS data policy](https://www.niehs.nih.gov/research/scientific-data/policy){target=_blank})
     - Human subjects protections for community health data and documented restrictions on sensitive data (contaminated-site locations, participant privacy, tribally governed data) still apply
 
@@ -714,7 +714,7 @@ Different data types require different management strategies:
 ### The Data Life Cycle
 
 <figure markdown>
-  ![Data Life Cycle](https://tyson-swetnam.github.io/dust-2026/assets/data_life_cycle.png){ width="500" }
+  ![Data Life Cycle](https://unm-carc.github.io/dust-2026/assets/data_life_cycle.png){ width="500" }
   <figcaption>Data flow through multiple stages, each with specific management needs</figcaption>
 </figure>
 
@@ -863,7 +863,7 @@ Understanding where data are in their lifecycle helps plan management strategies
     **Tribal community data (UNM METALS)** - the [Native BioData Consortium](https://nativebio.org/){target=_blank} Tribal Data Repository or tribally controlled storage; a metadata-only record elsewhere (institutional repository, DataCite) so the dataset is findable without leaving the community's control
 
 <figure markdown>
-  ![RO-Crate](https://tyson-swetnam.github.io/dust-2026/assets/RO_crate.png){ width="500" }
+  ![RO-Crate](https://unm-carc.github.io/dust-2026/assets/RO_crate.png){ width="500" }
   <figcaption>RO-Crate 1.3 (June 2026) packages data, code, and metadata as one citable research object</figcaption>
 </figure>
 
@@ -911,7 +911,7 @@ Good metadata enables discovery by you and others:
 In 2016, the [FAIR Guiding Principles](https://www.nature.com/articles/sdata201618){target=_blank} revolutionized how we think about data management.
 
 <figure markdown>
-  ![FAIR Principles](https://tyson-swetnam.github.io/dust-2026/assets/fair_principles.png){ width="500" }
+  ![FAIR Principles](https://unm-carc.github.io/dust-2026/assets/fair_principles.png){ width="500" }
   <figcaption>FAIR Principles provide a framework for data stewardship</figcaption>
 </figure>
 
@@ -1344,15 +1344,15 @@ In Lesson 3, we will address ethical considerations in modern research by explor
 - [CARE Principles](https://www.gida-global.org/careprinciples){target=_blank}
 - [DMPTool](https://dmptool.org/){target=_blank}
 - [Registry of Research Data Repositories](https://www.re3data.org/){target=_blank}
-- More in [Additional resources](https://tyson-swetnam.github.io/dust-2026/about/resources/)
+- More in [Additional resources](https://unm-carc.github.io/dust-2026/about/resources/)
 
 ---
 
-**Previous:** [← Lesson 1: Open Science](https://tyson-swetnam.github.io/dust-2026/lessons/01-open-science/) | **Next:** [Lesson 3: AI Ethics →](https://tyson-swetnam.github.io/dust-2026/lessons/03-ai-ethics/)
+**Previous:** [← Lesson 1: Open Science](https://unm-carc.github.io/dust-2026/lessons/01-open-science/) | **Next:** [Lesson 3: AI Ethics →](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/)
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson2_data_management/index.md){target=_blank} (last source update 2025-10-29), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson2_data_management/index.md){target=_blank} (last source update 2025-10-29), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
 
----8<--- https://tyson-swetnam.github.io/dust-2026/lessons/03-ai-ethics/
+---8<--- https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/
 
 ---
 title: "Lesson 3: Ethics and Artificial Intelligence"
@@ -1631,7 +1631,7 @@ Journal rules converged in 2025-26: AI tools cannot be authors, use must be disc
     - R/Python help on synthetic example data; Methods drafts from published protocols; summaries of published literature
 
 !!! tip "Consumer vs enterprise accounts"
-    Consumer chatbot tiers may train on or retain what you type; enterprise, institutional, and API accounts generally do not. Reported 2026 defaults: Claude consumer accounts opt in to training (since October 2025), ChatGPT consumer accounts train by default, Gemini retains conversations up to 18 months, enterprise/API tiers exclude training ([summary](https://witness.ai/blog/ai-data-retention/){target=_blank}; confirm on the vendor's page). Use the tools your institution provisions: [UNM AI Resources](https://airesources.unm.edu/){target=_blank} lists approved tools and asks that no IRB, PII, or CUI data go into unevaluated tools; [UA Responsible AI](https://responsibleai.arizona.edu/){target=_blank} provides the "U of A GenAI" tool. An enterprise account still does not create permission: tribal data need NNHRRB or community approval, and CARE's **Authority to Control** rests with the community, not the account holder (see [Lesson 2](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/)).
+    Consumer chatbot tiers may train on or retain what you type; enterprise, institutional, and API accounts generally do not. Reported 2026 defaults: Claude consumer accounts opt in to training (since October 2025), ChatGPT consumer accounts train by default, Gemini retains conversations up to 18 months, enterprise/API tiers exclude training ([summary](https://witness.ai/blog/ai-data-retention/){target=_blank}; confirm on the vendor's page). Use the tools your institution provisions: [UNM AI Resources](https://airesources.unm.edu/){target=_blank} lists approved tools and asks that no IRB, PII, or CUI data go into unevaluated tools; [UA Responsible AI](https://responsibleai.arizona.edu/){target=_blank} provides the "U of A GenAI" tool. An enterprise account still does not create permission: tribal data need NNHRRB or community approval, and CARE's **Authority to Control** rests with the community, not the account holder (see [Lesson 2](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)).
 
 #### 4. Bias Awareness
 
@@ -1667,7 +1667,7 @@ An **agent** is an LLM that takes autonomous actions toward a goal: it plans, ex
 
 - **Least privilege.** Give the agent read-only access to data; never hand it credentials, production Data Store access, or the IRB-governed dataset
 - **Contain it.** Run agents in a container or VM with copies of data, not on the lab file server
-- **Keep the transcript.** The agent transcript plus the commit log is a lab-notebook artifact; store it with the analysis (see provenance in [Lesson 2](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/))
+- **Keep the transcript.** The agent transcript plus the commit log is a lab-notebook artifact; store it with the analysis (see provenance in [Lesson 2](https://unm-carc.github.io/dust-2026/lessons/02-data-management/))
 - **Human gate.** Nothing leaves the sandbox - no submission, deletion, publication, email, or push to a shared repository - without a person reviewing it
 - **Disclose agent use** in the Methods the same way you would disclose any AI use
 - **Never let an agent submit** to NIH, an IRB, the NNHRRB, or a journal on your behalf
@@ -1897,10 +1897,10 @@ Congratulations on completing all three lessons! You now have foundational knowl
 
 **Next Steps:**
 
-1. Review [Additional Resources](https://tyson-swetnam.github.io/dust-2026/about/resources/) for deeper learning
+1. Review [Additional Resources](https://unm-carc.github.io/dust-2026/about/resources/) for deeper learning
 2. Apply concepts to your current research projects
 3. Share knowledge with your research group
-4. Provide [feedback](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank} to improve this training
+4. Provide [feedback](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} to improve this training
 
 ### Additional Resources
 
@@ -1940,11 +1940,11 @@ Congratulations on completing all three lessons! You now have foundational knowl
 
 ---
 
-**Previous:** [← Lesson 2: Data Management](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/) | **Home:** [Training Home →](https://tyson-swetnam.github.io/dust-2026/)
+**Previous:** [← Lesson 2: Data Management](https://unm-carc.github.io/dust-2026/lessons/02-data-management/) | **Home:** [Training Home →](https://unm-carc.github.io/dust-2026/)
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson3_ai_ethics/index.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson3_ai_ethics/index.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
 
----8<--- https://tyson-swetnam.github.io/dust-2026/about/training/
+---8<--- https://unm-carc.github.io/dust-2026/about/training/
 
 ---
 title: "About this training"
@@ -2020,7 +2020,7 @@ Open science should be accessible to all researchers, regardless of technical ba
 
 ### Continuous Improvement
 
-This training is a living resource. We welcome feedback, suggestions, and contributions from the community. Open an [issue on GitHub](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank} or submit a pull request to help improve these materials.
+This training is a living resource. We welcome feedback, suggestions, and contributions from the community. Open an [issue on GitHub](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} or submit a pull request to help improve these materials.
 
 ## Who Created This?
 
@@ -2032,7 +2032,7 @@ This training was developed by synthesizing materials from multiple open science
 - **Intro to GPT Workshop** - AI, prompt engineering, and agentic AI fundamentals
 - **Awesome Open Science** - Curated resources for open science tools
 
-See the [Credits and attribution](https://tyson-swetnam.github.io/dust-2026/about/credits/) page for detailed attribution.
+See the [Credits and attribution](https://unm-carc.github.io/dust-2026/about/credits/) page for detailed attribution.
 
 ## How to Use This Training
 
@@ -2046,11 +2046,11 @@ Work through the three lessons sequentially at your own pace. Each lesson takes 
 - Self-assessment questions
 - Additional resources for deeper learning
 
-1. [Lesson 1: Foundations of Open Science](https://tyson-swetnam.github.io/dust-2026/lessons/01-open-science/)
-2. [Lesson 2: Modern Data Management](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/)
-3. [Lesson 3: Ethics and Artificial Intelligence](https://tyson-swetnam.github.io/dust-2026/lessons/03-ai-ethics/)
+1. [Lesson 1: Foundations of Open Science](https://unm-carc.github.io/dust-2026/lessons/01-open-science/)
+2. [Lesson 2: Modern Data Management](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)
+3. [Lesson 3: Ethics and Artificial Intelligence](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/)
 
-Set aside dedicated time for each lesson and complete the activities to maximize learning. The [Additional resources](https://tyson-swetnam.github.io/dust-2026/about/resources/) page collects further reading.
+Set aside dedicated time for each lesson and complete the activities to maximize learning. The [Additional resources](https://unm-carc.github.io/dust-2026/about/resources/) page collects further reading.
 
 ### For Instructors
 
@@ -2093,13 +2093,13 @@ This website is built with:
 - **[llms.txt](https://llmstxt.org){target=_blank}** - A linked outline and a full-corpus text file for AI agents
 - **GitHub Pages** - Free hosting, deployed automatically by GitHub Actions
 
-If you are an AI agent or are wiring one up, see [For AI agents](https://tyson-swetnam.github.io/dust-2026/about/ai-agents/) for the endpoints and trust signals.
+If you are an AI agent or are wiring one up, see [For AI agents](https://unm-carc.github.io/dust-2026/about/ai-agents/) for the endpoints and trust signals.
 
-The entire source is available on [GitHub](https://github.com/tyson-swetnam/dust-2026){target=_blank}: view the source markdown files, propose improvements or corrections, fork the repository to create your own version, or learn how to build similar documentation sites.
+The entire source is available on [GitHub](https://github.com/UNM-CARC/dust-2026){target=_blank}: view the source markdown files, propose improvements or corrections, fork the repository to create your own version, or learn how to build similar documentation sites.
 
 ## Accessibility
 
-We strive to make these materials accessible to all learners: semantic HTML structure for screen readers, sufficient color contrast, keyboard navigation support, alternative text for images, and clear, readable fonts. If you encounter accessibility barriers, please [let us know](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank} so we can improve.
+We strive to make these materials accessible to all learners: semantic HTML structure for screen readers, sufficient color contrast, keyboard navigation support, alternative text for images, and clear, readable fonts. If you encounter accessibility barriers, please [let us know](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} so we can improve.
 
 ## Privacy
 
@@ -2121,7 +2121,7 @@ You are free to **share** (copy and redistribute in any medium or format) and **
 
 For questions, suggestions, or issues:
 
-- Open an [issue on GitHub](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}
+- Open an [issue on GitHub](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}
 - Email: [tswetnam@unm.edu](mailto:tswetnam@unm.edu)
 
 ## Version History
@@ -2146,9 +2146,9 @@ For questions, suggestions, or issues:
 
 Future versions will incorporate community feedback and evolving best practices.
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/about.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/about.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
 
----8<--- https://tyson-swetnam.github.io/dust-2026/about/resources/
+---8<--- https://unm-carc.github.io/dust-2026/about/resources/
 
 ---
 title: "Additional resources"
@@ -2257,7 +2257,7 @@ This page provides curated resources for deeper learning in open science, data m
 - [Data Rescue Project](https://www.datarescueproject.org/){target=_blank} - Coordinated rescue of at-risk federal datasets
 - [Data Rescue Project data-loss report](https://www.datarescueproject.org/data-loss-report/){target=_blank} - August 2026 accounting of federal datasets removed since January 2025
 - [Harvard Library Innovation Lab data.gov archive](https://source.coop/repositories/harvard-lil/gov-data/description){target=_blank} - 311,000+ datasets, 16 TB, updated July 2026
-- DataLumos - Archive for at-risk government datasets; one of the mirrors named in [Lesson 2](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/)
+- DataLumos - Archive for at-risk government datasets; one of the mirrors named in [Lesson 2](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)
 - [EDGI: EPA removes EJScreen](https://envirodatagov.org/epa-removes-ejscreen-from-its-website/){target=_blank} - Environmental Data and Governance Initiative account of the removal
 
 ### Metadata Standards
@@ -2280,7 +2280,7 @@ This page provides curated resources for deeper learning in open science, data m
 ### Cloud-Native and ML-Ready Formats
 
 - [Cloud-Native Geospatial Guide](https://guide.cloudnativegeo.org/){target=_blank} - GeoParquet, Cloud-Optimized GeoTIFF (COG), and Zarr explained
-- DuckDB and Parquet - Query large tabular files locally; see the Interoperable section of [Lesson 2](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/)
+- DuckDB and Parquet - Query large tabular files locally; see the Interoperable section of [Lesson 2](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)
 - [Croissant](https://mlcommons.org/working-groups/data/croissant/){target=_blank} - MLCommons metadata format for machine-learning datasets (version 1.1)
 - [Frictionless Data](https://frictionlessdata.io/){target=_blank} - Data packages and table schemas
 - [RO-Crate](https://www.researchobject.org/ro-crate/){target=_blank} - Packaging research outputs with linked metadata (version 1.3, June 2026)
@@ -2531,11 +2531,11 @@ This page provides curated resources for deeper learning in open science, data m
 
 ---
 
-**Have a resource to suggest?** [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank} or email tswetnam@unm.edu.
+**Have a resource to suggest?** [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} or email tswetnam@unm.edu.
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/resources.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/resources.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
 
----8<--- https://tyson-swetnam.github.io/dust-2026/about/credits/
+---8<--- https://unm-carc.github.io/dust-2026/about/credits/
 
 ---
 title: "Credits and attribution"
@@ -2656,7 +2656,7 @@ This site is built with the Zensical static site generator. DUST 2025 was built 
 
 ### Open Knowledge Format (OKF) v0.2
 
-Every content page carries OKF frontmatter (type, description, tags, provenance, and lifecycle), and the site publishes `llms.txt`, `llms-full.txt`, and a Markdown mirror of each page so that people and AI agents can read the same source. See [For AI agents](https://tyson-swetnam.github.io/dust-2026/about/ai-agents/).
+Every content page carries OKF frontmatter (type, description, tags, provenance, and lifecycle), and the site publishes `llms.txt`, `llms-full.txt`, and a Markdown mirror of each page so that people and AI agents can read the same source. See [For AI agents](https://unm-carc.github.io/dust-2026/about/ai-agents/).
 
 - **Specification:** [OKF SPEC.md](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md){target=_blank}
 
@@ -2736,14 +2736,14 @@ This training is licensed under the [Creative Commons Attribution 4.0 Internatio
 
 **Suggested citation:**
 
-> Swetnam, T.L. (2026). DUST 2026: Open Science Training. https://tyson-swetnam.github.io/dust-2026/
+> Swetnam, T.L. (2026). DUST 2026: Open Science Training. https://unm-carc.github.io/dust-2026/
 
 ```bibtex
 @misc{swetnam2026dust,
   author = {Swetnam, Tyson L.},
   title  = {DUST 2026: Open Science Training},
   year   = {2026},
-  url    = {https://tyson-swetnam.github.io/dust-2026/},
+  url    = {https://unm-carc.github.io/dust-2026/},
   note   = {CC BY 4.0. Revised edition of DUST 2025.}
 }
 ```
@@ -2769,15 +2769,15 @@ When reusing this material you must:
 
 We welcome contributions to improve this training:
 
-- **Report issues:** [github.com/tyson-swetnam/dust-2026/issues](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}
-- **Suggest improvements:** Submit pull requests to [github.com/tyson-swetnam/dust-2026](https://github.com/tyson-swetnam/dust-2026){target=_blank}
+- **Report issues:** [github.com/UNM-CARC/dust-2026/issues](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}
+- **Suggest improvements:** Submit pull requests to [github.com/UNM-CARC/dust-2026](https://github.com/UNM-CARC/dust-2026){target=_blank}
 - **Share feedback:** Email tswetnam@unm.edu
 
 All contributors will be acknowledged in future versions.
 
 ## Updates and maintenance
 
-This training will be updated to reflect evolving open science practices, new tools and resources, policy changes, community feedback, and emerging AI ethics considerations. Each page records when it was generated in its frontmatter, and the [update log](https://tyson-swetnam.github.io/dust-2026/log/) lists every dated change.
+This training will be updated to reflect evolving open science practices, new tools and resources, policy changes, community feedback, and emerging AI ethics considerations. Each page records when it was generated in its frontmatter, and the [update log](https://unm-carc.github.io/dust-2026/log/) lists every dated change.
 
 ## Thank you
 
@@ -2791,9 +2791,9 @@ Most importantly, thank you to:
 
 By working together, we strengthen the foundation of transparent, reproducible, and accessible research for everyone.
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/acknowledgments.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/acknowledgments.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
 
----8<--- https://tyson-swetnam.github.io/dust-2026/about/ai-agents/
+---8<--- https://unm-carc.github.io/dust-2026/about/ai-agents/
 
 ---
 title: "For AI agents"
@@ -2834,11 +2834,11 @@ these endpoints rather than scraping rendered HTML.
 
 | Endpoint | What you get |
 | -------- | ------------ |
-| [`llms.txt`](https://tyson-swetnam.github.io/dust-2026/llms.txt) | Linked outline of every page with one-line descriptions ([llms.txt convention](https://llmstxt.org){target=_blank}) |
-| [`llms-full.txt`](https://tyson-swetnam.github.io/dust-2026/llms-full.txt) | The entire corpus in one file: every page's Markdown with frontmatter, prefixed by its canonical URL, links made absolute |
-| Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter (for example `https://tyson-swetnam.github.io/dust-2026/lessons/01-open-science/index.md`) |
+| [`llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt) | Linked outline of every page with one-line descriptions ([llms.txt convention](https://llmstxt.org){target=_blank}) |
+| [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt) | The entire corpus in one file: every page's Markdown with frontmatter, prefixed by its canonical URL, links made absolute |
+| Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter (for example `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`) |
 | `sitemap.xml`, `robots.txt` | Standard crawl surface; robots.txt repeats these pointers |
-| [Source repository](https://github.com/tyson-swetnam/dust-2026){target=_blank} | The bundle itself, plus `AGENTS.md` with contribution rules for coding agents |
+| [Source repository](https://github.com/UNM-CARC/dust-2026){target=_blank} | The bundle itself, plus `AGENTS.md` with contribution rules for coding agents |
 
 Every rendered page also declares its Markdown twin and OKF signals in HTML:
 
@@ -2895,14 +2895,15 @@ timelines, repository choice), direct users to their center's Data Management
 and Analysis Core or to the primary policy page linked in the lesson; do not
 guess.
 
----8<--- https://tyson-swetnam.github.io/dust-2026/log/
+---8<--- https://unm-carc.github.io/dust-2026/log/
 
 # Documentation update log
 
 ## 2026-09-11
 
+* **Update**: Moved the repository to the UNM CARC organization ([UNM-CARC/dust-2026](https://github.com/UNM-CARC/dust-2026){target=_blank}) and the site to <https://unm-carc.github.io/dust-2026/>; every site and repository link was updated. Links to the 2025 site are unchanged.
 * **Update**: Added the [Texas A&M Superfund Research Center](https://superfund.tamu.edu/){target=_blank} as a third supported center alongside the University of Arizona DUST Center and the UNM METALS Center on the [landing page](index.md), [About this training](about/training.md), [Credits](about/credits.md), and [Additional resources](about/resources.md), and in the site description and repository README. Lesson examples still pair Arizona and New Mexico items; Texas examples are a follow-up.
-* **Creation**: Built DUST 2026 from [DUST 2025](https://github.com/tyson-swetnam/dust-2025){target=_blank} (commit `29027db`, 2025-10-29), moving from MkDocs Material to [Zensical](https://zensical.org){target=_blank}, structured as an Open Knowledge Format (OKF v0.2) bundle, and restyled after the [UNM CARC documentation](https://carc.unm.edu/docs/){target=_blank}. Every page carries provenance frontmatter (`generated`, `sources` with per-file `last_modified`) and a source footer; all rewritten pages are unverified pending the author's review. Contact and repository details moved to UNM (tswetnam@unm.edu, tyson-swetnam/dust-2026).
+* **Creation**: Built DUST 2026 from [DUST 2025](https://github.com/tyson-swetnam/dust-2025){target=_blank} (commit `29027db`, 2025-10-29), moving from MkDocs Material to [Zensical](https://zensical.org){target=_blank}, structured as an Open Knowledge Format (OKF v0.2) bundle, and restyled after the [UNM CARC documentation](https://carc.unm.edu/docs/){target=_blank}. Every page carries provenance frontmatter (`generated`, `sources` with per-file `last_modified`) and a source footer; all rewritten pages are unverified pending the author's review. Contact and repository details moved to UNM (tswetnam@unm.edu, UNM-CARC/dust-2026).
 * **Creation**: Reorganized the site into [Lessons](lessons/index.md) 1–3 and [About](about/index.md) (training overview, resources, credits, guidance for AI agents, this log) with kebab-case URLs; `MIGRATION.md` in the repository maps every 2025 URL to its 2026 location. Wrote the landing page, section listings, and [For AI agents](about/ai-agents.md), and added the `llms.txt` / `llms-full.txt` agent indexes, the Markdown mirror, `okf:*` meta tags, and `robots.txt`.
 * **Update**: Reframed the whole training for a joint audience: the University of Arizona DUST Center and the UNM METALS Center. Every "DUST Example" became an "SRP Example" pairing an Arizona item (arsenic, mine tailings, phytoremediation, lung injury) with a New Mexico item (uranium and metal mixtures from abandoned mines, Navajo Nation and Pueblo of Laguna partners). Examples name centers, partner communities, and project topics, never individual investigators.
 * **Update**: [Lesson 1](lessons/01-open-science.md) now carries the September 2026 policy landscape: zero-embargo public access in force at NIH (1 July 2025), DOE, EPA, USGS, NSF, and USDA while the 2022 OSTP memo is under repeal; the pending NIH APC cap and the proposed OMB 2 CFR 200.461 change; Gold Standard Science (EO 14303, the Kratsios guidance, agency plans); the FY2026 NIEHS and SRP appropriation; 2026 article-processing charges; Diamond OA and the cOAlition S pivot; openRxiv and arXiv governance; two new quiz questions.

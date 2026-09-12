@@ -72,7 +72,7 @@ Open science should be accessible to all researchers, regardless of technical ba
 
 ### Continuous Improvement
 
-This training is a living resource. We welcome feedback, suggestions, and contributions from the community. Open an [issue on GitHub](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank} or submit a pull request to help improve these materials.
+This training is a living resource. We welcome feedback, suggestions, and contributions from the community. Open an [issue on GitHub](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} or submit a pull request to help improve these materials.
 
 ## Who Created This?
 
@@ -147,11 +147,11 @@ This website is built with:
 
 If you are an AI agent or are wiring one up, see [For AI agents](ai-agents.md) for the endpoints and trust signals.
 
-The entire source is available on [GitHub](https://github.com/tyson-swetnam/dust-2026){target=_blank}: view the source markdown files, propose improvements or corrections, fork the repository to create your own version, or learn how to build similar documentation sites.
+The entire source is available on [GitHub](https://github.com/UNM-CARC/dust-2026){target=_blank}: view the source markdown files, propose improvements or corrections, fork the repository to create your own version, or learn how to build similar documentation sites.
 
 ## Accessibility
 
-We strive to make these materials accessible to all learners: semantic HTML structure for screen readers, sufficient color contrast, keyboard navigation support, alternative text for images, and clear, readable fonts. If you encounter accessibility barriers, please [let us know](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank} so we can improve.
+We strive to make these materials accessible to all learners: semantic HTML structure for screen readers, sufficient color contrast, keyboard navigation support, alternative text for images, and clear, readable fonts. If you encounter accessibility barriers, please [let us know](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} so we can improve.
 
 ## Privacy
 
@@ -173,7 +173,7 @@ You are free to **share** (copy and redistribute in any medium or format) and **
 
 For questions, suggestions, or issues:
 
-- Open an [issue on GitHub](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}
+- Open an [issue on GitHub](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}
 - Email: [tswetnam@unm.edu](mailto:tswetnam@unm.edu)
 
 ## Version History
@@ -198,4 +198,4 @@ For questions, suggestions, or issues:
 
 Future versions will incorporate community feedback and evolving best practices.
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/about.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/about.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>

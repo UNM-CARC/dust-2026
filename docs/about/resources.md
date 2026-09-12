@@ -379,6 +379,6 @@ This page provides curated resources for deeper learning in open science, data m
 
 ---
 
-**Have a resource to suggest?** [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank} or email tswetnam@unm.edu.
+**Have a resource to suggest?** [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} or email tswetnam@unm.edu.
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/resources.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/resources.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>

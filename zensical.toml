@@ -6,13 +6,13 @@
 
 [project]
 site_name = "DUST 2026: Open Science Training"
-site_url = "https://tyson-swetnam.github.io/dust-2026/"
+site_url = "https://unm-carc.github.io/dust-2026/"
 site_description = "Three 50-minute lessons on open science, research data management, and the ethics of artificial intelligence for NIEHS Superfund Research Program trainees at the University of Arizona DUST Center, the UNM METALS Center, and the Texas A&M Superfund Research Center."
 site_author = "Tyson L. Swetnam, UNM Center for Advanced Research Computing"
 copyright = "&copy; 2026 Tyson L. Swetnam. Content licensed <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>."
 
-repo_url = "https://github.com/tyson-swetnam/dust-2026"
-repo_name = "tyson-swetnam/dust-2026"
+repo_url = "https://github.com/UNM-CARC/dust-2026"
+repo_name = "UNM-CARC/dust-2026"
 edit_uri = "edit/main/docs/"
 
 extra_css = ["stylesheets/extra.css"]
@@ -91,7 +91,7 @@ toggle.name = "Switch to system preference"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/tyson-swetnam/dust-2026"
+link = "https://github.com/UNM-CARC/dust-2026"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/orcid"

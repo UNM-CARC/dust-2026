@@ -544,7 +544,7 @@ Congratulations on completing all three lessons! You now have foundational knowl
 1. Review [Additional Resources](../about/resources.md) for deeper learning
 2. Apply concepts to your current research projects
 3. Share knowledge with your research group
-4. Provide [feedback](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank} to improve this training
+4. Provide [feedback](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} to improve this training
 
 ### Additional Resources
 
@@ -586,4 +586,4 @@ Congratulations on completing all three lessons! You now have foundational knowl
 
 **Previous:** [← Lesson 2: Data Management](02-data-management.md) | **Home:** [Training Home →](../index.md)
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson3_ai_ethics/index.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson3_ai_ethics/index.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>

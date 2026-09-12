@@ -5,7 +5,7 @@ research data management, and the ethics of artificial intelligence for NIEHS
 Superfund Research Program trainees at the University of Arizona DUST Center,
 the UNM METALS Center, and the Texas A&M Superfund Research Center. It is built with [Zensical](https://zensical.org),
 styled after the [UNM CARC documentation](https://carc.unm.edu/docs/), and
-published at <https://tyson-swetnam.github.io/dust-2026/>. The `docs/` tree
+published at <https://unm-carc.github.io/dust-2026/>. The `docs/` tree
 is an **Open Knowledge Format (OKF) v0.2 knowledge bundle**
 ([spec](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)):
 every content page carries YAML frontmatter with `type`, `title`,

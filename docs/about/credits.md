@@ -197,14 +197,14 @@ This training is licensed under the [Creative Commons Attribution 4.0 Internatio
 
 **Suggested citation:**
 
-> Swetnam, T.L. (2026). DUST 2026: Open Science Training. https://tyson-swetnam.github.io/dust-2026/
+> Swetnam, T.L. (2026). DUST 2026: Open Science Training. https://unm-carc.github.io/dust-2026/
 
 ```bibtex
 @misc{swetnam2026dust,
   author = {Swetnam, Tyson L.},
   title  = {DUST 2026: Open Science Training},
   year   = {2026},
-  url    = {https://tyson-swetnam.github.io/dust-2026/},
+  url    = {https://unm-carc.github.io/dust-2026/},
   note   = {CC BY 4.0. Revised edition of DUST 2025.}
 }
 ```
@@ -230,8 +230,8 @@ When reusing this material you must:
 
 We welcome contributions to improve this training:
 
-- **Report issues:** [github.com/tyson-swetnam/dust-2026/issues](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}
-- **Suggest improvements:** Submit pull requests to [github.com/tyson-swetnam/dust-2026](https://github.com/tyson-swetnam/dust-2026){target=_blank}
+- **Report issues:** [github.com/UNM-CARC/dust-2026/issues](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}
+- **Suggest improvements:** Submit pull requests to [github.com/UNM-CARC/dust-2026](https://github.com/UNM-CARC/dust-2026){target=_blank}
 - **Share feedback:** Email tswetnam@unm.edu
 
 All contributors will be acknowledged in future versions.
@@ -252,4 +252,4 @@ Most importantly, thank you to:
 
 By working together, we strengthen the foundation of transparent, reproducible, and accessible research for everyone.
 
-<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/acknowledgments.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/tyson-swetnam/dust-2026/issues){target=_blank}.</p>
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/acknowledgments.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>

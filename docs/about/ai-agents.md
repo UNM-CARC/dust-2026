@@ -39,9 +39,9 @@ these endpoints rather than scraping rendered HTML.
 | -------- | ------------ |
 | [`llms.txt`](../llms.txt) | Linked outline of every page with one-line descriptions ([llms.txt convention](https://llmstxt.org){target=_blank}) |
 | [`llms-full.txt`](../llms-full.txt) | The entire corpus in one file: every page's Markdown with frontmatter, prefixed by its canonical URL, links made absolute |
-| Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter (for example `https://tyson-swetnam.github.io/dust-2026/lessons/01-open-science/index.md`) |
+| Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter (for example `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`) |
 | `sitemap.xml`, `robots.txt` | Standard crawl surface; robots.txt repeats these pointers |
-| [Source repository](https://github.com/tyson-swetnam/dust-2026){target=_blank} | The bundle itself, plus `AGENTS.md` with contribution rules for coding agents |
+| [Source repository](https://github.com/UNM-CARC/dust-2026){target=_blank} | The bundle itself, plus `AGENTS.md` with contribution rules for coding agents |
 
 Every rendered page also declares its Markdown twin and OKF signals in HTML:
 
