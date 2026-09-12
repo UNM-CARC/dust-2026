@@ -9,7 +9,7 @@ tags:
   - Training
 generated:
   by: "claude/fable-5-1"
-  at: "2026-09-11T00:00:00Z"
+  at: "2026-09-12T02:00:00Z"
 sources:
   - id: dust-2025-about
     resource: "https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/about.md"
@@ -90,7 +90,7 @@ See the [Credits and attribution](credits.md) page for detailed attribution.
 
 ### For Individual Learners
 
-Work through the three lessons sequentially at your own pace. Each lesson takes approximately 50 minutes and includes:
+Work through the three lessons sequentially at your own pace. Each in-person lesson takes approximately 50 minutes and includes:
 
 - Clear learning objectives
 - Core concepts with examples
@@ -98,9 +98,11 @@ Work through the three lessons sequentially at your own pace. Each lesson takes 
 - Self-assessment questions
 - Additional resources for deeper learning
 
-1. [Lesson 1: Foundations of Open Science](../lessons/01-open-science.md)
+1. [Lesson 1: Foundations of Open Science](../lessons/01-open-science.md), then its [self-paced homework](../lessons/01-open-science-self-paced.md)
 2. [Lesson 2: Modern Data Management](../lessons/02-data-management.md)
 3. [Lesson 3: Ethics and Artificial Intelligence](../lessons/03-ai-ethics.md)
+
+Lesson 1 comes in two parts. The lecture page is what an instructor covers in 50 minutes; the homework page holds the full material in twelve modules, each ending in a checkpoint question, and takes about 90 to 120 minutes. If you are learning alone, do both. You can also hand either page to an AI assistant and take it as a lecture, a tutorial, or a quiz: see [Learn with an AI tutor](ai-tutor.md).
 
 Set aside dedicated time for each lesson and complete the activities to maximize learning. The [Additional resources](resources.md) page collects further reading.
 
@@ -108,7 +110,7 @@ Set aside dedicated time for each lesson and complete the activities to maximize
 
 These materials can be used for:
 
-- **Workshops** - Three 50-minute lessons or a half-day intensive
+- **Workshops** - Three 50-minute lessons or a half-day intensive; assign the Lesson 1 homework page before or after the session
 - **Course modules** - Integrate into methods courses or research seminars
 - **Lab training** - Onboard new lab members to open science practices
 - **Professional development** - Departmental or institutional training programs
@@ -117,6 +119,7 @@ All materials are licensed CC BY 4.0, allowing you to adapt and remix as needed 
 
 !!! tip "Teaching Tips"
 
+    - Teach from the lecture page and assign the self-paced page as homework; the lecture is deliberately a summary
     - Encourage discussion during activities
     - Adapt examples to your discipline and to your center's field sites
     - Share your own experiences with open science
@@ -151,7 +154,7 @@ The entire source is available on [GitHub](https://github.com/UNM-CARC/dust-2026
 
 ## Accessibility
 
-We strive to make these materials accessible to all learners: semantic HTML structure for screen readers, sufficient color contrast, keyboard navigation support, alternative text for images, and clear, readable fonts. If you encounter accessibility barriers, please [let us know](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} so we can improve.
+We aim for WCAG 2.2 level AA: semantic structure for screen readers, keyboard operation throughout, visible focus, sufficient contrast in light and dark mode, alternative text and text descriptions for figures, plain-language summaries and glossaries, no audio-only or video-only content, reduced motion on request, and machine-readable accessibility metadata so AI assistants can adapt a lesson for blind, deaf, or multilingual learners. The [Accessibility](accessibility.md) page describes all of this, its known limitations, and how to report a barrier.
 
 ## Privacy
 
@@ -177,6 +180,13 @@ For questions, suggestions, or issues:
 - Email: [tswetnam@unm.edu](mailto:tswetnam@unm.edu)
 
 ## Version History
+
+**Version 2.1** (September 2026)
+
+- Lesson 1 split into a 50-minute in-person lecture and a self-paced homework page with twelve modules and checkpoints
+- Gold Standard Science: the nine tenets mapped to open-science practices, the 2025 agency implementation plans, the September 2026 annual reports, and the debate
+- Learn with an AI tutor: lesson metadata (`lesson:` block, schema.org LearningResource) and prompts for lecture, tutor, and interactive modes
+- Accessibility statement, figure text descriptions, glossaries, plain-language summaries, focus and reduced-motion styles
 
 **Version 2.0** (September 2026)
 

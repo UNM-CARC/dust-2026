@@ -16,6 +16,13 @@ Run AFTER `zensical build`. It:
        <link rel="alternate" type="text/markdown" href="index.md">
        <meta name="okf:type" | okf:status | okf:trust-tier | okf:generated-at
              | okf:generated-by | okf:stale-after>
+   and, for pages whose frontmatter has `type: Lesson`, a schema.org
+   LearningResource JSON-LD record built from the `lesson:` block
+   (objectives, key terms, duration, delivery format, and the accessibility
+   profile: accessMode, accessModeSufficient, accessibilityFeature,
+   accessibilityHazard, accessibilitySummary) plus okf:lesson-* meta tags,
+   so learning platforms and AI tutors can pick a delivery mode without
+   parsing the Markdown.
 3. Writes robots.txt advertising sitemap.xml, llms.txt, llms-full.txt, and
    the Markdown mirror convention. Note: crawlers only honour robots.txt at a
    host root; for a project site (host/<repo>/) the host's root robots.txt
@@ -27,12 +34,14 @@ Usage: python3 scripts/postbuild_agent_surface.py [site_dir]
 from __future__ import annotations
 
 import html
+import json
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from okf_common import (DOCS, ROOT, absolutize, load_config,  # noqa: E402
-                        rewrite_link_targets, site_url, split_frontmatter)
+                        page_url, rewrite_link_targets, site_url,
+                        split_frontmatter)
 
 AI_AGENTS = ["Googlebot", "Google-Extended", "GoogleOther", "Google-CloudVertexBot",
              "GPTBot", "OAI-SearchBot", "ChatGPT-User",
@@ -53,7 +62,84 @@ def trust_tier(fm: dict) -> str:
     return "machine-confirmed" if actors else "unverified"
 
 
-def head_block(fm: dict) -> str:
+CC_BY = "https://creativecommons.org/licenses/by/4.0/"
+
+
+def lesson_jsonld(fm: dict, rel: str, cfg: dict, base: str,
+                  all_fm: dict[str, dict]) -> dict | None:
+    """schema.org LearningResource for a `type: Lesson` page (None otherwise).
+
+    Vocabulary: https://schema.org/LearningResource and the W3C accessibility
+    discoverability vocabulary (accessMode, accessModeSufficient,
+    accessibilityFeature, accessibilityHazard, accessibilitySummary)."""
+    if str(fm.get("type", "")).strip() != "Lesson":
+        return None
+    lesson = fm.get("lesson") if isinstance(fm.get("lesson"), dict) else {}
+    acc = lesson.get("accessibility") if isinstance(lesson.get("accessibility"), dict) else {}
+    url = page_url(base, rel)
+    fmt = str(lesson.get("format", "")).strip()
+    doc: dict = {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "@id": url,
+        "url": url,
+        "name": fm.get("title"),
+        "description": fm.get("description"),
+        "inLanguage": acc.get("language", cfg.get("theme", {}).get("language", "en")),
+        "license": CC_BY,
+        "isAccessibleForFree": True,
+        "educationalLevel": "graduate",
+        "audience": {"@type": "EducationalAudience",
+                     "educationalRole": "student",
+                     "audienceType": "NIEHS Superfund Research Program trainees"},
+        "learningResourceType": {"in-person": "lecture",
+                                 "self-paced": "self-paced lesson"}.get(fmt, "lesson"),
+        "isPartOf": {"@type": "Course", "name": cfg.get("site_name"), "url": base},
+        "encoding": {"@type": "MediaObject", "encodingFormat": "text/markdown",
+                     "contentUrl": url + "index.md"},
+    }
+    author = cfg.get("site_author")
+    if author:
+        doc["author"] = {"@type": "Person", "name": author}
+    gen = fm.get("generated") or {}
+    if isinstance(gen, dict) and gen.get("at"):
+        doc["dateModified"] = gen["at"]
+    if lesson.get("duration_minutes"):
+        doc["timeRequired"] = f"PT{int(lesson['duration_minutes'])}M"
+    if lesson.get("objectives"):
+        doc["teaches"] = list(lesson["objectives"])
+    keywords = list(lesson.get("key_terms") or []) + list(fm.get("tags") or [])
+    if keywords:
+        doc["keywords"] = keywords
+    if lesson.get("delivery_modes"):
+        doc["educationalUse"] = list(lesson["delivery_modes"])
+    companion = lesson.get("companion")
+    if companion:
+        crel = str(Path(rel).parent / companion).replace("\\", "/")
+        cfm = all_fm.get(crel, {})
+        curl = page_url(base, crel)
+        ref = {"@type": "LearningResource", "@id": curl, "url": curl,
+               "name": cfm.get("title", companion)}
+        if fmt == "in-person":
+            doc["hasPart"] = [ref]          # the homework belongs to the lecture
+        else:
+            doc["isPartOf"] = [doc["isPartOf"], ref]
+    if acc.get("access_mode"):
+        doc["accessMode"] = list(acc["access_mode"])
+    if acc.get("access_mode_sufficient"):
+        doc["accessModeSufficient"] = [{"@type": "ItemList",
+                                        "itemListElement": list(acc["access_mode_sufficient"])}]
+    if acc.get("features"):
+        doc["accessibilityFeature"] = list(acc["features"])
+    if acc.get("hazards"):
+        doc["accessibilityHazard"] = list(acc["hazards"])
+    if acc.get("media"):
+        doc["accessibilitySummary"] = acc["media"]
+    return {k: v for k, v in doc.items() if v not in (None, "", [], {})}
+
+
+def head_block(fm: dict, rel: str = "", cfg: dict | None = None, base: str = "",
+               all_fm: dict[str, dict] | None = None) -> str:
     lines = ['<meta name="robots" content="index, follow, max-snippet:-1, '
              'max-image-preview:large, max-video-preview:-1">',
              '<link rel="alternate" type="text/markdown" '
@@ -71,6 +157,14 @@ def head_block(fm: dict) -> str:
         meta("okf:generated-at", gen.get("at"))
         meta("okf:generated-by", gen.get("by"))
     meta("okf:stale-after", fm.get("stale_after"))
+    lesson = fm.get("lesson") if isinstance(fm.get("lesson"), dict) else {}
+    meta("okf:lesson-format", lesson.get("format"))
+    meta("okf:lesson-duration-minutes", lesson.get("duration_minutes"))
+    if cfg is not None:
+        ld = lesson_jsonld(fm, rel, cfg, base, all_fm or {})
+        if ld:
+            payload = json.dumps(ld, ensure_ascii=False, indent=1).replace("</", "<\\/")
+            lines.append('<script type="application/ld+json">' + payload + "</script>")
     return "\n".join(lines) + "\n"
 
 
@@ -98,6 +192,7 @@ def main():
     # 1. Mirror Markdown sources at pretty URLs, with absolute links.
     mirrored = 0
     fms: dict[Path, dict] = {}
+    by_rel: dict[str, dict] = {}
     for path in sorted(DOCS.rglob("*.md")):
         rel = path.relative_to(DOCS)
         if rel.parts[0] == "assets":
@@ -114,10 +209,14 @@ def main():
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(head + body, encoding="utf-8")
         fms[dest.parent.resolve()] = fm or {}
+        by_rel[rel_posix] = fm or {}
         mirrored += 1
 
     # 2. Inject <head> metadata into each page whose directory has a mirror.
     injected = 0
+    rel_of = {}
+    for rel_posix, fm in by_rel.items():
+        rel_of[dest_for(Path(rel_posix), site).parent.resolve()] = rel_posix
     for htmlfile in sorted(site.rglob("index.html")):
         fm = fms.get(htmlfile.parent.resolve())
         if fm is None:
@@ -125,7 +224,8 @@ def main():
         text = htmlfile.read_text(encoding="utf-8")
         if 'rel="alternate" type="text/markdown"' in text:
             continue  # idempotent
-        text = text.replace("</head>", head_block(fm) + "</head>", 1)
+        rel_posix = rel_of.get(htmlfile.parent.resolve(), "")
+        text = text.replace("</head>", head_block(fm, rel_posix, cfg, base, by_rel) + "</head>", 1)
         htmlfile.write_text(text, encoding="utf-8")
         injected += 1
 

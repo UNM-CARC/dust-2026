@@ -6,18 +6,53 @@ Each page below begins with its canonical URL followed by its original Markdown,
 
 ---
 title: "Lesson 1: Foundations of Open Science"
-description: "What open science is, its six pillars, why it matters for Superfund research in Arizona and New Mexico, and the 2026 US public-access and publication-cost landscape."
+description: "A 50-minute in-person lecture: what open science is, its six pillars, the nine Gold Standard Science tenets, and the 2026 public-access and publication-cost rules, with Superfund examples from Arizona and New Mexico."
 type: Lesson
 tags:
   - Open Science
   - Open Access
   - FAIR
   - CARE
+  - Gold Standard Science
   - Public Access Policy
   - Superfund Research Program
+lesson:
+  number: 1
+  format: in-person
+  duration_minutes: 50
+  companion: 01-open-science-self-paced.md
+  delivery_modes:
+    - lecture
+    - tutor
+    - interactive
+  objectives:
+    - "Define open science and name its six pillars"
+    - "List the nine Gold Standard Science tenets and match each to an open-science practice"
+    - "State what the NIH Public Access Policy requires at acceptance and why it does not require an article processing charge"
+    - "Explain why publication costs now belong in every proposal budget"
+    - "Apply 'as open as possible, as closed as necessary' to data collected with tribal and community partners"
+  key_terms:
+    - open science
+    - open access
+    - article processing charge (APC)
+    - accepted manuscript
+    - PubMed Central
+    - FAIR principles
+    - CARE principles
+    - Gold Standard Science
+    - pre-registration
+    - preprint
+    - rights retention
+  accessibility:
+    language: en
+    access_mode: [textual]
+    access_mode_sufficient: [textual]
+    features: [readingOrder, structuralNavigation, tableOfContents, unlocked, annotations]
+    hazards: [none]
+    media: "Text only: no images, audio, or video. Tables carry header rows. Quiz answers are native details/summary elements."
 generated:
   by: "claude/fable-5-1"
-  at: "2026-09-11T00:00:00Z"
+  at: "2026-09-12T02:00:00Z"
 sources:
   - id: dust-2025
     resource: "https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson1_open_science/index.md"
@@ -29,117 +64,423 @@ sources:
     title: "UNM CARC FOSS: docs/lessons/01-open-science.md"
     author: "team:unm-carc"
     last_modified: "2026-09-11T07:41:50-06:00"
+  - id: eo-14303
+    resource: "https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/"
+    title: "Executive Order 14303: Restoring Gold Standard Science (23 May 2025)"
+    author: "team:white-house"
+  - id: ostp-gss-guidance
+    resource: "https://www.whitehouse.gov/releases/2025/06/ostp-issues-agency-guidance-for-gold-standard-science/"
+    title: "OSTP: Agency Guidance for Implementing Gold Standard Science (23 June 2025)"
+    author: "team:ostp"
+  - id: nih-gss-plan
+    resource: "https://osp.od.nih.gov/nih-releases-implementation-plan-to-drive-gold-standard-science/"
+    title: "NIH Releases Implementation Plan to Drive Gold Standard Science (22 August 2025)"
+    author: "team:nih-osp"
+  - id: sparc-gss-brief
+    resource: "https://sparcopen.org/our-work/gss_policy_brief/"
+    title: "SPARC: Gold Standard Science, Federal Implementation Strategies and Open Access Policy Intersections"
+    author: "team:sparc"
 status: stable
 stale_after: "2027-03-01T00:00:00Z"
 ---
 
 # Lesson 1: Foundations of Open Science
 
-!!! info "Lesson Overview"
-    **Duration:** 50 minutes
+!!! info "Lesson overview"
+    **Format:** 50-minute in-person lecture with one group activity.
 
-    **Structure:**
+    **Structure:** Introduction (5 min), Core concepts (25 min), Hands-on activity (15 min), Wrap-up (5 min).
 
-    - Introduction (5 min)
-    - Core Concepts (25 min)
-    - Hands-on Activity (15 min)
-    - Wrap-up (5 min)
+    **Homework:** Every section below is a summary. The full material, with all the examples, figures, prices, and policy detail, is in [Lesson 1 homework: Open Science, self-paced](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/). Complete it before Lesson 2. Learners can also work through either page with an AI tutor: see [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/).
 
-## Learning Objectives
+!!! abstract "In brief"
+    Open science means sharing the papers, data, methods, code, and teaching materials from research so that anyone can check, use, and build on them. In the United States, open science is now a condition of federal funding. Since 1 July 2025, NIH requires every accepted paper to be free to read in PubMed Central on the day it is published. Since May 2025, the federal government also uses a framework called Gold Standard Science, with nine rules for how funded research must be done. This lesson explains the six pillars of open science, the nine Gold Standard Science tenets, and what both mean for Superfund Research Program trainees in Arizona and New Mexico.
 
-!!! success "After completing this lesson, you will be able to:"
-    - Define open science and explain its core components
-    - Identify the six pillars of open science
-    - Describe the behaviors and practices of open science
-    - Explain why open science matters in education, research, and society
-    - Understand both the advantages and challenges of implementing open science
-    - Evaluate your own research practices against open science principles
-    - Describe the 2026 US public-access and publication-cost landscape and what it means for SRP trainees
+## Learning objectives
+
+!!! success "After this lecture, you will be able to:"
+    1. Define open science and name its six pillars
+    2. List the nine Gold Standard Science tenets and match each to an open-science practice
+    3. State what the NIH Public Access Policy requires at acceptance, and why it does not require an article processing charge (APC)
+    4. Explain why publication costs now belong in every proposal budget
+    5. Apply "as open as possible, as closed as necessary" to data collected with tribal and community partners
 
 ---
 
 ## Introduction (5 minutes)
 
-### What Brings You Here?
+### One question
 
-Take a moment to reflect:
+!!! question "Reflect (1 minute)"
+    Think of one time you could not get a paper, a dataset, or a protocol that you needed. What did that cost you, and who else did it cost?
 
-!!! question "Self-Reflection"
+### Open science is a condition of funding
+
+Open science is not only an ideal. In 2026 it is a requirement that follows the money:
+
+- **Public access is required at acceptance.** The [NIH Public Access Policy](https://grants.nih.gov/policy-and-compliance/policy-topics/public-access/nih-public-access-policy-overview){target=_blank} applies to every manuscript accepted on or after 1 July 2025: the accepted manuscript goes into PubMed Central with no embargo. DOE, EPA, USGS, NSF, and USDA have equivalent zero-embargo policies in force.
+- **The federal frame is now Gold Standard Science.** [Executive Order 14303](https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/){target=_blank} (23 May 2025) sets nine tenets that every agency must build into how it funds, conducts, and manages research. Agencies filed implementation plans in August 2025 and their first annual progress reports on 1 September 2026.
+- **Communities expect it.** People living near mine tailings in Arizona-Sonora mining towns, and Navajo Nation and Pueblo of Laguna communities living with abandoned uranium mines, expect research about their exposure to be shared with them, in forms they can use.
+
+!!! example "SRP Example: why it matters here"
+    **Arizona:** Findings about arsenic in mine-tailings dust and lung injury protect people only if public health officials and residents can read them promptly, so the DUST Center's papers must be public at acceptance and its protocols reproducible.
+
+    **New Mexico:** The UNM METALS Center's uranium and metal-mixture data are collected with Navajo Nation and Pueblo of Laguna partners under community review. Openness there means sharing on the community's terms, which is what the CARE Principles require.
+
+---
+
+## Core concepts (25 minutes)
+
+### 1. What open science is (5 minutes)
+
+!!! quote "Definition"
+    "Open Science is defined as an inclusive construct that combines various movements and practices aiming to make multilingual scientific knowledge openly available, accessible and reusable for everyone."
+
+    — [UNESCO Recommendation on Open Science](https://www.unesco.org/en/natural-sciences/open-science){target=_blank}
+
+Open science touches every stage of a research project:
+
+1. **Planning:** pre-registration and open protocols
+2. **Execution:** open notebooks and transparent methods
+3. **Analysis:** reproducible workflows and version control
+4. **Dissemination:** open-access publishing and data sharing
+
+Homework: [Module 1, definitions and the research life cycle](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/#module-1-definitions-and-the-research-life-cycle).
+
+### 2. The six pillars (8 minutes)
+
+Open access
+:   Publications are free for anyone to read. NIH is satisfied by the free **accepted manuscript** in PubMed Central; a paid "gold" open-access article is optional.
+
+Open data
+:   Research data are deposited with a persistent identifier and follow the **FAIR** principles (Findable, Accessible, Interoperable, Reusable), within the limits set by privacy, safety, and the **CARE** principles for Indigenous data.
+
+Open educational resources
+:   Teaching and training materials are released under an open license, such as CC BY, so others can reuse and adapt them.
+
+Open methodology
+:   Methods are described in enough detail that others can repeat the work: protocols, version-controlled code, and **pre-registration** of hypotheses and analysis plans.
+
+Open peer review
+:   Reviews are signed, published, or both, and preprints can be reviewed before journal submission.
+
+Open source software
+:   Research software is publicly available under a recognized open license.
+
+??? question "How many pillars are there really?"
+    Frameworks count between four and eight. Some combine categories, others split them. Learn the principles, not the number.
+
+!!! example "SRP Example: one pillar in each state"
+    **Arizona (open methodology):** Pre-registering the lung-injury endpoints for an arsenic-exposure mouse study fixes the outcomes before the exposures begin, so selective reporting is off the table.
+
+    **New Mexico (open data, as closed as necessary):** A METALS biomonitoring dataset is shared with a DOI and full metadata, but chapter-level exposure values are released only with the community's authority, after Navajo Nation Human Research Review Board approval.
+
+Homework: [Modules 2 to 7](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/#module-2-open-access), one per pillar.
+
+### 3. Gold Standard Science (8 minutes)
+
+Executive Order 14303 (23 May 2025) directs every federal agency to conduct and manage science according to nine tenets. The [OSTP guidance of 23 June 2025](https://www.whitehouse.gov/releases/2025/06/ostp-issues-agency-guidance-for-gold-standard-science/){target=_blank} applies the tenets to all agency-managed science, intramural and extramural, "from the selection phase throughout closeout": that includes your Superfund grant. Agencies filed implementation plans on 22 August 2025 and their first annual reports on 1 September 2026.
+
+The nine tenets are, for the most part, open-science practices under a new name:
+
+| Gold Standard Science tenet (EO 14303, section 3) | Open-science practice | What you do as a trainee |
+| --- | --- | --- |
+| Reproducible | Open methodology, open source | Version your code; write protocols another lab can run |
+| Transparent | Open data, open access | Deposit data with a DOI; deposit the accepted manuscript in PubMed Central |
+| Communicative of error and uncertainty | Open methodology | Report confidence intervals, detection limits, and QA/QC results, not only point estimates |
+| Collaborative and interdisciplinary | Open data, open source | Use standard formats so the Arizona and New Mexico centers can compare results directly |
+| Skeptical of its findings and assumptions | Open peer review | Post a preprint, invite critique, and answer it in public |
+| Structured for falsifiability of hypotheses | Pre-registration | Register hypotheses and endpoints before the exposures begin |
+| Subject to unbiased peer review | Open peer review | Review for others, declare your conflicts, prefer venues that publish reviews |
+| Accepting of negative results as positive outcomes | Open data, preprints | Publish the null remediation trial and deposit its data |
+| Without conflicts of interest | Transparency | Disclose funding and relationships in every output |
+
+**What NIH's plan means for you.** NIH's [implementation plan](https://osp.od.nih.gov/nih-releases-implementation-plan-to-drive-gold-standard-science/){target=_blank} (22 August 2025) commits the agency to expanded rigor and reproducibility training, stronger data-sharing compliance, new support for replication studies, and periodic public reporting on outcomes. In practice, the reviewers of your next proposal and the program officer on your next progress report will be looking for the right-hand column of the table above.
+
+!!! warning "Two things to know before you cite Gold Standard Science"
+    1. **Mostly familiar, partly new.** Independent reviews of the agency plans found that they largely restate existing data-management, sharing, and public-access policy ([AIP FYI](https://www.aip.org/fyi/gold-standard-science-plans-emphasize-existing-agency-efforts){target=_blank}; [SPARC brief](https://sparcopen.org/our-work/gss_policy_brief/){target=_blank}). The new elements are the annual reporting, the encouragement to use AI tools to check reproducibility and detect bias in review, and the extension of oversight to all funded research, not only government laboratories.
+    2. **It is contested.** The order gives political appointees a role in judging scientific integrity, and [critics in *Science*](https://www.science.org/content/article/what-does-trump-s-call-gold-standard-science-really-mean){target=_blank} and SPARC warn that this could constrain independent inquiry. You can practice the nine tenets on their merits while following that debate.
+
+Homework: [Module 9, Gold Standard Science in depth](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/#module-9-gold-standard-science-in-depth).
+
+### 4. The 2026 compliance landscape (4 minutes)
+
+Three facts, as of September 2026, that you will act on this year:
+
+1. **Accepted manuscript to PubMed Central, at acceptance, no embargo.** Depositing the free accepted manuscript satisfies NIH. You do not have to pay an APC (Nature's 2026 list price is $12,850) to comply. Publishers steer NIH authors toward paid routes; know the difference before you sign.
+2. **Publication costs are moving, so budget them.** NIH floated caps on allowable APCs in July 2025 ([NOT-OD-25-138](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-138.html){target=_blank}); none was final when this page was written. OMB's [proposed revision of 2 CFR 200.461](https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance){target=_blank} (29 May 2026) would make publication costs unallowable unless pre-approved in the award, with a target date of 1 October 2026; it was still a proposal in September 2026. Either way: put publication costs in every proposal budget, explicitly.
+3. **As open as possible, as closed as necessary.** Human health data, Indigenous data, and sensitive site locations have limits. Data collected with Navajo Nation partners need [Navajo Nation Human Research Review Board](http://nnhrrb.navajo-nsn.gov/){target=_blank} approval before collection and before release; the Pueblo of Laguna has its own review. The [CARE Principles](https://www.gida-global.org/careprinciples){target=_blank} (Collective benefit, Authority to control, Responsibility, Ethics) govern, and Lesson 2 covers them in depth.
+
+Homework: [Module 10, the 2026 public-access and publication-cost landscape](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/#module-10-the-2026-public-access-and-publication-cost-landscape).
+
+---
+
+## Hands-on activity (15 minutes)
+
+### Six questions, one per pillar
+
+Work in pairs. Answer yes, partly, or no for your own current project.
+
+!!! question "Where are you now?"
+    1. **Open access:** Will the accepted manuscript of your next paper go to PubMed Central at acceptance, and do you know who deposits it?
+    2. **Open data:** Could someone reuse your data from the repository record alone, without emailing you?
+    3. **Open educational resources:** Have you shared a protocol, slide deck, or training exercise under an open license?
+    4. **Open methodology:** Is your analysis code version-controlled, and have you ever pre-registered a study?
+    5. **Open peer review:** Have you posted a preprint or reviewed one in public?
+    6. **Open source:** Does your research software have a LICENSE file?
+
+### Pick one action for this month
+
+!!! example "Choose one"
+    - Create or complete an [ORCID](https://orcid.org/){target=_blank} profile
+    - Add publication costs as a budget line in the proposal you are writing
+    - Deposit the accepted manuscript of your next paper in PubMed Central yourself
+    - Pre-register your next exposure study on [OSF](https://osf.io/){target=_blank}
+    - Add a LICENSE file to your analysis code on GitHub
+    - Ask whether your data involve tribal partners and need a CARE review
+
+Report out: each pair names its weakest pillar and its one action.
+
+---
+
+## Wrap-up (5 minutes)
+
+### Key takeaways
+
+!!! success "Remember"
+    1. Open science is **transparency, accessibility, and collaboration** across six pillars
+    2. **Gold Standard Science** renames those practices as nine tenets and now attaches annual agency reporting to them
+    3. Public access is **required at acceptance**; the free accepted manuscript is enough
+    4. **Publication costs belong in the budget**, because the rules on paying them are changing
+    5. **As open as possible, as closed as necessary**: CARE and tribal review set the limits
+
+### Three quick questions
+
+??? question "True or false: every paper in *Nature* and *Science* is open access"
+    **False.** These journals sell open access for a fee. NIH compliance is separate: the free accepted manuscript in PubMed Central satisfies the policy without an APC.
+
+??? question "Which Gold Standard Science tenet does pre-registration serve most directly?"
+    **Structured for falsifiability of hypotheses.** Registering hypotheses and endpoints before data collection separates confirmatory from exploratory analysis and prevents hypothesizing after results are known.
+
+??? question "Do you need to pay an article processing charge to comply with the NIH Public Access Policy?"
+    **No.** Deposit the accepted manuscript in PubMed Central at acceptance. Paying for the version of record to be open is a separate decision, and one that should be in the budget.
+
+### Homework before Lesson 2
+
+Complete [Lesson 1 homework: Open Science, self-paced](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/) (about 90 to 120 minutes). It holds the full pillar material, the figures, the 2026 prices and policies, the Gold Standard Science deep dive, a 13-question self-assessment, and the full quiz.
+
+**Next:** [Lesson 2: Modern Data Management →](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)
+
+## Key terms
+
+Accepted manuscript
+:   The peer-reviewed version of a paper before the publisher typesets it. NIH requires this version in PubMed Central.
+
+Article processing charge (APC)
+:   A fee an author or funder pays a journal to make an article open access.
+
+CARE principles
+:   Collective benefit, Authority to control, Responsibility, Ethics: rules for Indigenous data governance.
+
+FAIR principles
+:   Findable, Accessible, Interoperable, Reusable: rules for data management.
+
+Gold Standard Science
+:   The federal science-integrity framework from Executive Order 14303 (2025), with nine tenets.
+
+Pre-registration
+:   Recording your hypotheses and analysis plan in a public registry before collecting data.
+
+Preprint
+:   A paper shared publicly before peer review.
+
+Rights retention
+:   A statement at submission that you keep the right to share your accepted manuscript openly.
+
+<p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson1_open_science/index.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
+
+*[APC]: Article processing charge
+*[NIH]: National Institutes of Health
+*[OSTP]: White House Office of Science and Technology Policy
+*[OMB]: Office of Management and Budget
+*[DOE]: Department of Energy
+*[EPA]: Environmental Protection Agency
+*[USGS]: United States Geological Survey
+*[NSF]: National Science Foundation
+*[USDA]: United States Department of Agriculture
+*[FAIR]: Findable, Accessible, Interoperable, Reusable
+*[CARE]: Collective benefit, Authority to control, Responsibility, Ethics
+*[DOI]: Digital object identifier
+*[QA/QC]: Quality assurance and quality control
+*[OSF]: Open Science Framework
+*[SRP]: Superfund Research Program
+*[UNM]: University of New Mexico
+*[METALS]: Metal Exposure and Toxicity Assessment on Tribal Lands in the Southwest
+*[SPARC]: Scholarly Publishing and Academic Resources Coalition
+*[AIP]: American Institute of Physics
+*[ORCID]: Open Researcher and Contributor ID
+
+---8<--- https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/
+
+---
+title: "Lesson 1 homework: Open Science, self-paced"
+description: "The self-paced companion to Lesson 1: twelve modules with checkpoints on the six pillars, Gold Standard Science in depth, the 2026 public-access and publication-cost landscape, a full self-assessment, and the complete quiz."
+type: Lesson
+tags:
+  - Open Science
+  - Open Access
+  - FAIR
+  - CARE
+  - Gold Standard Science
+  - Public Access Policy
+  - Superfund Research Program
+  - Self-paced
+lesson:
+  number: 1
+  format: self-paced
+  duration_minutes: 100
+  companion: 01-open-science.md
+  delivery_modes:
+    - tutor
+    - interactive
+    - lecture
+  objectives:
+    - "Define open science and explain its core components"
+    - "Describe each of the six pillars of open science and give a Superfund example of each"
+    - "Explain the FAIR and CARE principles and when data must stay closed"
+    - "Describe the nine Gold Standard Science tenets, how agencies are implementing them, and the debate about them"
+    - "Describe the 2026 US public-access and publication-cost landscape and what it means for SRP trainees"
+    - "Evaluate your own research practices against open science principles and choose concrete actions"
+  key_terms:
+    - open science
+    - open access
+    - subscription, gold, and diamond open access
+    - article processing charge (APC)
+    - preprint
+    - accepted manuscript
+    - version of record
+    - rights retention
+    - FAIR principles
+    - CARE principles
+    - open educational resources
+    - pre-registration
+    - open peer review
+    - open source
+    - Gold Standard Science
+    - Nelson memo
+  accessibility:
+    language: en
+    access_mode: [textual, visual]
+    access_mode_sufficient: [textual]
+    features: [alternativeText, longDescription, readingOrder, structuralNavigation, tableOfContents, unlocked, annotations]
+    hazards: [none]
+    media: "No audio or video. Five images, each with alt text and a collapsible text description immediately after it. Tables carry header rows. Checkpoint and quiz answers are native details/summary elements."
+generated:
+  by: "claude/fable-5-1"
+  at: "2026-09-12T02:00:00Z"
+sources:
+  - id: dust-2025
+    resource: "https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson1_open_science/index.md"
+    title: "DUST 2025: docs/lesson1_open_science/index.md"
+    author: "human:tswetnam"
+    last_modified: "2025-10-14T14:51:10-07:00"
+  - id: unm-carc-foss
+    resource: "https://github.com/UNM-CARC/foss/blob/f83c334a6d6a53795631c108aef2f1a477a1b7ef/docs/lessons/01-open-science.md"
+    title: "UNM CARC FOSS: docs/lessons/01-open-science.md"
+    author: "team:unm-carc"
+    last_modified: "2026-09-11T07:41:50-06:00"
+  - id: eo-14303
+    resource: "https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/"
+    title: "Executive Order 14303: Restoring Gold Standard Science (23 May 2025)"
+    author: "team:white-house"
+  - id: ostp-gss-guidance
+    resource: "https://www.whitehouse.gov/releases/2025/06/ostp-issues-agency-guidance-for-gold-standard-science/"
+    title: "OSTP: Agency Guidance for Implementing Gold Standard Science (23 June 2025)"
+    author: "team:ostp"
+  - id: nih-gss-plan
+    resource: "https://osp.od.nih.gov/nih-releases-implementation-plan-to-drive-gold-standard-science/"
+    title: "NIH Releases Implementation Plan to Drive Gold Standard Science (22 August 2025)"
+    author: "team:nih-osp"
+  - id: sparc-gss-brief
+    resource: "https://sparcopen.org/our-work/gss_policy_brief/"
+    title: "SPARC: Gold Standard Science, Federal Implementation Strategies and Open Access Policy Intersections"
+    author: "team:sparc"
+  - id: sparc-2cfr200
+    resource: "https://sparcopen.org/our-work/2026-proposed-2cfr200-updates-faqs/"
+    title: "SPARC: 2026 OMB Proposed Updates to 2 CFR Part 200, FAQ"
+    author: "team:sparc"
+  - id: ostp-golden-age
+    resource: "https://www.whitehouse.gov/releases/2026/07/45470/"
+    title: "OSTP: Science: A New Golden Age (21 July 2026)"
+    author: "team:ostp"
+status: stable
+stale_after: "2027-03-01T00:00:00Z"
+---
+
+# Lesson 1 homework: Open Science, self-paced
+
+!!! info "How to use this page"
+    **Time:** about 90 to 120 minutes, in one sitting or several.
+
+    **Structure:** twelve modules. Each ends with a **checkpoint**: answer it in your own words before opening the answer. The in-person lecture, [Lesson 1: Foundations of Open Science](https://unm-carc.github.io/dust-2026/lessons/01-open-science/), is the summary of this page; complete this page before [Lesson 2](https://unm-carc.github.io/dust-2026/lessons/02-data-management/).
+
+    **With an AI tutor:** this page is written so an AI assistant can teach it module by module. See [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/) for prompts, including prompts for screen-reader users, deaf and hard-of-hearing learners, and learners whose first language is not English. Every figure has a text description directly below it.
+
+!!! abstract "In brief"
+    This page is the full version of Lesson 1. Modules 1 to 8 cover what open science is, its six pillars, and why researchers practice it. Module 9 explains Gold Standard Science, the federal framework that since 2025 has attached nine tenets and annual reporting to funded research. Module 10 explains the 2026 rules on public access and publication costs. Modules 11 and 12 are a self-assessment, discussion questions, an action plan, and the full quiz. Every example pairs an Arizona item with a New Mexico item from the two Superfund Research Program centers.
+
+## Learning objectives
+
+!!! success "After completing this page, you will be able to:"
+    - Define open science and explain its core components
+    - Describe each of the six pillars of open science and give a Superfund example of each
+    - Explain the FAIR and CARE principles and when data must stay closed
+    - Describe the nine Gold Standard Science tenets, how agencies are implementing them, and the debate about them
+    - Describe the 2026 US public-access and publication-cost landscape and what it means for SRP trainees
+    - Evaluate your own research practices against open science principles and choose concrete actions
+
+---
+
+## Module 1: Definitions and the research life cycle
+
+*About 10 minutes.*
+
+### What brings you here?
+
+!!! question "Self-reflection"
     - What does "open" mean to you in the context of your research?
     - Have you encountered barriers to accessing research materials you needed?
     - What concerns do you have about sharing your own work?
 
-### Why Open Science Matters Now
+### Why open science matters now
 
-In 2023 the White House declared the Year of Open Science, joined by federal agencies and over 85 universities. In 2025 the federal frame changed to "Gold Standard Science" (Executive Order 14303), and the policy details are still moving. What has not changed, and has in fact tightened, is the requirement itself: zero-embargo public access to accepted manuscripts is now live at six federal agencies, including NIH.
+In 2023 the White House declared the Year of Open Science, joined by federal agencies and over 85 universities. In 2025 the federal frame changed to "Gold Standard Science" ([Executive Order 14303](https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/){target=_blank}), and the policy details are still moving (Module 9). What has not changed, and has in fact tightened, is the requirement itself: zero-embargo public access to accepted manuscripts is now in force at six federal agencies, including NIH (Module 10).
 
-Open science is not just an ideological movement - it is a condition of funding:
+Open science is not just an ideological movement. It is a condition of funding:
 
 - **Federal funders** require data management and sharing plans *and* immediate public access to accepted manuscripts
 - **Publishers** increasingly require data and code availability, and increasingly steer authors toward paid open-access routes
 - **Universities** are recognizing open practices in promotion and tenure
-- **The public** expects access to publicly-funded research, and communities near contaminated sites expect it in forms they can use
+- **The public** expects access to publicly funded research, and communities near contaminated sites expect it in forms they can use
 
-!!! example "Why Open Science Matters for SRP Research"
-    **Environmental Justice** - Communities in Arizona-Sonora mining towns, and the Navajo communities of Red Water Pond Road, Blue Gap-Tachee and Cameron, and the Pueblo of Laguna near the Jackpile Mine, living with the legacy of abandoned uranium mines, deserve access to research about contamination affecting their health
+!!! example "SRP Example: why open science matters for Superfund research"
+    **Environmental justice:** Communities in Arizona-Sonora mining towns, and the Navajo communities of Red Water Pond Road, Blue Gap-Tachee and Cameron, and the Pueblo of Laguna near the Jackpile Mine, living with the legacy of abandoned uranium mines, deserve access to research about contamination affecting their health.
 
-    **Reproducibility** - Toxicology studies on arsenic exposure, and on uranium, arsenic and vanadium (U/As/V) mixtures, must be reproducible to inform public health policy
+    **Reproducibility:** Toxicology studies on arsenic exposure, and on uranium, arsenic and vanadium (U/As/V) mixtures, must be reproducible to inform public health policy.
 
-    **Two centers, one shared problem** - The University of Arizona DUST Center ("Hazardous Dust in Drylands - Exposure, Health Impacts, and Mitigation") and the UNM METALS Center ("Metal Exposure and Toxicity Assessment on Tribal Lands in the Southwest") both study inhaled mine dust; transparent protocols and data sharing let their results be compared
+    **Two centers, one shared problem:** The University of Arizona DUST Center ("Hazardous Dust in Drylands: Exposure, Health Impacts, and Mitigation") and the UNM METALS Center ("Metal Exposure and Toxicity Assessment on Tribal Lands in the Southwest") both study inhaled mine dust. Transparent protocols and data sharing let their results be compared.
 
-    **NIH Requirements** - Superfund Research Program grants require data management and sharing plans, and every accepted manuscript must be deposited in PubMed Central at acceptance
+    **NIH requirements:** Superfund Research Program grants require data management and sharing plans, and every accepted manuscript must be deposited in PubMed Central at acceptance.
 
-    **Community Trust** - Data collected with tribal partners are governed under the CARE Principles and community review; openness that ignores that authority destroys the trust the research depends on
+    **Community trust:** Data collected with tribal partners are governed under the CARE Principles and community review. Openness that ignores that authority destroys the trust the research depends on.
 
-    **Public Health Impact** - Findings about mine tailings dust exposure and lung disease must be rapidly disseminated to protect vulnerable populations
+    **Public health impact:** Findings about mine-tailings dust exposure and lung disease must be disseminated rapidly to protect vulnerable populations.
 
-The collapsed block below is reference material for proposal writing; skim it now and return to it when you budget a paper.
-
-??? tip "2026 policy landscape: what changed and what did not"
-
-    **1. The 2022 OSTP "Nelson memo" is under repeal, but agency policies stay in force.** Report language attached to the January 2026 minibus put the memo under review for repeal, and the House FY2027 CJS bill asks NSF to pause. None of that has withdrawn the policies agencies already adopted. Zero-embargo public access to accepted manuscripts began:
-
-    | Agency | Zero-embargo public access since |
-    | --- | --- |
-    | DOE | 1 October 2024 |
-    | EPA | 2 January 2025 |
-    | NIH | 1 July 2025 (NOT-OD-25-047) |
-    | USGS | 31 December 2025 |
-    | NSF | 22 January 2026 (NSF 26-202) |
-    | USDA | 7 April 2026 |
-
-    Follow changes on the [SPARC policy tracker](https://sparcopen.org/our-work/2022-updated-ostp-policy-guidance/){target=_blank}.
-
-    **2. NIH: accepted manuscript to PubMed Central at acceptance, no embargo.** The [NIH Public Access Policy](https://grants.nih.gov/policy-and-compliance/policy-topics/public-access/nih-public-access-policy-overview){target=_blank} applies to manuscripts accepted on or after 1 July 2025. Depositing the free accepted manuscript satisfies it; you do not have to pay for gold open access. Springer Nature, Wiley and Elsevier nonetheless steer NIH-funded authors toward paid gold-OA routes (see the [Springer Nature federal-compliance page](https://www.springernature.com/gp/open-science/us-federal-agency-compliance){target=_blank}). Know the difference before you sign.
-
-    **3. Publication costs: a cap is pending and pre-approval is proposed.** NIH floated caps on allowable article processing charges (APCs) in a July 2025 request for information ([NOT-OD-25-138](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-138.html){target=_blank}); as of June 2026 none had been finalized ([STAT](https://www.statnews.com/2026/06/11/open-access-journal-fees-nature-wiley-elsevier-nih/){target=_blank}). Separately, OMB's 29 May 2026 [proposed revision of 2 CFR 200.461](https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance){target=_blank} would make APCs unallowable unless pre-approved in the award, with a target date of 1 October 2026; it was not final when this page was written ([SPARC FAQ](https://sparcopen.org/our-work/2026-proposed-2cfr200-updates-faqs/){target=_blank}). Practical consequence: **budget publication costs explicitly** in every proposal.
-
-    **4. Gold Standard Science.** Executive Order 14303 (23 May 2025) and the 23 June 2025 OSTP guidance from Director Michael Kratsios set nine tenets that agencies must build into their science policies. The agency implementation plans mostly restate existing data-management, sharing and public-access policy ([AIP FYI](https://www.aip.org/fyi/gold-standard-science-plans-emphasize-existing-agency-efforts){target=_blank}); first annual reports were due 1 September 2026, and OSTP published "Science: A New Golden Age" on 21 July 2026. [Critics argue](https://www.science.org/content/article/what-does-trump-s-call-gold-standard-science-really-mean){target=_blank} the framework could enable political interference in what science is funded.
-
-    **5. Congress kept NIEHS and the SRP.** The FY2026 appropriation [rejected the proposed NIH reorganization and funds all 27 institutes and centers as structured in statute](https://jm-aq.com/congress-rejects-cuts-to-nih-increase-budget-for-fy26/){target=_blank}, so NIEHS and the Superfund Research Program were not folded into a new agency; SRP is funded at $77.1 million for FY2026 (P.L. 119-74).
-
-    !!! quote "Primary sources"
-
-        * [Executive Order 14303: Restoring Gold Standard Science, May 23, 2025](https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/){target=_blank}
-        * [Fact Sheet: President Donald J. Trump is Restoring Gold Standard Science in America](https://www.whitehouse.gov/fact-sheets/2025/05/fact-sheet-president-donald-j-trump-is-restoring-gold-standard-science-in-america/){target=_blank}
-        * [OSTP issues agency guidance for Gold Standard Science, June 23, 2025](https://www.whitehouse.gov/releases/2025/06/ostp-issues-agency-guidance-for-gold-standard-science/){target=_blank} and the [Kratsios memorandum (PDF)](https://www.whitehouse.gov/wp-content/uploads/2025/03/OSTP-Guidance-for-GSS-June-2025.pdf){target=_blank}
-        * [NSF Gold Standard Science](https://www.nsf.gov/policies/gold-standard-science){target=_blank} and [EPA Gold Standard Science](https://www.epa.gov/scientific-leadership/gold-standard-science){target=_blank}
-        * [OSTP: Science: A New Golden Age, July 21, 2026](https://www.whitehouse.gov/releases/2026/07/45470/){target=_blank}
-        * [AIP FYI: scholarly publishing costs under scrutiny](https://www.aip.org/fyi/scholarly-publishing-costs-under-scrutiny-by-trump-administration){target=_blank} and [STM: OSTP to review potential repeal of the Nelson memo](https://stm-assoc.org/ostp-to-review-potential-repeal-of-nelson-memo/){target=_blank}
-        * The 2025-26 federal AI executive orders and policy are covered in [Lesson 3](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/)
-
-    !!! warning "Verify before you cite"
-        This block describes the landscape as of September 2026. The OMB rule, the NIH APC cap and the Nelson memo review were all still moving. Check the primary sources and ask your program officer before relying on any of it in a proposal, a budget or a paper.
-
----
-
-## Core Concepts (25 minutes)
-
-### Defining Open Science
+### Defining open science
 
 Multiple definitions exist, each emphasizing different aspects:
 
-!!! quote "Key Definitions"
+!!! quote "Key definitions"
     **"Open Science is transparent and accessible knowledge that is shared and developed through collaborative networks"**
 
     — [Vincente-Saez & Martinez-Fuentes (2018)](https://doi.org/10.1016/j.jbusres.2017.12.043){target=_blank}
@@ -152,74 +493,104 @@ Multiple definitions exist, each emphasizing different aspects:
 
     — Jeffrey Gillan
 
-### The Research Life Cycle
+### The research life cycle
 
 Open science touches every stage of research, and each stage offers opportunities to embrace openness:
 
-1. **Planning** - Pre-registration, open protocols
-2. **Execution** - Open notebooks, transparent methods
-3. **Analysis** - Reproducible workflows, version control
-4. **Dissemination** - Open access publishing, data sharing
+1. **Planning:** pre-registration, open protocols
+2. **Execution:** open notebooks, transparent methods
+3. **Analysis:** reproducible workflows, version control
+4. **Dissemination:** open access publishing, data sharing
 
-### The Six Pillars of Open Science
+### The six pillars at a glance
 
-Open science rests on six foundational pillars:
+Open access
+:   Publications freely available to all
 
-| **:material-pillar: Open Access** | **:material-pillar: Open Data** | **:material-pillar: Open Education** |
-|:-:|:-:|:-:|
-| Publications freely available to all | Research data FAIR and accessible | Educational resources open to everyone |
+Open data
+:   Research data FAIR and accessible
 
-| **:material-pillar: Open Methodology** | **:material-pillar: Open Peer Review** | **:material-pillar: Open Source** |
-|:-:|:-:|:-:|
-| Transparent, reproducible methods | Review process open and attributed | Software code freely available |
+Open educational resources
+:   Educational resources open to everyone
 
-??? question "How Many Pillars Are There Really?"
+Open methodology
+:   Transparent, reproducible methods
+
+Open peer review
+:   Review process open and attributed
+
+Open source
+:   Software code freely available
+
+??? question "How many pillars are there really?"
     The number varies from [4](https://narratives.insidehighered.com/four-pillars-of-open-science/){target=_blank} to [8](https://www.ucl.ac.uk/library/research-support/open-science/8-pillars-open-science){target=_blank} depending on the framework. Some combine categories, others separate them. What matters is understanding the principles, not memorizing a number.
 
-#### :material-pillar: Open Access Publications
+??? question "Checkpoint 1: In one sentence, what does the UNESCO definition add that the 2018 definition does not?"
+    It names **who** open science is for ("everyone") and adds **multilingual**: openness includes language, not only cost and licensing. That matters for research shared with Spanish-speaking border communities and Diné-speaking Navajo communities.
+
+---
+
+## Module 2: Open access
+
+*About 15 minutes.*
 
 <figure markdown>
-  [![Open Access Logo](https://upload.wikimedia.org/wikipedia/commons/f/f3/Open_Access_PLoS.svg){ width="150" target=_blank }](https://en.wikipedia.org/wiki/Open_access){target=_blank}
+  [![Open Access logo: an orange open padlock](https://upload.wikimedia.org/wikipedia/commons/f/f3/Open_Access_PLoS.svg){ width="150" }](https://en.wikipedia.org/wiki/Open_access){target=_blank}
+  <figcaption>The open-access logo</figcaption>
 </figure>
+
+??? note "Text description of this figure"
+    The open-access logo, designed by PLOS: an orange padlock drawn in outline with its shackle open, on a white background. It links to the Wikipedia article on open access.
 
 !!! quote "Definition"
     "Open access is a publishing model for scholarly communication that makes research information available to readers at no cost, as opposed to the traditional subscription model"
 
     — [OpenAccess.nl](https://www.openaccess.nl/en/what-is-open-access){target=_blank}
 
-**Publishing Models:**
+### Publishing models
 
-1. **Subscription model** - Author pays little or nothing; publisher charges readers/institutions
-2. **Gold Open Access model** - Author (or funder) pays an article processing charge; article is freely available. 2026 list prices ([Nature](https://www.nature.com/nature/for-authors/publishing-options){target=_blank}, [PLOS](https://plos.org/fees/){target=_blank}):
-   - Nature: $12,850
-   - Nature Communications: $7,350
-   - Scientific Reports: $2,850
-   - PLOS ONE: $2,477
-3. **Diamond Open Access model** - No fees for authors or readers; journals are funded by institutions, societies or consortia. cOAlition S's 2026-2030 strategy [drops hard mandates](https://www.chemistryworld.com/news/what-next-for-open-access-as-coalition-s-scales-back-its-ambitions/4022618.article){target=_blank} and backs Diamond OA, preprints and rights retention instead
+1. **Subscription model:** the author pays little or nothing; the publisher charges readers and institutions.
+2. **Gold open access model:** the author (or funder) pays an article processing charge (APC); the article is freely available. 2026 list prices ([Nature](https://www.nature.com/nature/for-authors/publishing-options){target=_blank}, [PLOS](https://plos.org/fees/){target=_blank}):
+
+    | Journal | 2026 APC (USD) |
+    | --- | --- |
+    | Nature | 12,850 |
+    | Nature Communications | 7,350 |
+    | Scientific Reports | 2,850 |
+    | PLOS ONE | 2,477 |
+
+3. **Diamond open access model:** no fees for authors or readers; journals are funded by institutions, societies or consortia. cOAlition S's 2026-2030 strategy [drops hard mandates](https://www.chemistryworld.com/news/what-next-for-open-access-as-coalition-s-scales-back-its-ambitions/4022618.article){target=_blank} and backs Diamond OA, preprints and rights retention instead.
 
 !!! tip "You do not need gold OA to comply with NIH"
     The NIH policy is satisfied by depositing the free **accepted manuscript** in PubMed Central. A $12,850 APC buys the version of record open on the publisher's site; it is not required for compliance. Decide on the merits, and put the cost in the budget.
 
-**Article Versions:**
+### Article versions
 
-- **Preprint** - Pre-peer review version, freely available on preprint servers
-- **Author Accepted Manuscript (AAM)** - Post-peer review, pre-typesetting; the version NIH requires in PubMed Central
-- **Version of Record (VOR)** - Final published version with publisher formatting
-- **Rights retention** (applies to the AAM) - A statement at submission that you keep the right to share your accepted manuscript openly, so no publisher agreement can block the PubMed Central deposit
+- **Preprint:** pre-peer-review version, freely available on preprint servers
+- **Author accepted manuscript (AAM):** post-peer-review, pre-typesetting; the version NIH requires in PubMed Central
+- **Version of record (VOR):** final published version with publisher formatting
+- **Rights retention** (applies to the AAM): a statement at submission that you keep the right to share your accepted manuscript openly, so no publisher agreement can block the PubMed Central deposit
 
-!!! example "Preprint Repositories"
-    - [arXiv](https://arxiv.org/){target=_blank} - Physics, math, computer science; an [independent nonprofit since 1 July 2026](https://blog.arxiv.org/2026/06/30/arxivs-next-chapter/){target=_blank}
-    - [bioRxiv](https://www.biorxiv.org/){target=_blank} - Biology
-    - [medRxiv](https://www.medrxiv.org/){target=_blank} - Health sciences (perfect for environmental health research); bioRxiv and medRxiv are run by [openRxiv](https://openrxiv.org/2025-year-in-review/){target=_blank}, an independent nonprofit since 2025
-    - [EarthArXiv](https://eartharxiv.org/){target=_blank} - Earth sciences
-    - [engrXiv](https://engrxiv.org/){target=_blank} - Engineering (including environmental engineering)
-    - [OSF Preprints](https://osf.io/preprints/){target=_blank} - Multi-disciplinary
+!!! example "Preprint repositories"
+    - [arXiv](https://arxiv.org/){target=_blank}: physics, math, computer science; an [independent nonprofit since 1 July 2026](https://blog.arxiv.org/2026/06/30/arxivs-next-chapter/){target=_blank}
+    - [bioRxiv](https://www.biorxiv.org/){target=_blank}: biology
+    - [medRxiv](https://www.medrxiv.org/){target=_blank}: health sciences (a good fit for environmental health research); bioRxiv and medRxiv are run by [openRxiv](https://openrxiv.org/2025-year-in-review/){target=_blank}, an independent nonprofit since 2025
+    - [EarthArXiv](https://eartharxiv.org/){target=_blank}: Earth sciences
+    - [engrXiv](https://engrxiv.org/){target=_blank}: engineering, including environmental engineering
+    - [OSF Preprints](https://osf.io/preprints/){target=_blank}: multi-disciplinary
 
     **SRP Example (Arizona):** A study on arsenic-induced lung fibrosis mechanisms could be posted to medRxiv immediately after submission to a journal, allowing public health officials to access findings months before formal publication.
 
     **SRP Example (New Mexico):** A METALS biomonitoring study with Navajo Nation and Pueblo of Laguna partners is shared with the community and cleared under its dissemination approval *before* the preprint is released; the preprint then carries the community-agreed framing rather than the journal's.
 
-#### :material-pillar: Open Data
+??? question "Checkpoint 2: Your paper is accepted at Nature Communications. Name the cheapest fully compliant path under the NIH policy, and what the $7,350 would buy instead."
+    Deposit the **accepted manuscript** in PubMed Central at acceptance, with a rights-retention statement if the journal's agreement is restrictive: cost $0. The $7,350 APC buys the **version of record** open on the journal's site, which is a legitimate choice but not a compliance requirement, and must be in the budget.
+
+---
+
+## Module 3: Open data
+
+*About 15 minutes.*
 
 !!! quote "Definition"
     "Open data and content can be freely used, modified, and shared by anyone for any purpose"
@@ -228,18 +599,22 @@ Open science rests on six foundational pillars:
 
 Data are the foundation of science. The **FAIR Principles** guide data management:
 
-**Findable** - Globally unique identifiers, rich metadata, searchable registries
+Findable
+:   Globally unique identifiers, rich metadata, searchable registries
 
-**Accessible** - Retrievable via standard protocols, metadata persists even when data are restricted
+Accessible
+:   Retrievable via standard protocols; metadata persists even when data are restricted
 
-**Interoperable** - Standard formats and vocabularies enable data integration
+Interoperable
+:   Standard formats and vocabularies enable data integration
 
-**Reusable** - Clear licenses, detailed provenance, community standards
+Reusable
+:   Clear licenses, detailed provenance, community standards
 
 !!! warning "Public does not mean permanent"
     The [Data Rescue Project](https://www.datarescueproject.org/data-loss-report/){target=_blank} counted 3,000 to 4,000 federal datasets removed from public access since January 2025 (report of 18 August 2026). Deposit your own data in a repository with a persistent identifier; do not assume a government portal will still hold it. The NIEHS [SRP data sharing page](https://tools.niehs.nih.gov/srp/data/index.cfm){target=_blank} lists where SRP-funded datasets are deposited.
 
-!!! warning "As Open as Possible, as Closed as Necessary"
+!!! warning "As open as possible, as closed as necessary"
     Not all data should be open:
 
     - Human health data (HIPAA regulations)
@@ -258,59 +633,89 @@ Data are the foundation of science. The **FAIR Principles** guide data managemen
 
     **SRP Context (New Mexico):** Research on the Navajo Nation requires approval from the [Navajo Nation Human Research Review Board (NNHRRB)](http://nnhrrb.navajo-nsn.gov/){target=_blank} before collection and before results are shared; data are returned to the community, and chapter-level exposure data are not released without community authority. Pueblo of Laguna partners have their own review. See the [UNM IRB guidance on research with American Indian communities](https://irb.unm.edu/library/documents/guidance/research-with-american-indian-communities.pdf){target=_blank} and the [METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank} Community Engagement Core. [Lesson 2](https://unm-carc.github.io/dust-2026/lessons/02-data-management/) covers this in depth.
 
-#### :material-pillar: Open Educational Resources
+??? question "Checkpoint 3: A dataset is 'available upon request'. Which FAIR letters does it fail, and why?"
+    At least **F** and **A**: without a persistent identifier and a repository record it is not findable, and access depends on one person answering email, which is not a standard protocol and does not survive that person leaving. It usually fails **R** as well, because there is no license or provenance record.
+
+---
+
+## Module 4: Open educational resources
+
+*About 5 minutes.*
 
 <figure markdown>
-  [![OER Logo](https://upload.wikimedia.org/wikipedia/commons/2/20/Global_Open_Educational_Resources_Logo.svg){ width="200" target=_blank }](https://www.unesco.org/en/communication-information/open-solutions/open-educational-resources){target=_blank}
+  [![Global Open Educational Resources logo: an open book whose pages spread outward like raised hands](https://upload.wikimedia.org/wikipedia/commons/2/20/Global_Open_Educational_Resources_Logo.svg){ width="200" }](https://www.unesco.org/en/communication-information/open-solutions/open-educational-resources){target=_blank}
+  <figcaption>The Global OER logo (UNESCO)</figcaption>
 </figure>
+
+??? note "Text description of this figure"
+    The Global Open Educational Resources logo, commissioned by UNESCO: a stylized open book seen from the front, whose pages fan outward and upward like a row of raised hands, suggesting knowledge being shared and received. It links to UNESCO's OER page.
 
 !!! quote "Definition"
     "Open Educational Resources (OER) are learning, teaching and research materials in any format and medium that reside in the public domain or are under copyright that have been released under an open license"
 
     — [UNESCO](https://www.unesco.org/en/communication-information/open-solutions/open-educational-resources){target=_blank}
 
-**Examples of OER Providers:**
+**Examples of OER providers:**
 
-- [The Carpentries](https://carpentries.org/){target=_blank} - Foundational coding and data science
-- [Project Pythia](https://projectpythia.org/){target=_blank} - Geoscience Python education
-- [OER Commons](https://www.oercommons.org/){target=_blank} - Multi-disciplinary resources
-- [NIEHS Worker Training Program](https://www.niehs.nih.gov/careers/hazmat){target=_blank} - Environmental health and hazardous materials
-- [METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank} Community Engagement Core - Community-facing materials on uranium and metal-mixture exposure, developed with partner communities
+- [The Carpentries](https://carpentries.org/){target=_blank}: foundational coding and data science
+- [Project Pythia](https://projectpythia.org/){target=_blank}: geoscience Python education
+- [OER Commons](https://www.oercommons.org/){target=_blank}: multi-disciplinary resources
+- [NIEHS Worker Training Program](https://www.niehs.nih.gov/careers/hazmat){target=_blank}: environmental health and hazardous materials
+- [METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/){target=_blank} Community Engagement Core: community-facing materials on uranium and metal-mixture exposure, developed with partner communities
+- This training: DUST 2026 is itself an OER, licensed CC BY 4.0
 
-!!! example "SRP Application"
+!!! example "SRP application"
     **Arizona:** Openly sharing protocols for collecting mine tailings samples, analyzing metalloid concentrations, or conducting plant uptake experiments accelerates research across Superfund sites nationwide. Creating open training materials on working safely with arsenic-contaminated dusts benefits the entire environmental health community.
 
     **New Mexico:** Materials that explain uranium and metal-mixture exposure in plain language, co-developed with Navajo and Pueblo of Laguna partners, return the research to the communities it came from and can be reused by other tribal communities living near abandoned mines.
 
-#### :material-pillar: Open Methodology
+??? question "Checkpoint 4: What makes a slide deck an OER rather than just a free download?"
+    An **open license** (or public-domain status) that permits reuse and adaptation. A free PDF that is still "all rights reserved" can be read but not legally remixed.
+
+---
+
+## Module 5: Open methodology and pre-registration
+
+*About 10 minutes.*
 
 !!! quote "Definition"
     "An open methodology is one which has been described in sufficient detail to allow other researchers to repeat the work and apply it elsewhere"
 
     — [Watson (2015)](https://doi.org/10.1186/s13059-015-0669-2){target=_blank}
 
-**Key Practices:**
+**Key practices:**
 
-- **Code Sharing** - GitHub, GitLab for version-controlled code
-- **Protocol Publishing** - Detailed methods in protocols.io, Nature Protocols
-- **Pre-registration** - Documenting analysis plans before data collection
+- **Code sharing:** GitHub or GitLab for version-controlled code
+- **Protocol publishing:** detailed methods in protocols.io or Nature Protocols
+- **Pre-registration:** documenting analysis plans before data collection
 
 <figure markdown>
-  ![Preregistration](https://unm-carc.github.io/dust-2026/assets/cycle_prereg.png){ width="300" }
-  <figcaption>Pre-registration distinguishes hypothesis-generating from hypothesis-testing research</figcaption>
+  ![The Open Science Framework research cycle, a ring of ten stages, with pre-registration marked between designing the study and acquiring materials](https://unm-carc.github.io/dust-2026/assets/cycle_prereg.png){ width="300" }
+  <figcaption>Pre-registration distinguishes hypothesis-generating from hypothesis-testing research (Center for Open Science)</figcaption>
 </figure>
 
-!!! tip "Why Pre-register?"
+??? note "Text description of this figure"
+    A circular diagram in shades of blue with the Open Science Framework (OSF) logo at the center. Ten segments run clockwise around the ring, starting at the top right: Search and Discover, Develop Idea, Design Study, Acquire Materials, Collect Data, Store Data, Analyze Data, Interpret Findings, Write Report, and Publish Report, after which the cycle returns to Search and Discover. A callout box labeled "PreRegistration" points at the boundary between Design Study and Acquire Materials: the moment, after the study is designed and before any materials or data are gathered, when hypotheses and the analysis plan are registered.
+
+!!! tip "Why pre-register?"
     - Prevents p-hacking and HARKing (Hypothesizing After Results are Known)
     - Separates exploratory from confirmatory research
     - Increases credibility of findings
+    - Directly serves the Gold Standard Science tenet "structured for falsifiability of hypotheses" (Module 9)
     - Platforms: [OSF](https://osf.io/){target=_blank}, [AsPredicted](https://aspredicted.org/){target=_blank}
 
     **SRP Example (Arizona):** Pre-registering analysis plans for a study comparing lung injury markers between arsenic-exposed and control mice prevents selective reporting of outcomes. Documenting a phytoremediation field trial protocol before planting ensures transparent reporting of both successful and unsuccessful remediation approaches.
 
     **SRP Example (New Mexico):** Pre-registering the inflammation endpoints for an inhaled mine-dust study fixes the outcomes before the exposures begin. Registering a fungal-mineral bioremediation trial protocol, including the uranium immobilization metrics that count as success, means a null result is still a reportable result.
 
-#### :material-pillar: Open Peer Review
+??? question "Checkpoint 5: At which point in the research cycle does pre-registration happen, and what goes wrong if it happens later?"
+    After **Design Study** and before **Acquire Materials** or **Collect Data**. Registered later, the plan can be shaped by the data already seen, which is exactly the hypothesizing-after-results problem pre-registration exists to prevent.
+
+---
+
+## Module 6: Open peer review
+
+*About 5 minutes.*
 
 Traditional peer review has limitations:
 
@@ -322,25 +727,34 @@ Traditional peer review has limitations:
 
 **Open peer review options:**
 
-- Signed reviews (reviewers identity known)
-- Published reviews (reviews public alongside paper)
+- Signed reviews (the reviewer's identity is known)
+- Published reviews (reviews public alongside the paper)
 - Reviewer participation (broader community involvement)
-- Pre-print review (review before journal submission)
+- Preprint review (review before journal submission)
 
-!!! example "Open Review Platforms"
-    - [F1000Research](https://f1000research.com/){target=_blank} - Post-publication peer review
-    - [PREreview](https://prereview.org/){target=_blank} - Preprint review, now integrated with bioRxiv and medRxiv so reviews appear alongside the preprint
-    - [Sciety](https://sciety.org/){target=_blank} - Aggregates public preprint evaluations
-    - [PubPeer](https://pubpeer.com/){target=_blank} - Post-publication commenting
+!!! example "Open review platforms"
+    - [F1000Research](https://f1000research.com/){target=_blank}: post-publication peer review
+    - [PREreview](https://prereview.org/){target=_blank}: preprint review, now integrated with bioRxiv and medRxiv so reviews appear alongside the preprint
+    - [Sciety](https://sciety.org/){target=_blank}: aggregates public preprint evaluations
+    - [PubPeer](https://pubpeer.com/){target=_blank}: post-publication commenting
 
-#### :material-pillar: Open Source Software
+Gold Standard Science asks for research "subject to unbiased peer review" and "skeptical of its findings and assumptions". Open review is one of the few mechanisms that lets anyone check whether that happened. One of the options NIH floated for capping publication costs would allow a higher APC only at journals that pay reviewers and publish reviewer reports (Module 10).
+
+??? question "Checkpoint 6: Name one benefit and one risk of signed reviews for an early-career reviewer."
+    Benefit: credit for the work, and accountability that improves review quality. Risk: retaliation from a senior author whose paper you criticized. Published-but-anonymous reviews and preprint review platforms are middle paths.
+
+---
+
+## Module 7: Open source software
+
+*About 5 minutes.*
 
 !!! quote "Definition"
-    "Open source software is code that is designed to be publicly accessible—anyone can see, modify, and distribute the code as they see fit"
+    "Open source software is code that is designed to be publicly accessible: anyone can see, modify, and distribute the code as they see fit"
 
     — [Red Hat](https://www.redhat.com/en/topics/open-source/what-is-open-source){target=_blank}
 
-    Learn more: [Open Source Initiative →](https://opensource.org/){target=_blank}
+    Learn more: [Open Source Initiative](https://opensource.org/){target=_blank}
 
 Research relies on open source:
 
@@ -350,54 +764,168 @@ Research relies on open source:
 - Environmental tools: QGIS (spatial analysis), OpenAir (air quality), ChemSpider (chemical structures)
 
 <figure markdown>
-  <a href="https://xkcd.com/2347/" target="_blank">![Dependency](https://imgs.xkcd.com/comics/dependency.png){ width="400" }</a>
-  <figcaption>Modern digital infrastructure relies on open source - handle with care! [XKCD](https://xkcd.com/2347/){target=_blank}</figcaption>
+  <a href="https://xkcd.com/2347/" target="_blank">![xkcd comic 'Dependency': a tall, precarious stack of blocks labeled 'all modern digital infrastructure' rests on one tiny block near the bottom, labeled 'a project some random person in Nebraska has been thanklessly maintaining since 2003'](https://imgs.xkcd.com/comics/dependency.png){ width="400" }</a>
+  <figcaption>Modern digital infrastructure relies on open source; handle with care. [XKCD 2347](https://xkcd.com/2347/){target=_blank}, CC BY-NC 2.5</figcaption>
 </figure>
 
-!!! example "SRP Research with Open Source"
-    **X-ray Spectroscopy Analysis (Arizona)** - Using open-source Python libraries (lmfit, pyFAI) to analyze synchrotron data characterizing arsenic speciation in mine tailings particulate matter
+??? note "Text description of this figure"
+    A black-and-white line drawing of a tall, irregular tower of rectangular blocks of many sizes, stacked so that the whole structure looks about to topple. A label with an arrow at the top reads "All modern digital infrastructure". Near the bottom, a single thin block holds up much of the tower; its label reads "A project some random person in Nebraska has been thanklessly maintaining since 2003". The joke: enormous systems depend on small, unfunded open-source projects.
 
-    **Metal-Mixture Speciation (New Mexico)** - The same pyFAI and lmfit workflows resolve uranium, arsenic and vanadium speciation in nanoparticulate mine waste, so both centers can compare results directly
+!!! example "SRP research with open source"
+    **X-ray spectroscopy analysis (Arizona):** open-source Python libraries (lmfit, pyFAI) analyze synchrotron data characterizing arsenic speciation in mine-tailings particulate matter.
 
-    **Spatial Modeling** - QGIS and R packages (sf, terra) for mapping contamination dispersal patterns from mine sites across dryland ecosystems
+    **Metal-mixture speciation (New Mexico):** the same pyFAI and lmfit workflows resolve uranium, arsenic and vanadium speciation in nanoparticulate mine waste, so both centers can compare results directly.
 
-    **Statistical Analysis** - R packages for analyzing dose-response relationships in toxicology experiments, with complete computational workflows shared on GitHub
+    **Spatial modeling:** QGIS and R packages (sf, terra) map contamination dispersal patterns from mine sites across dryland ecosystems.
 
-    **Microbiome Analysis (New Mexico)** - QIIME 2 pipelines for gut immunity studies of metal-mixture exposure, with the full pipeline versioned alongside the sequence data
+    **Statistical analysis:** R packages analyze dose-response relationships in toxicology experiments, with complete computational workflows shared on GitHub.
 
-    **Image Analysis** - Open-source tools (CellProfiler, ImageJ) for quantifying lung tissue damage from inhalation exposure studies
+    **Microbiome analysis (New Mexico):** QIIME 2 pipelines for gut immunity studies of metal-mixture exposure, with the full pipeline versioned alongside the sequence data.
 
-### Why Do Open Science?
+    **Image analysis:** open-source tools (CellProfiler, ImageJ) quantify lung tissue damage from inhalation exposure studies.
 
-[Bartling & Friesike (2014)](https://doi.org/10.1007/978-3-319-00026-8){target=_blank} identified five schools of thought (motivations):
-
-1. **Democratic** - Making scholarship freely available to everyone
-2. **Pragmatic** - Improving quality through collaboration and critique
-3. **Infrastructure** - Building better platforms and tools
-4. **Public** - Engaging society through citizen science and clear communication
-5. **Measurement** - Developing alternative impact metrics beyond journal publications
-
-We add a sixth:
-
-6. **Compliance** - Meeting requirements from funders and institutions
-
-<figure markdown>
-  ![Five schools of open science](https://unm-carc.github.io/dust-2026/assets/five_schools.png){ width="600" }
-  <figcaption>The five schools of thought in Open Science show its multidisciplinary nature</figcaption>
-</figure>
-
-!!! question "Discussion: Your Motivation"
-    Which school resonates with you? Are there other motivations not captured here?
+??? question "Checkpoint 7: An author says their software is open source but will not share it. Is it open source?"
+    **No.** Open source requires the code to be publicly available under a recognized license that permits use, modification, and distribution. A claim without the code is not a license.
 
 ---
 
-## Hands-on Activity (15 minutes)
+## Module 8: Why do open science?
 
-### Open Science Self-Assessment
+*About 5 minutes.*
 
-Work individually or in small groups to assess your current practices:
+[Bartling & Friesike (2014)](https://doi.org/10.1007/978-3-319-00026-8){target=_blank} identified five schools of thought (motivations):
 
-!!! question "Assessment Questions"
+1. **Democratic:** making scholarship freely available to everyone
+2. **Pragmatic:** improving quality through collaboration and critique
+3. **Infrastructure:** building better platforms and tools
+4. **Public:** engaging society through citizen science and clear communication
+5. **Measurement:** developing alternative impact metrics beyond journal publications
+
+We add a sixth:
+
+6. **Compliance:** meeting requirements from funders and institutions, which since 2025 includes Gold Standard Science
+
+<figure markdown>
+  ![Diagram of the five schools of open science, each with its assumption, goal, and keywords, arranged around a central box labeled Open Science](https://unm-carc.github.io/dust-2026/assets/five_schools.png){ width="600" }
+  <figcaption>The five schools of thought in open science show its multidisciplinary nature (Fecher & Friesike, openingscience.org, CC BY)</figcaption>
+</figure>
+
+??? note "Text description of this figure"
+    A grey-scale diagram. A central box reads "Open Science". Five boxes around it each point an arrow at the center and list an assumption, a goal, and keywords:
+
+    - **Infrastructure School** (top): assumption, efficient research depends on the available tools and applications; goal, creating openly available platforms, tools and services for scientists; keywords, collaboration platforms and tools.
+    - **Pragmatic School** (left): assumption, knowledge creation could be more efficient if scientists worked together; goal, making the process of knowledge creation more efficient and goal oriented; keywords, wisdom of the crowds, network effects, open data, open code.
+    - **Public School** (right): assumption, science needs to be made accessible to the public; goal, making science accessible for citizens; keywords, citizen science, science PR, science blogging.
+    - **Democratic School** (bottom left): assumption, the access to knowledge is unequally distributed; goal, making knowledge freely available for everyone; keywords, open access, intellectual property rights, open data, open code.
+    - **Measurement School** (bottom right): assumption, scientific contributions today need alternative impact measurements; goal, developing an alternative metric system for scientific impact; keywords, altmetrics, peer review, citation, impact factors.
+
+!!! question "Discussion: your motivation"
+    Which school resonates with you? Are there other motivations not captured here?
+
+??? question "Checkpoint 8: Which school does a community-facing plain-language report on uranium exposure belong to, and which does a pre-registration belong to?"
+    The community report is the **Public** school (and, if written with the community, also serves the CARE principle of collective benefit). Pre-registration is mostly the **Pragmatic** school, improving quality through transparency and critique.
+
+---
+
+## Module 9: Gold Standard Science in depth
+
+*About 15 minutes.*
+
+### The executive order
+
+[Executive Order 14303, "Restoring Gold Standard Science"](https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/){target=_blank} (23 May 2025) states that federally funded and conducted science must be:
+
+1. Reproducible
+2. Transparent
+3. Communicative of error and uncertainty
+4. Collaborative and interdisciplinary
+5. Skeptical of its findings and assumptions
+6. Structured for falsifiability of hypotheses
+7. Subject to unbiased peer review
+8. Accepting of negative results as positive outcomes
+9. Without conflicts of interest
+
+Read the list against Modules 2 to 7. Reproducibility and transparency are open methodology, open data, and open access. Falsifiability is pre-registration. Unbiased peer review and skepticism are what open review is designed to expose. Negative results as positive outcomes is the argument for preprints and data deposit of null findings. In the lecture's table ([Lesson 1, section 3](https://unm-carc.github.io/dust-2026/lessons/01-open-science/#3-gold-standard-science-8-minutes)), each tenet is mapped to the practice and to what you do.
+
+### The OSTP guidance and the reporting cycle
+
+The [OSTP guidance of 23 June 2025](https://www.whitehouse.gov/releases/2025/06/ostp-issues-agency-guidance-for-gold-standard-science/){target=_blank} ([memorandum, PDF](https://www.whitehouse.gov/wp-content/uploads/2025/03/OSTP-Guidance-for-GSS-June-2025.pdf){target=_blank}), signed by OSTP Director Michael Kratsios, sets the mechanics:
+
+- Agencies must apply the tenets to **all** agency-managed science, intramural and extramural, "from the selection phase throughout closeout". Your grant is extramural science; the tenets apply to it.
+- Each agency submitted an **implementation plan** by 22 August 2025, and must file an **annual report** to OSTP by 1 September each year, beginning in 2026, describing how it addresses each tenet, its evaluation metrics, training, use of advanced technologies including AI, and challenges.
+- Agencies are encouraged to explore **AI and automated tools** for validating reproducible protocols, standardizing transparent data reporting, and detecting bias in peer and merit review. Lesson 3 covers the limits of that idea.
+
+### What the agencies did
+
+- **NIH** released its [implementation plan](https://osp.od.nih.gov/nih-releases-implementation-plan-to-drive-gold-standard-science/){target=_blank} on 22 August 2025 ([plan, PDF](https://www.nih.gov/sites/default/files/2025-08/2025-gss.pdf){target=_blank}). It describes existing initiatives and planned expansions: rigor and reproducibility training for funded researchers, stronger data-sharing compliance, mechanisms to support replication studies, policies to strengthen public trust, and a framework for periodic assessment and public reporting. NIH's parent department published an [HHS Gold Standard Science report for 2025](https://www.hhs.gov/sites/default/files/hhs-gold-standard-science-report-2025.pdf){target=_blank} and its [2026 annual report](https://www.hhs.gov/sites/default/files/gss-at-hhs-annual-report-2026.pdf){target=_blank}.
+- **NSF** ([Gold Standard Science page](https://www.nsf.gov/policies/gold-standard-science){target=_blank}) and **EPA** ([Gold Standard Science page](https://www.epa.gov/scientific-leadership/gold-standard-science){target=_blank}) published plans. EPA is the agency whose science governs Superfund cleanups, so its plan bears directly on the sites the DUST and METALS centers study.
+- **SPARC's** [policy brief](https://sparcopen.org/our-work/gss_policy_brief/){target=_blank} reviewed the plans and found three common strategies: standardized assessment metrics, automated (AI-based) compliance monitoring, and oversight extended to all federally funded research. It also found agencies **linking Gold Standard Science implementation to their public-access requirements**: persistent identifiers (ORCID for people, DataCite and Crossref for outputs), machine-readable metadata, and transparent reporting of negative results.
+- **OSTP's follow-on report**, [*Science: A New Golden Age*](https://www.whitehouse.gov/releases/2026/07/45470/){target=_blank} (21 July 2026), proposes a broad restructuring of federal research funding: rebalancing toward foundational and physical science, national missions such as the Genesis Mission for AI in science, alternative funding models, and metascience units inside agencies to evaluate funding practices. Agencies with large research budgets were asked for action plans within 90 days. The report does not change the public-access or Gold Standard Science requirements described here; it sets the direction for future budgets.
+
+### The debate
+
+Independent reviews ([AIP FYI](https://www.aip.org/fyi/gold-standard-science-plans-emphasize-existing-agency-efforts){target=_blank}) found that the agency plans mostly restate practices agencies already had: data management and sharing plans, public access, rigor training, conflict-of-interest rules. Supporters see the order as giving those practices teeth. Critics ([*Science*](https://www.science.org/content/article/what-does-trump-s-call-gold-standard-science-really-mean){target=_blank}; SPARC) point to the role the order gives political appointees in judging scientific integrity, and warn that "gold standard" can be used to discount inconvenient findings, for example in environmental health, where evidence is often observational and uncertain by nature. Communicating uncertainty honestly (tenet 3) is a scientific virtue; treating uncertainty as a reason to dismiss a finding is not.
+
+For an SRP trainee the practical position is simple. The nine tenets, taken on their merits, are the open-science practices this lesson teaches. Practice them, document them in your proposals and progress reports, and follow the policy debate through the primary sources below.
+
+!!! quote "Primary sources"
+    * [Executive Order 14303: Restoring Gold Standard Science, 23 May 2025](https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science/){target=_blank}
+    * [Fact sheet: Restoring Gold Standard Science](https://www.whitehouse.gov/fact-sheets/2025/05/fact-sheet-president-donald-j-trump-is-restoring-gold-standard-science-in-america/){target=_blank}
+    * [OSTP issues agency guidance for Gold Standard Science, 23 June 2025](https://www.whitehouse.gov/releases/2025/06/ostp-issues-agency-guidance-for-gold-standard-science/){target=_blank} and the [Kratsios memorandum (PDF)](https://www.whitehouse.gov/wp-content/uploads/2025/03/OSTP-Guidance-for-GSS-June-2025.pdf){target=_blank}
+    * [NIH implementation plan, 22 August 2025](https://osp.od.nih.gov/nih-releases-implementation-plan-to-drive-gold-standard-science/){target=_blank}; [HHS report 2025 (PDF)](https://www.hhs.gov/sites/default/files/hhs-gold-standard-science-report-2025.pdf){target=_blank}; [HHS annual report 2026 (PDF)](https://www.hhs.gov/sites/default/files/gss-at-hhs-annual-report-2026.pdf){target=_blank}
+    * [NSF Gold Standard Science](https://www.nsf.gov/policies/gold-standard-science){target=_blank} and [EPA Gold Standard Science](https://www.epa.gov/scientific-leadership/gold-standard-science){target=_blank}
+    * [SPARC: Gold Standard Science, federal implementation strategies and open access policy intersections](https://sparcopen.org/our-work/gss_policy_brief/){target=_blank}
+    * [OSTP: Science: A New Golden Age, 21 July 2026](https://www.whitehouse.gov/releases/2026/07/45470/){target=_blank}
+    * The 2025-26 federal AI executive orders and policy are covered in [Lesson 3](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/)
+
+!!! warning "Verify before you cite"
+    This module describes the landscape as of September 2026. Agency annual reports had just been filed and OSTP had not yet responded to them. Check the primary sources and ask your program officer before relying on any of it in a proposal, a budget, or a paper.
+
+??? question "Checkpoint 9: A reviewer asks how your project meets Gold Standard Science. Name three things you can point to that you already do."
+    Any three from: a pre-registered analysis plan (falsifiability); version-controlled code and a written protocol (reproducibility); a data management and sharing plan with a repository and DOI (transparency); reported uncertainties and QA/QC (error and uncertainty); a preprint with public review (skepticism, unbiased review); a plan to publish null results (negative results); conflict-of-interest disclosures.
+
+---
+
+## Module 10: The 2026 public-access and publication-cost landscape
+
+*About 10 minutes.* Reference material for proposal writing; skim it now and return to it when you budget a paper.
+
+**1. The 2022 OSTP "Nelson memo" is under repeal, but agency policies stay in force.** Report language attached to the January 2026 appropriations minibus asked OSTP to report on its process of repealing the memo, and the House FY2027 Commerce-Justice-Science report asked NSF to pause new public-access policies until OSTP finishes ([AIP FYI](https://www.aip.org/fyi/scholarly-publishing-costs-under-scrutiny-by-trump-administration){target=_blank}; [STM](https://stm-assoc.org/ostp-to-review-potential-repeal-of-nelson-memo/){target=_blank}). None of that has withdrawn the policies agencies already adopted. Zero-embargo public access to accepted manuscripts began:
+
+| Agency | Zero-embargo public access since |
+| --- | --- |
+| DOE | 1 October 2024 |
+| EPA | 2 January 2025 |
+| NIH | 1 July 2025 (NOT-OD-25-047) |
+| USGS | 31 December 2025 |
+| NSF | 22 January 2026 (NSF 26-202) |
+| USDA | 7 April 2026 |
+
+Follow changes on the [SPARC policy tracker](https://sparcopen.org/our-work/2022-updated-ostp-policy-guidance/){target=_blank}.
+
+**2. NIH: accepted manuscript to PubMed Central at acceptance, no embargo.** The [NIH Public Access Policy](https://grants.nih.gov/policy-and-compliance/policy-topics/public-access/nih-public-access-policy-overview){target=_blank} applies to manuscripts accepted on or after 1 July 2025. Depositing the free accepted manuscript satisfies it; you do not have to pay for gold open access. Springer Nature, Wiley and Elsevier nonetheless steer NIH-funded authors toward paid gold-OA routes (see the [Springer Nature federal-compliance page](https://www.springernature.com/gp/open-science/us-federal-agency-compliance){target=_blank}). Know the difference before you sign.
+
+**3. Publication costs: a cap is pending and pre-approval is proposed.** NIH floated caps on allowable article processing charges in a July 2025 request for information ([NOT-OD-25-138](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-138.html){target=_blank}): options ranged from disallowing publication costs entirely, to a $2,000 per-paper cap, to $3,000 only at journals that pay reviewers and publish reviewer reports, to a cap tied to award size. As of June 2026 none had been finalized ([STAT](https://www.statnews.com/2026/06/11/open-access-journal-fees-nature-wiley-elsevier-nih/){target=_blank}), and we found no final policy as of September 2026. Separately, OMB's 29 May 2026 [proposed revision of 2 CFR 200.461](https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance){target=_blank} would make publication costs unallowable unless required by statute or approved in advance by the agency, with a target effective date of 1 October 2026; comments closed 13 July 2026 and the rule was still a proposal in September 2026 ([SPARC FAQ](https://sparcopen.org/our-work/2026-proposed-2cfr200-updates-faqs/){target=_blank}). The proposal states that a general requirement to make results publicly available does not by itself authorize publication costs; the federal-purpose license (2 CFR 200.315(b)) still lets you deposit the accepted manuscript without paying anyone. Practical consequence: **budget publication costs explicitly** in every proposal, and expect to justify them.
+
+**4. Congress kept NIEHS and the SRP.** The FY2026 appropriation [rejected the proposed NIH reorganization and funds all 27 institutes and centers as structured in statute](https://jm-aq.com/congress-rejects-cuts-to-nih-increase-budget-for-fy26/){target=_blank}, so NIEHS and the Superfund Research Program were not folded into a new agency; SRP is funded at $77.1 million for FY2026 (P.L. 119-74).
+
+!!! warning "Verify before you cite"
+    This module describes the landscape as of September 2026. The OMB rule, the NIH APC cap and the Nelson memo review were all still moving. Check the primary sources and ask your program officer before relying on any of it in a proposal, a budget or a paper.
+
+??? question "Checkpoint 10: Why does repealing the Nelson memo not, by itself, end the NIH public-access requirement?"
+    The memo was guidance to agencies. NIH adopted its own policy (NOT-OD-25-047) under its own authority; that policy stays in force until NIH itself changes it.
+
+---
+
+## Module 11: Self-assessment and action plan
+
+*About 15 minutes.*
+
+### Open science self-assessment
+
+Work individually or in a small group to assess your current practices:
+
+!!! question "Assessment questions"
 
     **Publications**
 
@@ -427,20 +955,20 @@ Work individually or in small groups to assess your current practices:
     12. Do you contribute to open source projects?
     13. Is your research software publicly available with a license?
 
-### Group Discussion
+### Group discussion
 
-Share with your group:
+Share with your group, or write a paragraph if you are working alone:
 
 - Which pillar of open science is strongest in your work?
 - Which pillar could you improve most easily?
 - What barriers prevent you from being more open?
 - What would motivate you to adopt more open practices?
 
-### Action Planning
+### Action planning
 
 Identify ONE concrete action you can take this month:
 
-!!! example "Example Actions"
+!!! example "Example actions"
     - Create an ORCID profile
     - Upload a preprint to medRxiv or bioRxiv
     - Deposit the accepted manuscript of your next paper in PubMed Central at acceptance
@@ -448,60 +976,59 @@ Identify ONE concrete action you can take this month:
     - Ask whether your data involve tribal partners and need a CARE review
     - Add a LICENSE file to your analysis code repository on GitHub
     - Create a data management plan for your mine tailings, uranium or toxicology project
-    - Share field sampling protocols under CC-BY license
-    - Deposit spectroscopy data in a domain repository with DOI
+    - Share field sampling protocols under a CC BY license
+    - Deposit spectroscopy data in a domain repository with a DOI
     - Pre-register your next exposure study on OSF
     - Document your image analysis pipeline in a Jupyter notebook
+    - Write one paragraph for your next progress report mapping what you do to the nine Gold Standard Science tenets
+
+??? question "Checkpoint 11: Write your one action here, with a date."
+    There is no answer key. If you are working with an AI tutor, ask it to hold you to the date.
 
 ---
 
-## Wrap-up (5 minutes)
+## Module 12: Quiz and resources
 
-### Key Takeaways
+*About 10 minutes.*
 
-!!! success "Remember These Concepts"
+### Key takeaways
+
+!!! success "Remember these concepts"
     1. Open science is about **transparency, accessibility, and collaboration**
     2. The **six pillars** provide a framework for openness
-    3. Open science benefits **you, your field, and society**
-    4. Start with **small, practical steps** rather than perfection
-    5. **As open as possible, as closed as necessary** - openness has limits
-    6. Public access is now **required at acceptance**, and publication costs belong **in the budget**
+    3. **Gold Standard Science** restates those practices as nine tenets, with annual agency reporting since September 2026
+    4. Open science benefits **you, your field, and society**
+    5. Start with **small, practical steps** rather than perfection
+    6. **As open as possible, as closed as necessary**: openness has limits
+    7. Public access is now **required at acceptance**, and publication costs belong **in the budget**
 
-### Self-Assessment Quiz
+### Self-assessment quiz
 
-Test your understanding:
+??? question "True or false: all research papers in Nature and Science are open access"
+    **False.** These journals offer open-access options but charge substantial fees (Nature: $12,850 in 2026). Authors must pay extra to make the version of record freely available. Since 1 July 2025, NIH requires the free *accepted manuscript* to be deposited in PubMed Central at acceptance with no embargo; that is public access, not paid open access, and it is satisfied without paying an APC.
 
-??? question "True or False: All research papers in Nature and Science are Open Access"
-    **False**
-
-    These journals offer Open Access options but charge substantial fees (Nature: $12,850 in 2026). Authors must pay extra to make the version of record freely available. Since 1 July 2025, NIH requires the free *accepted manuscript* to be deposited in PubMed Central at acceptance with no embargo; that is public access, not paid open access, and it is satisfied without paying an APC.
-
-??? question "True or False: Data 'available upon request' meets the definition of Open Data"
-    **False**
-
-    Open data must be freely accessible in a public repository with a persistent identifier. "Available upon request" does not meet FAIR principles as data are not findable, accessible without barriers, or guaranteed to remain available.
+??? question "True or false: data 'available upon request' meets the definition of open data"
+    **False.** Open data must be freely accessible in a public repository with a persistent identifier. "Available upon request" does not meet FAIR principles: the data are not findable, not accessible without barriers, and not guaranteed to remain available.
 
 ??? question "Using GitHub for your analysis code is an example of..."
-    **Open Methodology**
-
-    Version control systems document your computational methods transparently. This enables others to understand, verify, and build upon your work - core principles of open methodology.
+    **Open methodology.** Version control systems document your computational methods transparently. This enables others to understand, verify, and build upon your work, and it is the first thing a reviewer will look for under the Gold Standard Science tenet "reproducible".
 
 ??? question "If an author states their software is open source but refuses to share it, is it open source?"
-    **No**
+    **No.** Claiming a license without making the code publicly available does not make it open source. True open source software must be publicly accessible with a recognized license that permits use, modification, and distribution.
 
-    Claiming a license without actually making the code publicly available does not make it open source. True open source software must be publicly accessible with a recognized license that permits use, modification, and distribution.
-
-??? question "True or False: The 2022 OSTP 'Nelson memo' has been repealed, so federal public-access requirements no longer apply"
-    **Partly false**
-
-    The memo was placed under review for repeal in January 2026, but the public-access policies that agencies adopted under it remain in force: NIH (1 July 2025), NSF (22 January 2026), USDA (7 April 2026) and the others in the table above. Repeal of the memo would not by itself withdraw an agency policy.
+??? question "True or false: the 2022 OSTP 'Nelson memo' has been repealed, so federal public-access requirements no longer apply"
+    **Partly false.** The memo was placed under review for repeal in January 2026, but the public-access policies that agencies adopted under it remain in force: NIH (1 July 2025), NSF (22 January 2026), USDA (7 April 2026) and the others in the Module 10 table. Repeal of the memo would not by itself withdraw an agency policy.
 
 ??? question "Can you charge a $12,850 Nature APC to your NIH award today?"
-    **Yes, if it is a reasonable cost of the award - but watch two pending changes**
+    **Yes, if it is a reasonable cost of the award, but watch two pending changes.** The latest report we could verify (STAT, June 2026) found no NIH cap in force; the July 2025 RFI (NOT-OD-25-138) floated one that has not been finalized. OMB's proposed 2 CFR 200.461 revision would make publication costs unallowable unless pre-approved in the award (target 1 October 2026). Put publication costs in the budget explicitly, and confirm with your program officer before committing.
 
-    The latest report we could verify (STAT, June 2026) found no NIH cap in force; the July 2025 RFI (NOT-OD-25-138) floated one that has not been finalized. OMB's proposed 2 CFR 200.461 revision would make APCs unallowable unless pre-approved in the award (target 1 October 2026). Put publication costs in the budget explicitly, and confirm with your program officer before committing.
+??? question "Which Gold Standard Science tenet is served by publishing a remediation trial that did not work?"
+    **Accepting of negative results as positive outcomes.** Depositing the data and posting the preprint also serve transparency and reproducibility, and they save the next lab from repeating the trial.
 
-### Looking Ahead
+??? question "True or false: Gold Standard Science applies only to research done inside federal laboratories"
+    **False.** The June 2025 OSTP guidance applies the tenets to all agency-managed science, intramural and extramural, from selection through closeout. Your Superfund grant is extramural science.
+
+### Looking ahead
 
 In Lesson 2, we will put these principles into practice by learning how to:
 
@@ -510,24 +1037,59 @@ In Lesson 2, we will put these principles into practice by learning how to:
 - Implement FAIR principles and honor CARE
 - Write a data management and sharing plan
 
-### Additional Resources
+### Additional resources
 
 - [UNESCO Open Science Toolkit](https://www.unesco.org/en/open-science/about){target=_blank}
-- [FORRT (Framework for Open and Reproducible Research Training)](https://forrt.org/){target=_blank} - open and reproducible research training materials
+- [FORRT (Framework for Open and Reproducible Research Training)](https://forrt.org/){target=_blank}: open and reproducible research training materials
 - [The Turing Way](https://book.the-turing-way.org/){target=_blank}
 - [Center for Open Science](https://www.cos.io/){target=_blank}
 - [SPARC federal public-access policy tracker](https://sparcopen.org/our-work/2022-updated-ostp-policy-guidance/){target=_blank}
+- [SPARC Gold Standard Science policy brief](https://sparcopen.org/our-work/gss_policy_brief/){target=_blank}
 - [Data Rescue Project data-loss report](https://www.datarescueproject.org/data-loss-report/){target=_blank}
 - [Barcelona Declaration on Open Research Information](https://barcelona-declaration.org/){target=_blank}
-- [openRxiv](https://openrxiv.org/2025-year-in-review/){target=_blank} - home of bioRxiv and medRxiv
-- [Retraction Watch data in Crossref](https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/){target=_blank} - check whether a paper you cite has been retracted
+- [openRxiv](https://openrxiv.org/2025-year-in-review/){target=_blank}: home of bioRxiv and medRxiv
+- [Retraction Watch data in Crossref](https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/){target=_blank}: check whether a paper you cite has been retracted
 - More in [Resources](https://unm-carc.github.io/dust-2026/about/resources/)
 
 ---
 
-**Next:** [Lesson 2: Modern Data Management →](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)
+**Lecture:** [← Lesson 1: Foundations of Open Science](https://unm-carc.github.io/dust-2026/lessons/01-open-science/) | **Next:** [Lesson 2: Modern Data Management →](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)
 
 <p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/lesson1_open_science/index.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
+
+*[APC]: Article processing charge
+*[APCs]: Article processing charges
+*[NIH]: National Institutes of Health
+*[NIEHS]: National Institute of Environmental Health Sciences
+*[HHS]: Department of Health and Human Services
+*[OSTP]: White House Office of Science and Technology Policy
+*[OMB]: Office of Management and Budget
+*[DOE]: Department of Energy
+*[EPA]: Environmental Protection Agency
+*[USGS]: United States Geological Survey
+*[NSF]: National Science Foundation
+*[USDA]: United States Department of Agriculture
+*[FAIR]: Findable, Accessible, Interoperable, Reusable
+*[CARE]: Collective benefit, Authority to control, Responsibility, Ethics
+*[DOI]: Digital object identifier
+*[DOIs]: Digital object identifiers
+*[QA/QC]: Quality assurance and quality control
+*[OSF]: Open Science Framework
+*[OER]: Open educational resources
+*[SRP]: Superfund Research Program
+*[UNM]: University of New Mexico
+*[METALS]: Metal Exposure and Toxicity Assessment on Tribal Lands in the Southwest
+*[NNHRRB]: Navajo Nation Human Research Review Board
+*[IRB]: Institutional Review Board
+*[HIPAA]: Health Insurance Portability and Accountability Act
+*[SPARC]: Scholarly Publishing and Academic Resources Coalition
+*[AIP]: American Institute of Physics
+*[ORCID]: Open Researcher and Contributor ID
+*[AAM]: Author accepted manuscript
+*[VOR]: Version of record
+*[OA]: Open access
+*[RFI]: Request for information
+*[GPS]: Global Positioning System
 
 ---8<--- https://unm-carc.github.io/dust-2026/lessons/02-data-management/
 
@@ -1957,7 +2519,7 @@ tags:
   - Training
 generated:
   by: "claude/fable-5-1"
-  at: "2026-09-11T00:00:00Z"
+  at: "2026-09-12T02:00:00Z"
 sources:
   - id: dust-2025-about
     resource: "https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/about.md"
@@ -2038,7 +2600,7 @@ See the [Credits and attribution](https://unm-carc.github.io/dust-2026/about/cre
 
 ### For Individual Learners
 
-Work through the three lessons sequentially at your own pace. Each lesson takes approximately 50 minutes and includes:
+Work through the three lessons sequentially at your own pace. Each in-person lesson takes approximately 50 minutes and includes:
 
 - Clear learning objectives
 - Core concepts with examples
@@ -2046,9 +2608,11 @@ Work through the three lessons sequentially at your own pace. Each lesson takes 
 - Self-assessment questions
 - Additional resources for deeper learning
 
-1. [Lesson 1: Foundations of Open Science](https://unm-carc.github.io/dust-2026/lessons/01-open-science/)
+1. [Lesson 1: Foundations of Open Science](https://unm-carc.github.io/dust-2026/lessons/01-open-science/), then its [self-paced homework](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/)
 2. [Lesson 2: Modern Data Management](https://unm-carc.github.io/dust-2026/lessons/02-data-management/)
 3. [Lesson 3: Ethics and Artificial Intelligence](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/)
+
+Lesson 1 comes in two parts. The lecture page is what an instructor covers in 50 minutes; the homework page holds the full material in twelve modules, each ending in a checkpoint question, and takes about 90 to 120 minutes. If you are learning alone, do both. You can also hand either page to an AI assistant and take it as a lecture, a tutorial, or a quiz: see [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/).
 
 Set aside dedicated time for each lesson and complete the activities to maximize learning. The [Additional resources](https://unm-carc.github.io/dust-2026/about/resources/) page collects further reading.
 
@@ -2056,7 +2620,7 @@ Set aside dedicated time for each lesson and complete the activities to maximize
 
 These materials can be used for:
 
-- **Workshops** - Three 50-minute lessons or a half-day intensive
+- **Workshops** - Three 50-minute lessons or a half-day intensive; assign the Lesson 1 homework page before or after the session
 - **Course modules** - Integrate into methods courses or research seminars
 - **Lab training** - Onboard new lab members to open science practices
 - **Professional development** - Departmental or institutional training programs
@@ -2065,6 +2629,7 @@ All materials are licensed CC BY 4.0, allowing you to adapt and remix as needed 
 
 !!! tip "Teaching Tips"
 
+    - Teach from the lecture page and assign the self-paced page as homework; the lecture is deliberately a summary
     - Encourage discussion during activities
     - Adapt examples to your discipline and to your center's field sites
     - Share your own experiences with open science
@@ -2099,7 +2664,7 @@ The entire source is available on [GitHub](https://github.com/UNM-CARC/dust-2026
 
 ## Accessibility
 
-We strive to make these materials accessible to all learners: semantic HTML structure for screen readers, sufficient color contrast, keyboard navigation support, alternative text for images, and clear, readable fonts. If you encounter accessibility barriers, please [let us know](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} so we can improve.
+We aim for WCAG 2.2 level AA: semantic structure for screen readers, keyboard operation throughout, visible focus, sufficient contrast in light and dark mode, alternative text and text descriptions for figures, plain-language summaries and glossaries, no audio-only or video-only content, reduced motion on request, and machine-readable accessibility metadata so AI assistants can adapt a lesson for blind, deaf, or multilingual learners. The [Accessibility](https://unm-carc.github.io/dust-2026/about/accessibility/) page describes all of this, its known limitations, and how to report a barrier.
 
 ## Privacy
 
@@ -2125,6 +2690,13 @@ For questions, suggestions, or issues:
 - Email: [tswetnam@unm.edu](mailto:tswetnam@unm.edu)
 
 ## Version History
+
+**Version 2.1** (September 2026)
+
+- Lesson 1 split into a 50-minute in-person lecture and a self-paced homework page with twelve modules and checkpoints
+- Gold Standard Science: the nine tenets mapped to open-science practices, the 2025 agency implementation plans, the September 2026 annual reports, and the debate
+- Learn with an AI tutor: lesson metadata (`lesson:` block, schema.org LearningResource) and prompts for lecture, tutor, and interactive modes
+- Accessibility statement, figure text descriptions, glossaries, plain-language summaries, focus and reduced-motion styles
 
 **Version 2.0** (September 2026)
 
@@ -2793,11 +3365,329 @@ By working together, we strengthen the foundation of transparent, reproducible, 
 
 <p class="carc-provenance" markdown>Adapted from [DUST 2025](https://github.com/tyson-swetnam/dust-2025/blob/29027dbda9ca29a123a68d8b4e2ae5dc198f7193/docs/acknowledgments.md){target=_blank} (last source update 2025-10-14), CC BY 4.0. Spotted a problem? [Open an issue](https://github.com/UNM-CARC/dust-2026/issues){target=_blank}.</p>
 
+---8<--- https://unm-carc.github.io/dust-2026/about/ai-tutor/
+
+---
+title: "Learn with an AI tutor"
+description: "How to load a DUST 2026 lesson into Claude, ChatGPT, Gemini, or NotebookLM and take it as a lecture, a Socratic tutorial, or an interactive quiz, with prompts for screen-reader users, deaf learners, and learners whose first language is not English."
+type: Guide
+tags:
+  - About
+  - AI agents
+  - Accessibility
+  - Tutoring
+generated:
+  by: "claude/fable-5-1"
+  at: "2026-09-12T02:00:00Z"
+sources:
+  - id: intro-gpt-tutoring
+    resource: "https://tyson-swetnam.github.io/intro-gpt/tutoring/"
+    title: "GPT 101: AI Tutoring, Student's Guide to Learning with AI"
+    author: "human:tswetnam"
+    last_modified: "2026-05-09T19:43:45Z"
+  - id: dust-ai-agents
+    resource: "https://github.com/UNM-CARC/dust-2026/blob/main/docs/about/ai-agents.md"
+    title: "DUST 2026: For AI agents"
+    author: "human:tswetnam"
+status: stable
+stale_after: "2027-03-01T00:00:00Z"
+---
+
+# Learn with an AI tutor
+
+The lessons on this site are written so that an AI assistant can teach them. Each lesson page carries a machine-readable `lesson` block (objectives, key terms, duration, delivery modes, accessibility profile), the self-paced pages are divided into modules with checkpoints, and every figure has a text description. Give an assistant the lesson and one of the prompts below, and it can deliver the lesson as a lecture, tutor you through it, or quiz you, in the form that suits how you learn.
+
+!!! abstract "In brief"
+    1. Copy the Markdown address of a lesson (the page address plus `index.md`).
+    2. Paste it into Claude, ChatGPT, Gemini, or NotebookLM with one of the prompts on this page.
+    3. Pick a mode: **lecture**, **tutor**, or **interactive**. Add an accommodation prompt if you use a screen reader, do not hear, or read English as an additional language.
+    4. Check any date or dollar figure against the primary source linked in the lesson before you rely on it.
+
+## Step 1: Give the assistant the lesson
+
+Every page on this site has a plain Markdown twin at its address plus `index.md`. That version includes the lesson metadata and the figure descriptions and is what an AI should read.
+
+| Lesson | Markdown address |
+| --- | --- |
+| Lesson 1 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md` |
+| Lesson 1 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/index.md` |
+| Lesson 2 | `https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md` |
+| Lesson 3 | `https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md` |
+| The whole site in one file | `https://unm-carc.github.io/dust-2026/llms-full.txt` |
+
+How to hand it over:
+
+- **Claude, ChatGPT, Gemini:** paste the address into the chat. If the assistant cannot browse, open the address in your browser, select all, copy, and paste the text into the chat instead.
+- **NotebookLM:** add the address as a website source, or upload the copied text. NotebookLM's audio overview is a listening option; it is not a substitute for the text for deaf learners.
+- **Claude Projects or ChatGPT custom GPTs:** add `llms-full.txt` as a file so every lesson is available across conversations.
+
+Tell the assistant which page you want if you use the full-site file.
+
+## Step 2: Choose a mode
+
+Each prompt below assumes you have already pasted the lesson address or text. Replace the bracketed parts.
+
+=== "Lecture"
+
+    Use this to hear the lesson delivered in order, the way an instructor would, with a pause for questions after each section.
+
+    ```
+    You are teaching me "Lesson 1: Foundations of Open Science" from the DUST 2026
+    training. Read the page's lesson block (objectives, key terms, duration) and
+    deliver the lesson as a lecture in the order of its headings. For each section:
+    state the point in two or three sentences, give the Superfund example from the
+    page (Arizona and New Mexico), and then stop and ask whether I have a question
+    before moving on. Do not add facts that are not on the page; if I ask about
+    something the page does not cover, say so and point me to the primary source
+    the page links. When you reach the quiz, ask me each question and wait for my
+    answer before revealing the page's answer.
+    ```
+
+=== "Tutor"
+
+    Use this for Socratic tutoring: the assistant asks, hints, and checks your understanding, and does not lecture.
+
+    ```
+    Act as my tutor for "Lesson 1 homework: Open Science, self-paced" from the
+    DUST 2026 training. Work through it one module at a time, in order. For each
+    module: ask me what I already know about the topic, then explain only what I
+    am missing, using the page's own definitions and examples. At the end of the
+    module, give me its checkpoint question and wait for my answer. If I am wrong,
+    give a hint, not the answer, and let me try again; reveal the page's answer
+    only after my second try. Keep a short list of the key terms I struggled with
+    and review them at the end. My field is [your field, e.g. inhalation
+    toxicology / environmental chemistry / community-engaged exposure science],
+    so choose the example closest to it when the page offers several.
+    ```
+
+=== "Interactive"
+
+    Use this for practice: quizzes, flashcards, and scenario role-play built from the page.
+
+    ```
+    Using "Lesson 1 homework: Open Science, self-paced" from the DUST 2026
+    training, build me an interactive session:
+    1. Ten multiple-choice questions that cover all six pillars, the nine Gold
+       Standard Science tenets, and the 2026 public-access and publication-cost
+       rules. Ask one at a time, wait for my answer, then explain using the page.
+    2. Flashcards for every term in the page's key_terms list, in random order.
+    3. A role-play: you are the program officer reviewing my progress report and
+       asking how my project meets Gold Standard Science; I answer; you grade my
+       answer against the page's tenet table and tell me what a stronger answer
+       would include.
+    Keep score, and at the end tell me which modules to reread.
+    ```
+
+!!! tip "One page at a time"
+    The lecture page is a 50-minute summary; the self-paced page is the full material. Tutor and interactive modes work best on the self-paced page because it has module checkpoints and the complete quiz.
+
+## Step 3: Add an accommodation
+
+Add one of these to any prompt above.
+
+### Screen-reader users and learners who are blind or have low vision
+
+```
+I use a screen reader. Read from the Markdown version of the page, not a
+screenshot. Start by reading me the heading outline so I know the structure.
+Then go one section at a time and stop after each. Whenever the page has a
+figure, read its "Text description of this figure" block in full instead of
+describing the image yourself. Read tables row by row, naming the column
+before each value. Spell out acronyms the first time you use them. Do not use
+emoji, bullet symbols, or decorative characters in your replies.
+```
+
+If you prefer to listen and speak, the Claude, ChatGPT, and Gemini mobile apps have voice modes; use the same prompt and add "We are in voice mode; keep each turn under a minute of speech."
+
+### Deaf and hard-of-hearing learners
+
+```
+I am deaf. Keep everything in text: do not suggest audio overviews, voice
+mode, podcasts, or videos. If the page or your knowledge includes a video or
+recording, give me its transcript or caption text, or tell me it has none.
+Give written feedback on my quiz answers.
+```
+
+The DUST 2026 lessons contain no audio or video, so nothing is lost by staying in text. If your instructor records the in-person session, ask for the captioned recording; the lecture page is the script.
+
+### Learners whose first language is not English
+
+```
+My first language is [language]. For each section, explain the idea first in
+[language], then give the same explanation in plain English with short
+sentences. Keep the technical terms in English (for example "accepted
+manuscript", "article processing charge", "pre-registration"), because they
+are the words I will see in NIH and journal policies, and define each one in
+[language] the first time it appears. At the end of each module, give me a
+two-column glossary of the module's key terms: English term, definition in
+[language]. Ask me the checkpoint questions in English and let me answer in
+either language.
+```
+
+Your browser can also translate the page directly (in Chrome, right-click and choose "Translate to..."), and the Markdown version translates cleanly.
+
+### Learners who want a slower or a faster pace
+
+```
+Set the pace to [slow / fast]. Slow: one idea per message, a comprehension
+question after each, and wait for me before continuing. Fast: one message per
+module with only the key points and the checkpoint question.
+```
+
+## What the assistant is reading
+
+Each lesson page's frontmatter includes a block like this, which an assistant can use to plan a session:
+
+```yaml
+lesson:
+  number: 1
+  format: in-person            # or self-paced
+  duration_minutes: 50
+  companion: 01-open-science-self-paced.md
+  delivery_modes: [lecture, tutor, interactive]
+  objectives: [...]
+  key_terms: [...]
+  accessibility:
+    language: en
+    access_mode: [textual, visual]
+    access_mode_sufficient: [textual]
+    features: [alternativeText, longDescription, readingOrder, structuralNavigation, tableOfContents]
+    hazards: [none]
+    media: "No audio or video. Every figure has alt text and a text description."
+```
+
+`access_mode_sufficient: [textual]` means the whole lesson can be understood from text alone; an assistant serving a blind learner can rely on that. The rendered page also carries the same information as a schema.org `LearningResource` record for platforms that read structured data. Instructions for agents are on [For AI agents](https://unm-carc.github.io/dust-2026/about/ai-agents/#teaching-a-lesson).
+
+## Use it well
+
+!!! warning "Check the dates and the dollars"
+    The lessons state policy facts "as of" a month, with a link to the primary source. An AI tutor may present a pending rule as final, drop a caveat, or invent a date. When a fact would change what you do (a deposit deadline, a budget line, a tribal review step), open the link.
+
+- **Ask for understanding, not answers.** "Explain why the accepted manuscript satisfies NIH" teaches more than "what is the answer to quiz question 1".
+- **Struggle first.** Try the checkpoint before asking for the hint.
+- **Disclose AI use** in coursework if your program requires it, and never paste unpublished data, participant information, or tribal partners' data into a consumer AI service. [Lesson 3](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/) covers AI privacy, disclosure, and integrity rules in detail.
+- **Prefer an institutional account** (UNM, University of Arizona, and Texas A&M provide enterprise AI access) over a personal one for anything connected to your research.
+
+More prompts and strategies, including study planning and hallucination checks, are in [GPT 101: AI Tutoring](https://tyson-swetnam.github.io/intro-gpt/tutoring/){target=_blank}.
+
+*[NIH]: National Institutes of Health
+*[UNM]: University of New Mexico
+
+---8<--- https://unm-carc.github.io/dust-2026/about/accessibility/
+
+---
+title: "Accessibility"
+description: "Accessibility statement for DUST 2026: what the site provides for screen-reader users, deaf and hard-of-hearing learners, and learners whose first language is not English, how to use it with AI assistants, known limitations, and how to report a barrier."
+type: Guide
+tags:
+  - About
+  - Accessibility
+  - AI agents
+generated:
+  by: "claude/fable-5-1"
+  at: "2026-09-12T02:00:00Z"
+sources:
+  - id: wcag22
+    resource: "https://www.w3.org/TR/WCAG22/"
+    title: "Web Content Accessibility Guidelines (WCAG) 2.2"
+    author: "team:w3c"
+  - id: schema-accessibility
+    resource: "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocab-20230718/"
+    title: "Accessibility Discoverability Vocabulary for Schema.org"
+    author: "team:w3c"
+  - id: foss-training
+    resource: "https://github.com/UNM-CARC/dust-2026/blob/main/docs/about/training.md"
+    title: "DUST 2026: About this training (Accessibility First)"
+    author: "human:tswetnam"
+status: stable
+---
+
+# Accessibility
+
+We want every Superfund Research Program trainee to be able to use this training, including people who are blind or have low vision, people who are deaf or hard of hearing, people with cognitive or motor disabilities, and people whose first language is not English. This page says what the site provides, how to use it with assistive technology and with AI assistants, what we know is still missing, and how to tell us about a barrier.
+
+## Our target
+
+We aim to meet [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/){target=_blank} at level AA. The site has not yet been audited by a third party; the author checks pages with keyboard-only navigation, a screen reader, and browser accessibility tools. Pages rewritten by an AI agent are marked unverified until the author reviews them (see [For AI agents](https://unm-carc.github.io/dust-2026/about/ai-agents/)).
+
+## What the site provides
+
+**Structure and navigation**
+
+- Every page has one `H1` and a strict heading hierarchy, so a screen reader's headings list is a working outline. The "On this page" table of contents mirrors it.
+- A "Skip to content" link is the first focusable element on each page. All navigation, search, the light and dark mode switch, and every quiz or figure description work with the keyboard alone, and focused elements show a visible outline.
+- Collapsible content (quiz answers, checkpoints, figure descriptions, reference blocks) uses the native HTML `details` and `summary` elements, which screen readers announce as expandable buttons.
+- Tables carry header rows. Layout tables are not used; lists of terms use definition lists.
+- The page language is declared as English (`lang="en"`), so screen readers and translation tools pick the right voice and dictionary.
+
+**Images and media**
+
+- Every image has alternative text, and every figure in the lessons (starting with Lesson 1) is followed by a collapsible **"Text description of this figure"** that states everything the picture shows. The arrow that marks external links is hidden from screen readers.
+- The lessons contain **no audio and no video**. If we add a video, it will carry captions and a transcript.
+
+**Language and reading**
+
+- Each lesson opens with an **"In brief"** plain-language summary in short sentences.
+- Acronyms are expanded on first use and defined as abbreviations, so hovering or focusing them shows the full term; a **Key terms** glossary closes each lesson.
+- Sufficient color contrast in both light and dark mode, no information conveyed by color alone, and animation disabled when your system asks for reduced motion.
+- Print styles produce a clean paper copy with link addresses written out.
+
+**Machine-readable formats**
+
+- Every page is available as plain Markdown by adding `index.md` to its address (for example `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`), and the whole site is one file at [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt). Many screen readers, Braille displays, translation services, and AI assistants handle plain text better than a styled web page.
+- Each lesson page declares its accessibility profile in machine-readable form: a `lesson.accessibility` block in its Markdown frontmatter and a [schema.org `LearningResource`](https://schema.org/LearningResource){target=_blank} record in the page head with `accessMode`, `accessModeSufficient`, `accessibilityFeature`, `accessibilityHazard`, and `accessibilitySummary`, following the [W3C accessibility discoverability vocabulary](https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocab-20230718/){target=_blank}. Learning platforms, search engines, and AI tutors can read these to choose how to present a lesson.
+
+## Using the site with an AI assistant
+
+AI assistants (Claude, ChatGPT, Gemini, NotebookLM, and the assistants built into screen readers and phones) can adapt these lessons to how you learn. The [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/) page has copy-and-paste prompts. In short:
+
+**If you are blind or have low vision**
+
+- Give the assistant the Markdown address of the lesson (page address plus `index.md`) rather than the web page. It gets the same headings, tables, and figure descriptions without the layout.
+- Ask it to read the heading outline first, then one section at a time, and to read the "Text description of this figure" block whenever a figure appears rather than describing the image itself.
+- Voice modes in the Claude, ChatGPT, and Gemini apps let you take the whole lesson by conversation.
+
+**If you are deaf or hard of hearing**
+
+- Nothing in the lessons requires hearing. If an instructor records the in-person lecture, ask for the captioned recording or the transcript; the lecture page is the written script of that session.
+- In an AI tutor, stay in text mode and ask for a written quiz and written feedback.
+
+**If English is not your first language**
+
+- Your browser can translate any page (in Chrome: right-click, "Translate to..."). The Markdown version translates cleanly too.
+- Ask an AI tutor to explain each section in your language and in English side by side, to keep the technical terms in English (they are what you will see in NIH and journal policies), and to define each key term in both languages. The [prompt is on the AI tutor page](https://unm-carc.github.io/dust-2026/about/ai-tutor/#learners-whose-first-language-is-not-english).
+- The UNESCO definition of open science in Lesson 1 includes "multilingual" on purpose: research shared with Spanish-speaking border communities or Diné-speaking Navajo communities is part of what open science means.
+
+!!! warning "AI assistants make mistakes"
+    An AI tutor can misread a table, invent a policy date, or drop a caveat. The lessons carry dated facts with primary-source links; when a date or dollar figure matters, check the link. [Lesson 3](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/) covers how to use AI responsibly in research.
+
+## Known limitations
+
+- Two images in Lesson 1 (the open-access and OER logos) and one comic (xkcd) load from third-party sites; their text descriptions are on our page, but the images themselves may not load if those sites are blocked.
+- Lessons 2 and 3 have alternative text on every image but do not yet carry the collapsible long descriptions, plain-language summaries, and glossaries that Lesson 1 has. They are next.
+- Linked external sites (publishers, agencies, repositories) are outside our control and vary in accessibility.
+- Search results and the light/dark switch come from the site theme ([Zensical](https://zensical.org){target=_blank}); we report theme-level barriers upstream.
+- The site is in English. We welcome community translations under the CC BY 4.0 license.
+
+## Report a barrier
+
+If something on this site does not work for you, tell us and we will fix it or provide the content another way:
+
+- Open an [issue on GitHub](https://github.com/UNM-CARC/dust-2026/issues){target=_blank} (say which page and what assistive technology you use)
+- Email [tswetnam@unm.edu](mailto:tswetnam@unm.edu)
+
+Trainees can also contact their university's accessibility office: [UNM Accessibility Resource Center](https://arc.unm.edu/){target=_blank}, [University of Arizona Disability Resource Center](https://drc.arizona.edu/){target=_blank}, [Texas A&M Disability Resources](https://disability.tamu.edu/){target=_blank}.
+
+*[WCAG]: Web Content Accessibility Guidelines
+*[OER]: Open educational resources
+*[NIH]: National Institutes of Health
+*[UNM]: University of New Mexico
+
 ---8<--- https://unm-carc.github.io/dust-2026/about/ai-agents/
 
 ---
 title: "For AI agents"
-description: "How agents and harnesses should consume this site: llms.txt, per-page Markdown with OKF frontmatter, and trust signals."
+description: "How agents and harnesses should consume this site: llms.txt, per-page Markdown with OKF frontmatter, trust signals, and how to teach a lesson in lecture, tutor, or interactive mode while honoring its accessibility profile."
 type: Reference
 tags:
   - About
@@ -2805,7 +3695,7 @@ tags:
   - OKF
 generated:
   by: "claude/fable-5-1"
-  at: "2026-09-11T00:00:00Z"
+  at: "2026-09-12T02:00:00Z"
 sources:
   - id: okf-spec
     resource: "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md"
@@ -2839,6 +3729,7 @@ these endpoints rather than scraping rendered HTML.
 | Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter (for example `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`) |
 | `sitemap.xml`, `robots.txt` | Standard crawl surface; robots.txt repeats these pointers |
 | [Source repository](https://github.com/UNM-CARC/dust-2026){target=_blank} | The bundle itself, plus `AGENTS.md` with contribution rules for coding agents |
+| Lesson page `<head>` | A schema.org `LearningResource` JSON-LD record (objectives, duration, delivery format, accessibility profile) and `okf:lesson-*` meta tags, generated from the page's `lesson:` frontmatter block |
 
 Every rendered page also declares its Markdown twin and OKF signals in HTML:
 
@@ -2848,6 +3739,9 @@ Every rendered page also declares its Markdown twin and OKF signals in HTML:
 <meta name="okf:status" content="stable">
 <meta name="okf:trust-tier" content="unverified">
 <meta name="okf:generated-at" content="2026-09-11T00:00:00Z">
+<meta name="okf:lesson-format" content="in-person">
+<meta name="okf:lesson-duration-minutes" content="50">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", ...}</script>
 ```
 
 ## Reading the OKF frontmatter
@@ -2887,6 +3781,64 @@ These sites share the same agent conventions:
 * [Foundational Open Science Skills](https://unm-carc.github.io/foss/llms.txt){target=_blank}: open science, data management, version control, containers, HPC.
 * [GPT 101](https://tyson-swetnam.github.io/intro-gpt/llms.txt){target=_blank}: generative-AI platforms, prompt engineering, agents, ethics, and law. Its raw-source convention differs: replace a page URL's trailing `/` with `.md`.
 
+## Teaching a lesson
+
+The lessons are written to be delivered by an agent as well as read. Lesson 1
+is a pair: a 50-minute in-person lecture
+([`lessons/01-open-science/`](https://unm-carc.github.io/dust-2026/lessons/01-open-science/)) and its
+self-paced homework
+([`lessons/01-open-science-self-paced/`](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/)),
+split into numbered modules that each end in a checkpoint question. Every
+lesson page carries a `lesson:` frontmatter block:
+
+```yaml
+lesson:
+  number: 1
+  format: in-person            # or self-paced
+  duration_minutes: 50
+  companion: 01-open-science-self-paced.md
+  delivery_modes: [lecture, tutor, interactive]
+  objectives: [...]            # what the learner should be able to do afterwards
+  key_terms: [...]             # glossary and flashcard source
+  accessibility:
+    language: en
+    access_mode: [textual, visual]
+    access_mode_sufficient: [textual]
+    features: [alternativeText, longDescription, readingOrder, structuralNavigation, tableOfContents]
+    hazards: [none]
+    media: "No audio or video. Every figure has alt text and a text description."
+```
+
+When a user asks you to teach, tutor, or quiz them on a lesson:
+
+1. **Fetch the Markdown twin** (page URL + `index.md`), not the rendered HTML,
+   and read the `lesson:` block first.
+2. **Pick the delivery mode** the user asked for, from `delivery_modes`:
+   *lecture* (deliver sections in heading order, pause after each),
+   *tutor* (Socratic: ask what they know, fill gaps, pose the module
+   checkpoint, hint before revealing), or *interactive* (quiz, flashcards from
+   `key_terms`, scenario role-play). Use the self-paced page for tutor and
+   interactive modes; it has checkpoints and the full quiz.
+3. **Honor the accessibility profile.** `access_mode_sufficient: [textual]`
+   means the lesson is complete without images: when a figure appears, read
+   its "Text description of this figure" block rather than interpreting the
+   image. For a screen-reader user, read the heading outline first, read
+   tables row by row, and avoid decorative characters. For a deaf user, stay in
+   text and never suggest audio. For a user whose first language is not
+   English, explain in their language and in plain English, keep technical
+   terms in English, and define them bilingually. The learner-facing prompts
+   are on [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/); the site's accessibility
+   statement is on [Accessibility](https://unm-carc.github.io/dust-2026/about/accessibility/).
+4. **Pace by module.** Ask the checkpoint question at the end of each module
+   and wait for an answer before continuing. Do not skip the "In brief"
+   summary or the key-terms glossary.
+5. **Stay on the page.** Teach the lesson's content; when the learner asks
+   something it does not cover, say so and point to the primary source the
+   page links. Do not invent policy dates or dollar figures, and flag every
+   dated fact as "as of" the page's stated month.
+6. **Cite the page URL** at the end of the session so the learner can return
+   to it, and remind them that unverified pages await the author's review.
+
 ## Answering user questions
 
 Ground answers in this content and cite the page URL. For questions about a
@@ -2900,6 +3852,10 @@ guess.
 # Documentation update log
 
 ## 2026-09-11
+
+* **Update**: [Lesson 1](lessons/01-open-science.md) is now a 50-minute in-person lecture (definition, six pillars as a definition list, a Gold Standard Science tenet-to-practice table, three compliance facts, a six-question activity, three quiz questions, key terms), and its full material moved to a new self-paced homework page, [Lesson 1 homework: Open Science, self-paced](lessons/01-open-science-self-paced.md), organized as twelve modules with checkpoint questions. New Gold Standard Science content in both: the nine tenets of Executive Order 14303, the June 2025 OSTP guidance and its 1 September annual reporting cycle, NIH's 22 August 2025 implementation plan and the HHS 2025 and 2026 reports, the SPARC brief on how agencies tie the tenets to public access, OSTP's July 2026 "Science: A New Golden Age", and the debate over political oversight. Publication-cost facts refreshed as of September 2026 (NIH cap still not final; OMB 2 CFR 200.461 still a proposal).
+* **Creation**: [Learn with an AI tutor](about/ai-tutor.md): how to load a lesson into Claude, ChatGPT, Gemini, or NotebookLM, with prompts for lecture, tutor, and interactive modes and accommodation prompts for screen-reader users, deaf learners, and learners whose first language is not English. [For AI agents](about/ai-agents.md) gained a "Teaching a lesson" section.
+* **Creation**: [Accessibility](about/accessibility.md) statement (WCAG 2.2 AA target, features, use with assistive technology and AI assistants, known limitations, reporting). Lesson 1 pages carry a machine-readable `lesson:` frontmatter block (objectives, key terms, duration, delivery modes, accessibility profile); the build now injects a schema.org `LearningResource` JSON-LD record and `okf:lesson-*` meta tags into every Lesson page. Lesson 1 figures have text descriptions, both pages have "In brief" plain-language summaries and glossaries, and the stylesheet adds visible focus outlines, reduced-motion support, and a screen-reader-silent external-link marker.
 
 * **Update**: Moved the repository to the UNM CARC organization ([UNM-CARC/dust-2026](https://github.com/UNM-CARC/dust-2026){target=_blank}) and the site to <https://unm-carc.github.io/dust-2026/>; every site and repository link was updated. Links to the 2025 site are unchanged.
 * **Update**: Added the [Texas A&M Superfund Research Center](https://superfund.tamu.edu/){target=_blank} as a third supported center alongside the University of Arizona DUST Center and the UNM METALS Center on the [landing page](index.md), [About this training](about/training.md), [Credits](about/credits.md), and [Additional resources](about/resources.md), and in the site description and repository README. Lesson examples still pair Arizona and New Mexico items; Texas examples are a follow-up.

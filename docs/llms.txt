@@ -8,7 +8,8 @@ Every page's Markdown source (OKF frontmatter included) is served at its URL plu
 
 ## Lessons
 
-- [Lesson 1: Foundations of Open Science](https://unm-carc.github.io/dust-2026/lessons/01-open-science/): What open science is, its six pillars, why it matters for Superfund research in Arizona and New Mexico, and the 2026 US public-access and publication-cost landscape.
+- [Lesson 1: Foundations of Open Science](https://unm-carc.github.io/dust-2026/lessons/01-open-science/): A 50-minute in-person lecture: what open science is, its six pillars, the nine Gold Standard Science tenets, and the 2026 public-access and publication-cost rules, with Superfund examples from Arizona and New Mexico.
+- [Lesson 1 homework: Open Science, self-paced](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/): The self-paced companion to Lesson 1: twelve modules with checkpoints on the six pillars, Gold Standard Science in depth, the 2026 public-access and publication-cost landscape, a full self-assessment, and the complete quiz.
 - [Lesson 2: Modern Data Management for Computational Research](https://unm-carc.github.io/dust-2026/lessons/02-data-management/): The data life cycle, FAIR and CARE principles, the 2026 NIH and NSF data management and sharing plan formats, data rescue, and a two-site metal-mixture DMP exercise.
 - [Lesson 3: Ethics and Artificial Intelligence](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/): Sources of AI bias, responsible and agentic AI use in research, NIH and journal AI rules, energy and water costs, the 2026 regulatory landscape, and six discussion scenarios.
 
@@ -17,7 +18,9 @@ Every page's Markdown source (OKF frontmatter included) is served at its URL plu
 - [About this training](https://unm-carc.github.io/dust-2026/about/training/): Who this training is for, why open science matters for Superfund research, how to use the lessons, technical implementation, and version history.
 - [Additional resources](https://unm-carc.github.io/dust-2026/about/resources/): Curated links for open science, data management, Indigenous data governance, AI ethics, publishing, reproducibility, and staying current.
 - [Credits and attribution](https://unm-carc.github.io/dust-2026/about/credits/): Source materials, contributors, institutional support, license, and how to cite DUST 2026.
-- [For AI agents](https://unm-carc.github.io/dust-2026/about/ai-agents/): How agents and harnesses should consume this site: llms.txt, per-page Markdown with OKF frontmatter, and trust signals.
+- [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/): How to load a DUST 2026 lesson into Claude, ChatGPT, Gemini, or NotebookLM and take it as a lecture, a Socratic tutorial, or an interactive quiz, with prompts for screen-reader users, deaf learners, and learners whose first language is not English.
+- [Accessibility](https://unm-carc.github.io/dust-2026/about/accessibility/): Accessibility statement for DUST 2026: what the site provides for screen-reader users, deaf and hard-of-hearing learners, and learners whose first language is not English, how to use it with AI assistants, known limitations, and how to report a barrier.
+- [For AI agents](https://unm-carc.github.io/dust-2026/about/ai-agents/): How agents and harnesses should consume this site: llms.txt, per-page Markdown with OKF frontmatter, trust signals, and how to teach a lesson in lecture, tutor, or interactive mode while honoring its accessibility profile.
 
 ## Meta
 

@@ -39,7 +39,7 @@ hide:
 
     ---
 
-    What open science is, its six pillars, why it matters for Superfund research, and the 2026 US public-access and publication-cost landscape.
+    A 50-minute lecture on what open science is, its six pillars, the nine Gold Standard Science tenets, and the 2026 public-access and publication-cost rules, with a [self-paced homework page](lessons/01-open-science-self-paced.md) that carries the full material.
 
     [:octicons-arrow-right-24: Start Lesson 1](lessons/01-open-science.md)
 
@@ -65,7 +65,7 @@ hide:
 
 By the end of this training, you will be able to:
 
-- Explain the core principles and practices of open science and the federal policies that now require them
+- Explain the core principles and practices of open science, the nine Gold Standard Science tenets, and the federal policies that now require them
 - Apply FAIR data principles, and CARE principles for Indigenous data, to your research projects
 - Write a data management and sharing plan in the 2026 NIH and NSF formats
 - Recognize and mitigate bias in AI systems, including large language models and agents
@@ -84,7 +84,7 @@ By the end of this training, you will be able to:
 
 ## Training structure
 
-Each lesson follows the same learner-centered structure:
+Each in-person lesson follows the same learner-centered structure:
 
 | Segment | Time | What happens |
 | --- | --- | --- |
@@ -92,6 +92,8 @@ Each lesson follows the same learner-centered structure:
 | Core concepts | 25 min | Essential principles with examples and demonstrations |
 | Hands-on activity | 15 min | Practical exercises and group discussion |
 | Wrap-up | 5 min | Key takeaways, self-assessment, next steps |
+
+Lesson 1 pairs the 50-minute lecture with a self-paced homework page (about 90 to 120 minutes) that holds the full material in twelve modules with checkpoints; Lessons 2 and 3 will follow the same pattern. Any lesson can be taken with an AI assistant as a lecture, a tutorial, or a quiz: see [Learn with an AI tutor](about/ai-tutor.md). The site's [Accessibility](about/accessibility.md) page describes support for screen-reader users, deaf and hard-of-hearing learners, and learners whose first language is not English.
 
 **Prerequisites:** basic familiarity with research processes, a computer with an internet connection, and a willingness to discuss. No prior technical expertise is required.
 
@@ -122,7 +124,11 @@ Use the top navigation to move between lessons and resources. Each lesson stands
 - **Indigenous data sovereignty.** CARE principles, Navajo Nation research review requirements, and Local Contexts are treated as core practice, not a footnote.
 - **Agentic AI.** Lesson 3 covers what changes when an AI can browse, run code, and act on your behalf, with current energy and water figures and a Southwest data-center angle.
 - **Repaired and refreshed links**, current article-processing charges, openRxiv and arXiv governance changes, and updated tool recommendations.
-- **Built for people and for AI agents.** The site is an Open Knowledge Format bundle with `llms.txt` and per-page Markdown; see [For AI agents](about/ai-agents.md).
+- **Gold Standard Science.** Lesson 1 maps the nine tenets of Executive Order 14303 to open-science practices and follows the agencies' 2025 implementation plans and September 2026 annual reports.
+- **Lecture plus homework.** Lesson 1 is now a 50-minute in-person lecture with a self-paced companion page, so the session covers the highlights and the depth is done at home.
+- **Learn with an AI tutor.** Each lesson declares its objectives, key terms, delivery modes, and accessibility profile in machine-readable form; [prompts for Claude, ChatGPT, Gemini, and NotebookLM](about/ai-tutor.md) turn a lesson into a lecture, a tutorial, or a quiz.
+- **Accessibility.** Plain-language summaries, text descriptions of every Lesson 1 figure, a glossary, keyboard-operable quizzes, and guidance for blind, deaf, and multilingual learners; see [Accessibility](about/accessibility.md).
+- **Built for people and for AI agents.** The site is an Open Knowledge Format bundle with `llms.txt`, per-page Markdown, and schema.org LearningResource records; see [For AI agents](about/ai-agents.md).
 
 <div class="carc-partners" markdown>
 [University of Arizona DUST Center](https://superfund.arizona.edu/){target=_blank}
@@ -143,4 +149,4 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 ## Browse the site
 
 * [Lessons](lessons/index.md) - The three 50-minute lessons.
-* [About this site](about/index.md) - Who the training is for, resources, credits, guidance for AI agents, and the update log.
+* [About this site](about/index.md) - Who the training is for, resources, credits, the AI tutor guide, accessibility, guidance for AI agents, and the update log.

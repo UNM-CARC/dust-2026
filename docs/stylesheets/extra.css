@@ -243,9 +243,12 @@ iframe.carc-video {
   margin-top: 0.5rem;
 }
 
-/* Mark external links, except buttons, images, and nav */
+/* Mark external links, except buttons, images, and nav. The second
+   `content` declaration uses the CSS alternative-text syntax so screen
+   readers skip the arrow; browsers without it keep the first declaration. */
 .md-typeset a[href^="http"]:not(.md-button)::after {
   content: " \2197";
+  content: " \2197" / "";
   font-size: 0.8em;
   color: var(--md-default-fg-color--light);
 }
@@ -264,4 +267,50 @@ iframe.carc-video {
   .md-header, .md-footer, .md-sidebar, .md-content__button { display: none !important; }
   .md-content { max-width: 100% !important; }
   .md-typeset a::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+}
+
+/* ==========================================================================
+   Accessibility (see docs/about/accessibility.md)
+   ========================================================================== */
+
+/* Visible keyboard focus on every interactive element, in both schemes */
+.md-typeset a:focus-visible,
+.md-typeset summary:focus-visible,
+.md-typeset .md-button:focus-visible,
+.md-nav__link:focus-visible,
+.md-tabs__link:focus-visible,
+.md-header__button:focus-visible,
+.md-search__input:focus-visible,
+.md-top:focus-visible {
+  outline: 3px solid var(--carc-turquoise-bright);
+  outline-offset: 2px;
+  border-radius: 0.15rem;
+}
+
+/* Figure long descriptions: a compact details block right under the figure */
+.md-typeset figure + details.note {
+  margin-top: -0.4rem;
+  font-size: 0.8rem;
+}
+
+/* Abbreviations (key terms): dotted underline, help cursor, no odd tooltip color */
+.md-typeset abbr[title] {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
+  cursor: help;
+}
+
+/* Honor the operating-system request for less motion */
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .grid.cards > ul > li,
+  .md-typeset .grid > .card,
+  .carc-partners a,
+  .carc-actions .md-button {
+    transition: none !important;
+  }
+  .md-typeset .grid.cards > ul > li:hover,
+  .md-typeset .grid > .card:hover {
+    transform: none;
+  }
+  html { scroll-behavior: auto !important; }
 }

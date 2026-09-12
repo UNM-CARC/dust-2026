@@ -24,6 +24,7 @@ nav = [
   { "Lessons" = [
     { "Contents" = "lessons/index.md" },
     { "Lesson 1: Foundations of Open Science" = "lessons/01-open-science.md" },
+    { "Lesson 1 homework: Open Science, self-paced" = "lessons/01-open-science-self-paced.md" },
     { "Lesson 2: Modern Data Management" = "lessons/02-data-management.md" },
     { "Lesson 3: Ethics and Artificial Intelligence" = "lessons/03-ai-ethics.md" },
   ] },
@@ -32,6 +33,8 @@ nav = [
     { "About this training" = "about/training.md" },
     { "Additional resources" = "about/resources.md" },
     { "Credits and attribution" = "about/credits.md" },
+    { "Learn with an AI tutor" = "about/ai-tutor.md" },
+    { "Accessibility" = "about/accessibility.md" },
     { "For AI agents" = "about/ai-agents.md" },
     { "Update log" = "log.md" },
   ] },

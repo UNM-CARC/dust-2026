@@ -1,8 +1,8 @@
 # Agent guide — DUST 2026: Open Science Training
 
-This repository is DUST 2026, three 50-minute lessons on open science,
-research data management, and the ethics of artificial intelligence for NIEHS
-Superfund Research Program trainees at the University of Arizona DUST Center,
+This repository is DUST 2026, three 50-minute lessons (Lesson 1 also has a
+self-paced homework page) on open science, research data management, and the
+ethics of artificial intelligence for NIEHS Superfund Research Program trainees at the University of Arizona DUST Center,
 the UNM METALS Center, and the Texas A&M Superfund Research Center. It is built with [Zensical](https://zensical.org),
 styled after the [UNM CARC documentation](https://carc.unm.edu/docs/), and
 published at <https://unm-carc.github.io/dust-2026/>. The `docs/` tree
@@ -67,3 +67,26 @@ python3 scripts/externalize_links.py        # add {target=_blank} to external li
    `verified: { by: "human:tswetnam", at: <ISO 8601> }`.
 10. Keep the CC BY 4.0 attribution intact: the `sources` frontmatter, the
     `.carc-provenance` footer on adapted pages, and `docs/about/credits.md`.
+11. Lessons come in pairs: `NN-topic.md` is the 50-minute in-person lecture
+    (a summary, about 2,000 words of body text) and `NN-topic-self-paced.md`
+    is the homework, split into numbered `## Module N:` sections that each
+    end in a `??? question "Checkpoint N: ..."`. The lecture links each
+    section to its module anchor. Lesson 1 follows this pattern; Lessons 2
+    and 3 are still single pages.
+12. Every Lesson page carries a `lesson:` frontmatter block (`number`,
+    `format` in-person|self-paced, `duration_minutes`, `companion`,
+    `delivery_modes`, `objectives`, `key_terms`, `accessibility` with
+    `language`, `access_mode`, `access_mode_sufficient`, `features`,
+    `hazards`, `media`). `scripts/postbuild_agent_surface.py` turns it into
+    schema.org LearningResource JSON-LD; `docs/about/ai-agents.md` documents
+    how agents use it. Keep `objectives` identical to the page's learning
+    objectives callout.
+13. Accessibility (see `docs/about/accessibility.md`): every figure gets
+    meaningful alt text and is followed by `??? note "Text description of
+    this figure"` stating everything the image shows; no layout tables
+    (use definition lists); strict heading hierarchy; an `!!! abstract "In
+    brief"` plain-language summary near the top of each lesson page; a
+    `## Key terms` glossary and `*[ABBR]: expansion` definitions at the
+    bottom; no audio-only or video-only content (a video needs captions and
+    a transcript). `docs/about/ai-tutor.md` holds the learner-facing prompts;
+    keep its lesson address table current when pages are added.
