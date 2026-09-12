@@ -1,89 +1,238 @@
-/* Custom CSS for DUST 2025 Open Science Training */
-/* University of Arizona DUST Superfund Research Center */
+/* ==========================================================================
+   UNM CARC documentation theme
+   UNM brand: Cherry #BA0C2F + Turquoise #007A86 (accent), Silver #A7A8AA
+   Design inspired by the Jetstream2 documentation (gradient identity header,
+   card-based landing page) rebuilt for the Zensical modern theme.
+   ========================================================================== */
 
-/* UA Color Scheme */
-[data-md-color-scheme="ua"] {
-  --md-primary-fg-color:        #AB0520;  /* Arizona Red */
-  --md-primary-fg-color--light: #E48C88;  /* Light Red */
-  --md-primary-fg-color--dark:  #8B0015;  /* Dark Red */
-  --md-accent-fg-color:         #378DBD;  /* Oasis Blue */
-  --md-accent-fg-color--light:  #81D3EB;  /* Light Blue */
-  --md-accent-fg-color--dark:   #0C234B;  /* Arizona Blue */
+/* --- Brand color tokens ------------------------------------------------- */
+
+:root > * {
+  --md-primary-fg-color:        #ba0c2f;   /* UNM cherry */
+  --md-primary-fg-color--light: #d64d6d;
+  --md-primary-fg-color--dark:  #8a0923;
+  --md-accent-fg-color:         #007a86;   /* UNM turquoise */
+  --md-accent-fg-color--transparent: rgba(0, 122, 134, 0.1);
+
+  --carc-cherry:           #ba0c2f;
+  --carc-cherry-dark:      #6d0a1f;
+  --carc-turquoise:        #007a86;
+  --carc-turquoise-bright: #00a9ba;
+  --carc-silver:           #a7a8aa;
+  --carc-gradient: linear-gradient(105deg,
+      #4d0715 0%,
+      #8a0923 30%,
+      #ba0c2f 58%,
+      #7c2440 74%,
+      #0b5f6a 92%,
+      #007a86 100%);
 }
 
-/* Root variables for consistent theming */
-:root {
-  --md-primary-fg-color: #AB0520;  /* Arizona Red */
-  --md-accent-fg-color: #378DBD;   /* Oasis Blue */
+/* Dark scheme: lift the palette for contrast on slate backgrounds */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #ff5c7c;
+  --md-primary-fg-color--light: #ff8ba3;
+  --md-primary-fg-color--dark:  #d64d6d;
+  --md-accent-fg-color:         #35c9d6;
+  --md-accent-fg-color--transparent: rgba(53, 201, 214, 0.1);
+  --md-typeset-a-color:         #4fd3e0;   /* turquoise links for legibility */
 }
 
-/* Improve readability of long-form content */
-.md-typeset {
-  font-size: 0.9rem;
-  line-height: 1.7;
+/* --- Identity header (cherry-to-turquoise gradient) ---------------------- */
+
+.md-header,
+.md-tabs {
+  background: var(--carc-gradient);
+  color: #ffffff;
 }
 
-.md-typeset h1 {
-  font-weight: 700;
-  margin-top: 0;
+.md-header { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); }
+
+.md-header a,
+.md-header .md-header__title,
+.md-tabs a {
+  color: #ffffff;
 }
 
-.md-typeset h2 {
-  font-weight: 600;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
-  padding-bottom: 0.5rem;
+.md-tabs__link { opacity: 0.85; }
+.md-tabs__link--active,
+.md-tabs__link:hover { opacity: 1; }
+
+/* Keep header controls (search, palette toggle, repo) legible on gradient */
+.md-header .md-icon svg { fill: #ffffff; }
+.md-search__form { background-color: rgba(255, 255, 255, 0.12); }
+.md-search__input { color: #ffffff; }
+.md-search__input::placeholder { color: rgba(255, 255, 255, 0.75); }
+
+/* --- Landing page -------------------------------------------------------- */
+
+/* Accessible-but-invisible page H1 (the hero carries the visual title) */
+.carc-visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-/* Improve spacing for lesson objectives and admonitions */
-.md-typeset .admonition {
-  margin: 1.5em 0;
+.carc-hero .carc-hero__title {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  background: var(--carc-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.md-typeset .admonition-title {
-  font-weight: 600;
+[data-md-color-scheme="slate"] .carc-hero .carc-hero__title {
+  background: linear-gradient(105deg, #ff5c7c 0%, #ff8ba3 45%, #35c9d6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-/* Style for call-out cards on homepage */
-.md-typeset .grid.cards {
-  margin-top: 2rem;
+.carc-hero {
+  text-align: center;
+  margin: 0.5rem auto 1.6rem;
+  max-width: 42rem;
 }
 
-/* Better code block styling */
-.md-typeset pre > code {
-  border-radius: 0.2rem;
+.carc-hero img.carc-hero__logo {
+  width: 7.5rem;
+  margin-bottom: 0.25rem;
 }
 
-.md-typeset .highlight {
-  margin: 1.5em 0;
+/* No permalink pilcrow or TOC entry decoration on the hero title */
+.carc-hero .carc-hero__title .headerlink { display: none; }
+
+.carc-hero p.carc-hero__tagline {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
 }
 
-/* Improve table styling */
-.md-typeset table:not([class]) {
+/* Quick-action button row */
+.carc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.carc-actions .md-button {
+  border-radius: 2rem;
+  padding: 0.45rem 1.2rem;
+}
+
+.carc-actions .md-button--primary {
+  background: var(--carc-gradient);
+  border-color: transparent;
+}
+
+/* Card grids: turquoise hover treatment */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border-radius: 0.5rem;
+  transition: border-color 125ms, box-shadow 125ms, transform 125ms;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid > .card:hover {
+  border-color: var(--carc-turquoise);
+  box-shadow: 0 6px 16px rgba(0, 122, 134, 0.18);
+  transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  background: linear-gradient(90deg, var(--carc-cherry), var(--carc-turquoise));
+  height: 2px;
+  border: 0;
+}
+
+/* Partner strip */
+.carc-partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0 0.5rem;
+}
+
+.carc-partners a {
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.2rem;
+  border-radius: 2rem;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+  transition: border-color 125ms, color 125ms;
 }
 
+.carc-partners a:hover {
+  border-color: var(--carc-turquoise);
+  color: var(--carc-turquoise);
+}
+
+/* --- Content niceties ----------------------------------------------------- */
+
+/* Slightly wider content area, mirroring Jetstream2's 1200px layout */
+.md-grid { max-width: 76rem; }
+
+/* Provenance footer line added to migrated pages */
+.carc-provenance {
+  margin-top: 2.5rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  font-size: 0.64rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Embedded video players (YouTube nocookie) */
+iframe.carc-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 44rem;
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  margin: 0.6rem 0 1rem;
+  display: block;
+}
+
+/* FAQ question admonitions: turquoise instead of Material's default green */
+.md-typeset .admonition.question,
+.md-typeset details.question {
+  border-color: var(--carc-turquoise);
+}
+
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary {
+  background-color: rgba(0, 122, 134, 0.1);
+}
+
+.md-typeset .question > .admonition-title::before,
+.md-typeset .question > summary::before {
+  background-color: var(--carc-turquoise);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.question,
+[data-md-color-scheme="slate"] .md-typeset details.question {
+  border-color: var(--carc-turquoise-bright);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .question > .admonition-title::before,
+[data-md-color-scheme="slate"] .md-typeset .question > summary::before {
+  background-color: var(--carc-turquoise-bright);
+}
+
+/* Tables: header tint */
 .md-typeset table:not([class]) th {
-  background-color: var(--md-default-fg-color--lightest);
-  font-weight: 600;
+  background-color: var(--md-accent-fg-color--transparent);
 }
 
-/* Button styling for lesson navigation */
-.md-button {
-  margin: 0.5rem 0.25rem;
-}
-
-.md-button--primary {
-  background-color: var(--md-primary-fg-color);
-  border-color: var(--md-primary-fg-color);
-  color: white;
-}
-
-.md-button--primary:hover {
-  opacity: 0.9;
-}
+/* ==========================================================================
+   DUST 2026 additions (carried over from the DUST 2025 lesson styling)
+   ========================================================================== */
 
 /* Figure captions */
 .md-typeset figcaption {
@@ -94,119 +243,25 @@
   margin-top: 0.5rem;
 }
 
-/* Improve quiz/question styling */
-.md-typeset details {
-  margin: 1.5em 0;
-}
-
-.md-typeset details > summary {
-  cursor: pointer;
-  padding: 0.5rem 0;
-  font-weight: 500;
-}
-
-.md-typeset details[open] > summary {
-  margin-bottom: 1rem;
-}
-
-/* Tabs styling */
-.md-typeset .tabbed-set {
-  margin: 1.5em 0;
-}
-
-.md-typeset .tabbed-labels {
-  margin-bottom: 0;
-}
-
-/* Footer improvements */
-.md-footer__link {
-  padding: 1rem 0;
-}
-
-/* Search highlighting */
-.md-search-result mark {
-  background-color: var(--md-accent-fg-color);
-  color: white;
-}
-
-/* Improve task list appearance */
-.md-typeset .task-list-item input[type="checkbox"] {
-  margin-right: 0.5rem;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 76.1875em) {
-  .md-typeset {
-    font-size: 0.85rem;
-  }
-}
-
-/* Print styles */
-@media print {
-  .md-header,
-  .md-footer,
-  .md-sidebar,
-  .md-nav__link--active,
-  .md-content__button {
-    display: none !important;
-  }
-
-  .md-content {
-    max-width: 100% !important;
-  }
-
-  .md-typeset a::after {
-    content: " (" attr(href) ")";
-    font-size: 0.85em;
-  }
-}
-
-/* Accessibility improvements */
-.md-typeset a:focus,
-.md-button:focus {
-  outline: 2px solid var(--md-accent-fg-color);
-  outline-offset: 2px;
-}
-
-/* Skip to content link for keyboard navigation */
-.skip-to-content {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--md-primary-fg-color);
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 100;
-}
-
-.skip-to-content:focus {
-  top: 0;
-}
-
-/* Custom styling for lesson info boxes */
-.md-typeset .admonition.info.lesson-overview {
-  border-left: 0.25rem solid #448aff;
-}
-
-.md-typeset .admonition.success.learning-objectives {
-  border-left: 0.25rem solid #00c853;
-}
-
-/* Enhance visibility of external links */
-.md-typeset a[href^="http"]::after {
+/* Mark external links, except buttons, images, and nav */
+.md-typeset a[href^="http"]:not(.md-button)::after {
   content: " \2197";
   font-size: 0.8em;
   color: var(--md-default-fg-color--light);
 }
-
-.md-typeset a[href^="http"][target="_blank"]::after {
-  content: " \2197";
+.md-typeset a[href^="http"] > img,
+.md-typeset figure a::after,
+.md-nav__link::after {
+  content: none !important;
 }
 
-/* Don't show icon for buttons and specific elements */
-.md-button::after,
-.md-typeset .md-nav__link::after,
-.md-typeset img + a::after {
-  content: none !important;
+/* Collapsible quiz questions */
+.md-typeset details > summary { cursor: pointer; }
+.md-typeset details[open] > summary { margin-bottom: 0.75rem; }
+
+/* Print: hide chrome, show link targets */
+@media print {
+  .md-header, .md-footer, .md-sidebar, .md-content__button { display: none !important; }
+  .md-content { max-width: 100% !important; }
+  .md-typeset a::after { content: " (" attr(href) ")"; font-size: 0.85em; }
 }

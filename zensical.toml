@@ -1,0 +1,137 @@
+# DUST 2026: Open Science Training — Zensical + OKF v0.2 site.
+# Modeled on UNM-CARC/foss and UNM-CARC/docs (builds on Zensical 0.0.60).
+# IMPORTANT (TOML): bare keys attach to the most recent [table] header, so
+# every [project] key — including extra_css — must appear BEFORE the first
+# [project.*] or [[project.*]] header.
+
+[project]
+site_name = "DUST 2026: Open Science Training"
+site_url = "https://tyson-swetnam.github.io/dust-2026/"
+site_description = "Three 50-minute lessons on open science, research data management, and the ethics of artificial intelligence for NIEHS Superfund Research Program trainees at the University of Arizona DUST Center and the UNM METALS Center."
+site_author = "Tyson L. Swetnam, UNM Center for Advanced Research Computing"
+copyright = "&copy; 2026 Tyson L. Swetnam. Content licensed <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>."
+
+repo_url = "https://github.com/tyson-swetnam/dust-2026"
+repo_name = "tyson-swetnam/dust-2026"
+edit_uri = "edit/main/docs/"
+
+extra_css = ["stylesheets/extra.css"]
+
+# Section pattern: { "Section" = [ { "Contents" = "section/index.md" }, "section/page.md", ... ] }
+# Every .md file in docs/ must appear here (scripts/check_links.py enforces it).
+nav = [
+  { "Home" = "index.md" },
+  { "Lessons" = [
+    { "Contents" = "lessons/index.md" },
+    { "Lesson 1: Foundations of Open Science" = "lessons/01-open-science.md" },
+    { "Lesson 2: Modern Data Management" = "lessons/02-data-management.md" },
+    { "Lesson 3: Ethics and Artificial Intelligence" = "lessons/03-ai-ethics.md" },
+  ] },
+  { "About" = [
+    { "Contents" = "about/index.md" },
+    { "About this training" = "about/training.md" },
+    { "Additional resources" = "about/resources.md" },
+    { "Credits and attribution" = "about/credits.md" },
+    { "For AI agents" = "about/ai-agents.md" },
+    { "Update log" = "log.md" },
+  ] },
+]
+
+[project.theme]
+favicon = "assets/unm.ico"
+logo = "assets/carc-logo.svg"
+language = "en"
+features = [
+  "announce.dismiss",
+  "content.action.edit",
+  "content.action.view",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.instant.progress",
+  "navigation.path",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "search.suggest",
+  "toc.follow",
+]
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/tyson-swetnam/dust-2026"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/orcid"
+link = "https://orcid.org/0000-0002-6639-7181"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/globe"
+link = "https://carc.unm.edu"
+
+# Google Analytics 4 — the author's property carried over from DUST 2025.
+[project.extra.analytics]
+provider = "google"
+property = "G-NYETZFD8DN"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+toc.title = "On this page"
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}

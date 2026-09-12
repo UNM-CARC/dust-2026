@@ -1,0 +1,25 @@
+# DUST 2026: Open Science Training
+
+> Three 50-minute lessons on open science, research data management, and the ethics of artificial intelligence for NIEHS Superfund Research Program trainees at the University of Arizona DUST Center and the UNM METALS Center. The source repository is an Open Knowledge Format (OKF v0.2) bundle: every page carries YAML frontmatter with type, provenance (generated/sources), and lifecycle (status/stale_after) fields.
+
+Full corpus for ingestion: https://tyson-swetnam.github.io/dust-2026/llms-full.txt
+
+Every page's Markdown source (OKF frontmatter included) is served at its URL plus `index.md` — for example https://tyson-swetnam.github.io/dust-2026/lessons/01-open-science/index.md.
+
+## Lessons
+
+- [Lesson 1: Foundations of Open Science](https://tyson-swetnam.github.io/dust-2026/lessons/01-open-science/): What open science is, its six pillars, why it matters for Superfund research in Arizona and New Mexico, and the 2026 US public-access and publication-cost landscape.
+- [Lesson 2: Modern Data Management for Computational Research](https://tyson-swetnam.github.io/dust-2026/lessons/02-data-management/): The data life cycle, FAIR and CARE principles, the 2026 NIH and NSF data management and sharing plan formats, data rescue, and a two-site metal-mixture DMP exercise.
+- [Lesson 3: Ethics and Artificial Intelligence](https://tyson-swetnam.github.io/dust-2026/lessons/03-ai-ethics/): Sources of AI bias, responsible and agentic AI use in research, NIH and journal AI rules, energy and water costs, the 2026 regulatory landscape, and six discussion scenarios.
+
+## About
+
+- [About this training](https://tyson-swetnam.github.io/dust-2026/about/training/): Who this training is for, why open science matters for Superfund research, how to use the lessons, technical implementation, and version history.
+- [Additional resources](https://tyson-swetnam.github.io/dust-2026/about/resources/): Curated links for open science, data management, Indigenous data governance, AI ethics, publishing, reproducibility, and staying current.
+- [Credits and attribution](https://tyson-swetnam.github.io/dust-2026/about/credits/): Source materials, contributors, institutional support, license, and how to cite DUST 2026.
+- [For AI agents](https://tyson-swetnam.github.io/dust-2026/about/ai-agents/): How agents and harnesses should consume this site: llms.txt, per-page Markdown with OKF frontmatter, and trust signals.
+
+## Meta
+
+- [Documentation update log](https://tyson-swetnam.github.io/dust-2026/log/): dated history of changes to this bundle.
+- [For AI agents](https://tyson-swetnam.github.io/dust-2026/about/ai-agents/): endpoints and trust signals for agents.
