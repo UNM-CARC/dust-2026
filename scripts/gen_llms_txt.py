@@ -22,8 +22,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from okf_common import (DOCS, absolutize, frontmatter, is_external,  # noqa: E402
-                        load_config, nav_pages, page_url, rewrite_link_targets,
-                        site_url, split_frontmatter)
+                        load_config, nav_pages, page_url, raw_source_url,
+                        repo_branch, rewrite_link_targets, site_url,
+                        split_frontmatter)
 
 
 def main() -> int:
@@ -33,6 +34,8 @@ def main() -> int:
     desc = cfg.get("site_description", "").strip()
 
     example = None
+    raw_root = raw_source_url(cfg, "")
+    branch = repo_branch(cfg)
     lines = [
         f"# {name}",
         "",
@@ -41,9 +44,23 @@ def main() -> int:
         "provenance (generated/sources), and lifecycle (status/stale_after) "
         "fields.",
         "",
-        f"Full corpus for ingestion: {base}llms-full.txt",
+        "Every page below is listed with three addresses that all return the "
+        "same content: the rendered HTML page, its Markdown twin (page URL + "
+        "`index.md`, served as text/markdown with the OKF frontmatter), and "
+        "the raw source file on GitHub. Fetch whichever your tool is allowed "
+        "to reach; many sandboxes permit github.com and "
+        "raw.githubusercontent.com but not *.github.io.",
         "",
+        "```",
+        f"Site page        {base}<path>/",
+        f"Markdown twin    {base}<path>/index.md",
     ]
+    if raw_root:
+        lines += [f"Raw source       {raw_root}<path>.md      (branch {branch}; a moving target)",
+                  "",
+                  f"Content page     /lessons/01-open-science/  ->  {raw_root}lessons/01-open-science.md",
+                  f"Section listing  /lessons/                  ->  {raw_root}lessons/index.md"]
+    lines += ["```", ""]
     full = [
         f"# {name} — full corpus",
         "",
@@ -84,7 +101,9 @@ def main() -> int:
             suffix = " (deprecated; kept for history)"
         elif fm.get("status") == "draft":
             suffix = " (draft)"
-        add(trail, f"- [{title}]({url}): {summary}{suffix}")
+        raw = raw_source_url(cfg, rel)
+        alt = f" Markdown twin: {url}index.md" + (f" Raw source: {raw}" if raw else "")
+        add(trail, f"- [{title}]({url}): {summary}{suffix}{alt}")
         text = (DOCS / rel).read_text(encoding="utf-8")
         _, body = split_frontmatter(text)
         head = text[: len(text) - len(body)]
@@ -99,22 +118,32 @@ def main() -> int:
                 lines += [f"### {sub}", ""]
             lines += entries + [""]
 
-    lines += ["## Meta", "",
-              f"- [Documentation update log]({base}log/): dated history of changes to this bundle.",
-              f"- [For AI agents]({base}about/ai-agents/): endpoints and trust signals for agents.",
-              ""]
-    if example:
-        lines[6:6] = [
-            "Every page's Markdown source (OKF frontmatter included) is served "
-            f"at its URL plus `index.md` — for example {example}index.md.",
-            "",
-        ]
     log = DOCS / "log.md"
     if log.exists():
         full += [f"---8<--- {base}log/", "", log.read_text(encoding="utf-8").rstrip(), ""]
+    full_text = "\n".join(full).rstrip() + "\n"
+    nbytes = len(full_text.encode("utf-8"))
+    ktok = max(1, round(nbytes / 4 / 1000))
+
+    lines += ["## Meta", "",
+              f"- [Full corpus in one file]({base}llms-full.txt): every page's Markdown with "
+              f"frontmatter, links made absolute; about {nbytes // 1024} KB, roughly {ktok},000 "
+              "tokens. Prefer it over fetching pages one at a time.",
+              f"- [Documentation update log]({base}log/): dated history of changes to this bundle.",
+              f"- [For AI agents]({base}about/ai-agents/): endpoints, trust signals, and how to "
+              "teach a lesson; includes what to do if you cannot fetch this site.",
+              f"- [Learn with an AI tutor]({base}about/ai-tutor/): learner-facing prompts for "
+              "lecture, tutor, and interactive modes.",
+              f"- [Accessibility]({base}about/accessibility/): accessibility statement and the "
+              "per-lesson accessibility profile.",
+              f"- [Sitemap]({base}sitemap.xml) and [robots.txt]({base}robots.txt)."]
+    if raw_root:
+        lines.append(f"- [Source repository]({cfg.get('repo_url')}): the bundle itself; "
+                     f"`docs/` mirrors the site paths one to one.")
+    lines.append("")
 
     (DOCS / "llms.txt").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
-    (DOCS / "llms-full.txt").write_text("\n".join(full).rstrip() + "\n", encoding="utf-8")
+    (DOCS / "llms-full.txt").write_text(full_text, encoding="utf-8")
     print(f"llms.txt: {n} pages indexed; llms-full.txt: "
           f"{(DOCS / 'llms-full.txt').stat().st_size // 1024} KB")
     return 0

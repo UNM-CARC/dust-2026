@@ -16,7 +16,8 @@ every content page carries YAML frontmatter with `type`, `title`,
 
 ## Reading the corpus
 
-- `docs/llms.txt` — linked outline of every page with descriptions.
+- `docs/llms.txt` — linked outline of every page with descriptions, each with
+  its Markdown twin and raw GitHub source address (generated; do not edit).
 - `docs/llms-full.txt` — the entire corpus in one file, frontmatter included.
 - Trust: pages without a `verified:` key are **unverified** (OKF §5.3).
   Lessons carry `stale_after` because the policy, pricing, and AI facts they
@@ -91,3 +92,9 @@ python3 scripts/externalize_links.py        # add {target=_blank} to external li
     bottom; no audio-only or video-only content (a video needs captions and
     a transcript). `docs/about/ai-tutor.md` holds the learner-facing prompts;
     keep its lesson address table current when pages are added.
+14. Agent-facing addresses must be visible in body text as absolute links
+    (text-extracting fetchers discard `<head>`, and URL allowlists key on
+    anchors seen in prior results): never a bare code span. The postbuild
+    script injects the per-page Markdown button and "Machine-readable
+    versions" line; the footer `copyright` string carries the site-wide
+    `llms.txt` links.

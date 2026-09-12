@@ -36,23 +36,25 @@ The lessons on this site are written so that an AI assistant can teach them. Eac
 
 ## Step 1: Give the assistant the lesson
 
-Every page on this site has a plain Markdown twin at its address plus `index.md`. That version includes the lesson metadata and the figure descriptions and is what an AI should read.
+Every page on this site has a plain Markdown twin at its address plus `index.md`, and every page shows a "View this page as Markdown" button beside "View source". That version includes the lesson metadata and the figure descriptions and is what an AI should read.
 
-| Lesson | Markdown address |
-| --- | --- |
-| Lesson 1 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md` |
-| Lesson 1 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/index.md` |
-| Lesson 2 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md` |
-| Lesson 2 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/02-data-management-self-paced/index.md` |
-| Lesson 3 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md` |
-| Lesson 3 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics-self-paced/index.md` |
-| The whole site in one file | `https://unm-carc.github.io/dust-2026/llms-full.txt` |
+| Lesson | Markdown twin on the site | Raw source on GitHub |
+| --- | --- | --- |
+| Lesson 1 lecture (50 min) | [`https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`](https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science.md) |
+| Lesson 1 homework (self-paced) | [`https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/index.md`](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science-self-paced.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science-self-paced.md) |
+| Lesson 2 lecture (50 min) | [`https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md`](https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/02-data-management.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/02-data-management.md) |
+| Lesson 2 homework (self-paced) | [`https://unm-carc.github.io/dust-2026/lessons/02-data-management-self-paced/index.md`](https://unm-carc.github.io/dust-2026/lessons/02-data-management-self-paced/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/02-data-management-self-paced.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/02-data-management-self-paced.md) |
+| Lesson 3 lecture (50 min) | [`https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md`](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/03-ai-ethics.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/03-ai-ethics.md) |
+| Lesson 3 homework (self-paced) | [`https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics-self-paced/index.md`](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics-self-paced/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/03-ai-ethics-self-paced.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/03-ai-ethics-self-paced.md) |
+| The whole site in one file | [`https://unm-carc.github.io/dust-2026/llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/llms-full.txt`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/llms-full.txt) |
+
+If your assistant says it is not allowed to open a `github.io` address, give it the raw GitHub address from the third column instead; the content is identical. The site's linked index for assistants is [`https://unm-carc.github.io/dust-2026/llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt).
 
 How to hand it over:
 
 - **Claude, ChatGPT, Gemini:** paste the address into the chat. If the assistant cannot browse, open the address in your browser, select all, copy, and paste the text into the chat instead.
 - **NotebookLM:** add the address as a website source, or upload the copied text. NotebookLM's audio overview is a listening option; it is not a substitute for the text for deaf learners.
-- **Claude Projects or ChatGPT custom GPTs:** add `llms-full.txt` as a file so every lesson is available across conversations.
+- **Claude Projects or ChatGPT custom GPTs:** add [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt) as a file so every lesson is available across conversations.
 
 Tell the assistant which page you want if you use the full-site file.
 

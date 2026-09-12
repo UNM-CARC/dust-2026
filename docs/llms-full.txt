@@ -4257,23 +4257,25 @@ The lessons on this site are written so that an AI assistant can teach them. Eac
 
 ## Step 1: Give the assistant the lesson
 
-Every page on this site has a plain Markdown twin at its address plus `index.md`. That version includes the lesson metadata and the figure descriptions and is what an AI should read.
+Every page on this site has a plain Markdown twin at its address plus `index.md`, and every page shows a "View this page as Markdown" button beside "View source". That version includes the lesson metadata and the figure descriptions and is what an AI should read.
 
-| Lesson | Markdown address |
-| --- | --- |
-| Lesson 1 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md` |
-| Lesson 1 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/index.md` |
-| Lesson 2 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md` |
-| Lesson 2 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/02-data-management-self-paced/index.md` |
-| Lesson 3 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md` |
-| Lesson 3 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics-self-paced/index.md` |
-| The whole site in one file | `https://unm-carc.github.io/dust-2026/llms-full.txt` |
+| Lesson | Markdown twin on the site | Raw source on GitHub |
+| --- | --- | --- |
+| Lesson 1 lecture (50 min) | [`https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`](https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science.md) |
+| Lesson 1 homework (self-paced) | [`https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/index.md`](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science-self-paced.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science-self-paced.md) |
+| Lesson 2 lecture (50 min) | [`https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md`](https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/02-data-management.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/02-data-management.md) |
+| Lesson 2 homework (self-paced) | [`https://unm-carc.github.io/dust-2026/lessons/02-data-management-self-paced/index.md`](https://unm-carc.github.io/dust-2026/lessons/02-data-management-self-paced/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/02-data-management-self-paced.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/02-data-management-self-paced.md) |
+| Lesson 3 lecture (50 min) | [`https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md`](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/03-ai-ethics.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/03-ai-ethics.md) |
+| Lesson 3 homework (self-paced) | [`https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics-self-paced/index.md`](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics-self-paced/index.md) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/03-ai-ethics-self-paced.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/03-ai-ethics-self-paced.md) |
+| The whole site in one file | [`https://unm-carc.github.io/dust-2026/llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt) | [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/llms-full.txt`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/llms-full.txt) |
+
+If your assistant says it is not allowed to open a `github.io` address, give it the raw GitHub address from the third column instead; the content is identical. The site's linked index for assistants is [`https://unm-carc.github.io/dust-2026/llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt).
 
 How to hand it over:
 
 - **Claude, ChatGPT, Gemini:** paste the address into the chat. If the assistant cannot browse, open the address in your browser, select all, copy, and paste the text into the chat instead.
 - **NotebookLM:** add the address as a website source, or upload the copied text. NotebookLM's audio overview is a listening option; it is not a substitute for the text for deaf learners.
-- **Claude Projects or ChatGPT custom GPTs:** add `llms-full.txt` as a file so every lesson is available across conversations.
+- **Claude Projects or ChatGPT custom GPTs:** add [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt) as a file so every lesson is available across conversations.
 
 Tell the assistant which page you want if you use the full-site file.
 
@@ -4488,7 +4490,7 @@ We aim to meet [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.
 
 **Machine-readable formats**
 
-- Every page is available as plain Markdown by adding `index.md` to its address (for example `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`), and the whole site is one file at [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt). Many screen readers, Braille displays, translation services, and AI assistants handle plain text better than a styled web page.
+- Every page is available as plain Markdown by adding `index.md` to its address (for example [`https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`](https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md)), or through the "View this page as Markdown" button beside "View source", and the whole site is one file at [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt). Many screen readers, Braille displays, translation services, and AI assistants handle plain text better than a styled web page.
 - Each lesson page declares its accessibility profile in machine-readable form: a `lesson.accessibility` block in its Markdown frontmatter and a [schema.org `LearningResource`](https://schema.org/LearningResource){target=_blank} record in the page head with `accessMode`, `accessModeSufficient`, `accessibilityFeature`, `accessibilityHazard`, and `accessibilitySummary`, following the [W3C accessibility discoverability vocabulary](https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocab-20230718/){target=_blank}. Learning platforms, search engines, and AI tutors can read these to choose how to present a lesson.
 
 ## Using the site with an AI assistant
@@ -4578,11 +4580,12 @@ these endpoints rather than scraping rendered HTML.
 
 | Endpoint | What you get |
 | -------- | ------------ |
-| [`llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt) | Linked outline of every page with one-line descriptions ([llms.txt convention](https://llmstxt.org){target=_blank}) |
-| [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt) | The entire corpus in one file: every page's Markdown with frontmatter, prefixed by its canonical URL, links made absolute |
-| Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter (for example `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`) |
-| `sitemap.xml`, `robots.txt` | Standard crawl surface; robots.txt repeats these pointers |
-| [Source repository](https://github.com/UNM-CARC/dust-2026){target=_blank} | The bundle itself, plus `AGENTS.md` with contribution rules for coding agents |
+| [`https://unm-carc.github.io/dust-2026/llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt) | Linked outline of every page with one-line descriptions ([llms.txt convention](https://llmstxt.org){target=_blank}); every entry lists the HTML page, its Markdown twin, and its raw GitHub source |
+| [`https://unm-carc.github.io/dust-2026/llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt) | The entire corpus in one file: every page's Markdown with frontmatter, prefixed by its canonical URL, links made absolute (about 330 KB) |
+| Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter, served as `text/markdown` (for example [`https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`](https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md)); section listings too (`https://unm-carc.github.io/dust-2026/lessons/index.md`). Every rendered page links it from a "View this page as Markdown" button and from a "Machine-readable versions" line at the end of the article |
+| Raw source on GitHub | `https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/<path>.md`, where `<path>` is the site path without the trailing slash (for example [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science.md)). Same content as the Markdown twin; reachable from sandboxes that allow `github.com` but not `*.github.io` |
+| [`sitemap.xml`](https://unm-carc.github.io/dust-2026/sitemap.xml), [`robots.txt`](https://unm-carc.github.io/dust-2026/robots.txt) | Standard crawl surface; robots.txt repeats all of these pointers |
+| [Source repository](https://github.com/UNM-CARC/dust-2026){target=_blank} | The bundle itself (`docs/` mirrors the site paths one to one), plus `AGENTS.md` with contribution rules for coding agents |
 | Lesson page `<head>` | A schema.org `LearningResource` JSON-LD record (objectives, duration, delivery format, accessibility profile) and `okf:lesson-*` meta tags, generated from the page's `lesson:` frontmatter block |
 
 Every rendered page also declares its Markdown twin and OKF signals in HTML:
@@ -4597,6 +4600,33 @@ Every rendered page also declares its Markdown twin and OKF signals in HTML:
 <meta name="okf:lesson-duration-minutes" content="50">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", ...}</script>
 ```
+
+!!! warning "The head tags are invisible to most fetch tools"
+    The `<link rel="alternate">`, `okf:*` meta tags, and JSON-LD live in `<head>`, which text-extracting fetchers discard, and a link-derived URL allowlist never sees them. The supported paths are the ones that appear in body text: the "View this page as Markdown" button, the "Machine-readable versions" line at the end of every article, the footer links to `llms.txt`, and the addresses listed in `llms.txt` itself. All of them are absolute.
+
+## If you cannot fetch this site
+
+Some harnesses allow only one or two fetches from a user-supplied address, or allow `github.com` and `raw.githubusercontent.com` but not `*.github.io`. In that case:
+
+1. **Use the raw source.** `docs/` in the repository mirrors the site paths one to one on branch `main`:
+
+    ```
+    Site page        https://unm-carc.github.io/dust-2026/<path>/
+    Markdown twin    https://unm-carc.github.io/dust-2026/<path>/index.md
+    Raw source       https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/<path>.md
+
+    Content page     /lessons/01-open-science-self-paced/  ->  https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science-self-paced.md
+    Section listing  /lessons/                             ->  https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/index.md
+    Whole corpus     https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/llms-full.txt
+    ```
+
+    `main` moves; to cite a fixed version use `https://github.com/UNM-CARC/dust-2026/blob/<commit>/docs/<path>.md`, taking the commit from the repository's history.
+
+2. **Prefer one fetch over six.** `llms-full.txt` holds every page (about 330 KB); if you can make a single request, make that one.
+
+3. **Avoid the GitHub tree API** unless authenticated: `api.github.com` rate-limits anonymous calls per shared IP. Raw file paths do not.
+
+4. **If you reached only the landing page,** its footer links `llms.txt`, `llms-full.txt`, and this guide, and its "Browse the site" list links the section listings; all are absolute addresses that appear in extracted text.
 
 ## Reading the OKF frontmatter
 
@@ -4709,6 +4739,7 @@ guess.
 
 ## 2026-09-11
 
+* **Update**: Agent discoverability, after a Claude.ai tutoring session could not reach the Markdown twins (its fetch tool only opens addresses seen as links in prior results, and the twins were code spans and head-only tags). Every rendered page now has a "View this page as Markdown" button beside "View source" and a "Machine-readable versions" line at the end of the article linking the Markdown twin, the raw GitHub source, `llms.txt`, and `llms-full.txt`; the site footer links `llms.txt`, `llms-full.txt`, and the agent guide; [`llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt) lists the HTML, Markdown-twin, and raw-source address of every page, states the site-path to `docs/*.md` mapping, and gives the corpus size; [For AI agents](about/ai-agents.md) uses absolute links and gained "If you cannot fetch this site"; [Learn with an AI tutor](about/ai-tutor.md) links every address and adds a raw-source column; the landing page links the indexes in body text. Verified live: the Markdown twins, section-listing twins, `llms.txt`, `llms-full.txt`, `sitemap.xml`, and `robots.txt` all return 200.
 * **Update**: [Lesson 2](lessons/02-data-management.md) and [Lesson 3](lessons/03-ai-ethics.md) follow the Lesson 1 pattern: each is now a text-only 50-minute in-person lecture (Lesson 2: the data life cycle as a definition list, FAIR and CARE, a table of the 2026 NIH, NSF, and SRP plan requirements, repositories and licenses, and a draft-the-NIH-2026-plan exercise; Lesson 3: bias sources and LLM failure modes, the NIH, NSF, and journal rules, the never-paste list, agent practices, and two of the six scenarios), and the full material moved to new self-paced pages, [Lesson 2 homework](lessons/02-data-management-self-paced.md) and [Lesson 3 homework](lessons/03-ai-ethics-self-paced.md), each with twelve modules and checkpoints, `lesson:` metadata, "In brief" summaries, key-terms glossaries, and text descriptions for the data life cycle, RO-Crate, FAIR, and Dartmouth figures. Content tabs in Lesson 2 (data sources, licenses) became definition lists so linear readers and AI parsers see every option. Two quiz questions were added (the NSF versus NIH plan formats; evidence for an agent's claims).
 * **Update**: [Lesson 1](lessons/01-open-science.md) is now a 50-minute in-person lecture (definition, six pillars as a definition list, a Gold Standard Science tenet-to-practice table, three compliance facts, a six-question activity, three quiz questions, key terms), and its full material moved to a new self-paced homework page, [Lesson 1 homework: Open Science, self-paced](lessons/01-open-science-self-paced.md), organized as twelve modules with checkpoint questions. New Gold Standard Science content in both: the nine tenets of Executive Order 14303, the June 2025 OSTP guidance and its 1 September annual reporting cycle, NIH's 22 August 2025 implementation plan and the HHS 2025 and 2026 reports, the SPARC brief on how agencies tie the tenets to public access, OSTP's July 2026 "Science: A New Golden Age", and the debate over political oversight. Publication-cost facts refreshed as of September 2026 (NIH cap still not final; OMB 2 CFR 200.461 still a proposal).
 * **Creation**: [Learn with an AI tutor](about/ai-tutor.md): how to load a lesson into Claude, ChatGPT, Gemini, or NotebookLM, with prompts for lecture, tutor, and interactive modes and accommodation prompts for screen-reader users, deaf learners, and learners whose first language is not English. [For AI agents](about/ai-agents.md) gained a "Teaching a lesson" section.

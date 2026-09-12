@@ -23,8 +23,13 @@ Run AFTER `zensical build`. It:
    accessibilityHazard, accessibilitySummary) plus okf:lesson-* meta tags,
    so learning platforms and AI tutors can pick a delivery mode without
    parsing the Markdown.
-3. Writes robots.txt advertising sitemap.xml, llms.txt, llms-full.txt, and
-   the Markdown mirror convention. Note: crawlers only honour robots.txt at a
+3. Adds two *visible* pointers to every page, because text-extracting
+   fetch tools and link-derived URL allowlists never see <head>: a
+   "View this page as Markdown" button beside "View source", and a
+   "Machine-readable" line at the end of the article linking the Markdown
+   twin, the raw GitHub source, llms.txt, and llms-full.txt.
+4. Writes robots.txt advertising sitemap.xml, llms.txt, llms-full.txt, and
+   the Markdown mirror and raw-source conventions. Note: crawlers only honour robots.txt at a
    host root; for a project site (host/<repo>/) the host's root robots.txt
    must list this site's sitemap for the file to take effect.
 
@@ -40,8 +45,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from okf_common import (DOCS, ROOT, absolutize, load_config,  # noqa: E402
-                        page_url, rewrite_link_targets, site_url,
-                        split_frontmatter)
+                        page_url, raw_source_url, rewrite_link_targets,
+                        site_url, split_frontmatter)
 
 AI_AGENTS = ["Googlebot", "Google-Extended", "GoogleOther", "Google-CloudVertexBot",
              "GPTBot", "OAI-SearchBot", "ChatGPT-User",
@@ -168,6 +173,29 @@ def head_block(fm: dict, rel: str = "", cfg: dict | None = None, base: str = "",
     return "\n".join(lines) + "\n"
 
 
+MD_ICON = ('<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" '
+           'stroke-linecap="round" stroke-linejoin="round" stroke-width="2" '
+           'class="lucide lucide-file-text" viewBox="0 0 24 24" aria-hidden="true">'
+           '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>'
+           '<path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg>')
+
+
+def markdown_button() -> str:
+    return ('<a href="index.md" title="View this page as Markdown (for AI agents and '
+            'screen readers)" class="md-content__button md-icon" '
+            'type="text/markdown">' + MD_ICON + '</a>\n')
+
+
+def machine_readable_line(url: str, raw: str | None, base: str) -> str:
+    parts = [f'<a href="{url}index.md" type="text/markdown">Markdown twin</a>']
+    if raw:
+        parts.append(f'<a href="{raw}">raw source on GitHub</a>')
+    parts += [f'<a href="{base}llms.txt">llms.txt</a>',
+              f'<a href="{base}llms-full.txt">llms-full.txt (whole site)</a>']
+    return ('<p class="carc-machine-readable">Machine-readable versions of this page: '
+            + " · ".join(parts) + '. See <a href="' + base + 'about/ai-agents/">For AI agents</a>.</p>\n')
+
+
 def dest_for(rel: Path, site: Path) -> Path:
     if rel.name == "index.md":
         return site / rel
@@ -226,11 +254,23 @@ def main():
             continue  # idempotent
         rel_posix = rel_of.get(htmlfile.parent.resolve(), "")
         text = text.replace("</head>", head_block(fm, rel_posix, cfg, base, by_rel) + "</head>", 1)
+        # Visible pointers (body text survives extraction; <head> does not).
+        marker = 'title="View source of this page" class="md-content__button md-icon">'
+        if marker in text:
+            end = text.index("</a>", text.index(marker)) + len("</a>")
+            text = text[:end] + "\n" + markdown_button() + text[end:]
+        if rel_posix and "</article>" in text:
+            line = machine_readable_line(page_url(base, rel_posix),
+                                         raw_source_url(cfg, rel_posix), base)
+            text = text.replace("</article>", line + "</article>", 1)
         htmlfile.write_text(text, encoding="utf-8")
         injected += 1
 
     # 3. robots.txt — explicitly welcome AI fetchers alongside the blanket allow.
     ai_block = "".join(f"User-agent: {a}\nAllow: /\n\n" for a in AI_AGENTS)
+    raw_root = raw_source_url(cfg, "")
+    raw_line = (f"#   Raw source on GitHub:      {raw_root}<path>.md\n"
+                if raw_root else "")
     (site / "robots.txt").write_text(
         f"# {name} — {base}\n"
         "# This documentation is published for people AND for AI agents.\n"
@@ -245,6 +285,7 @@ def main():
         f"#   Full corpus (one file):    {base}llms-full.txt\n"
         "#   Markdown source of any page (OKF v0.2 frontmatter: type, provenance,\n"
         "#   trust, lifecycle): append `index.md` to the page URL.\n"
+        + raw_line +
         f"#   Agent guide:               {base}about/ai-agents/\n",
         encoding="utf-8")
 

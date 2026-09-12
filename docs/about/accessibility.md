@@ -57,7 +57,7 @@ We aim to meet [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.
 
 **Machine-readable formats**
 
-- Every page is available as plain Markdown by adding `index.md` to its address (for example `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`), and the whole site is one file at [`llms-full.txt`](../llms-full.txt). Many screen readers, Braille displays, translation services, and AI assistants handle plain text better than a styled web page.
+- Every page is available as plain Markdown by adding `index.md` to its address (for example [`https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`](https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md)), or through the "View this page as Markdown" button beside "View source", and the whole site is one file at [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt). Many screen readers, Braille displays, translation services, and AI assistants handle plain text better than a styled web page.
 - Each lesson page declares its accessibility profile in machine-readable form: a `lesson.accessibility` block in its Markdown frontmatter and a [schema.org `LearningResource`](https://schema.org/LearningResource){target=_blank} record in the page head with `accessMode`, `accessModeSufficient`, `accessibilityFeature`, `accessibilityHazard`, and `accessibilitySummary`, following the [W3C accessibility discoverability vocabulary](https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocab-20230718/){target=_blank}. Learning platforms, search engines, and AI tutors can read these to choose how to present a lesson.
 
 ## Using the site with an AI assistant

@@ -128,7 +128,7 @@ Use the top navigation to move between lessons and resources. Each lesson stands
 - **Lecture plus homework.** Each lesson is now a 50-minute in-person lecture with a self-paced companion page, so the session covers the highlights and the depth is done at home.
 - **Learn with an AI tutor.** Each lesson declares its objectives, key terms, delivery modes, and accessibility profile in machine-readable form; [prompts for Claude, ChatGPT, Gemini, and NotebookLM](about/ai-tutor.md) turn a lesson into a lecture, a tutorial, or a quiz.
 - **Accessibility.** Plain-language summaries, text descriptions of every figure, glossaries, keyboard-operable quizzes, and guidance for blind, deaf, and multilingual learners; see [Accessibility](about/accessibility.md).
-- **Built for people and for AI agents.** The site is an Open Knowledge Format bundle with `llms.txt`, per-page Markdown, and schema.org LearningResource records; see [For AI agents](about/ai-agents.md).
+- **Built for people and for AI agents.** The site is an Open Knowledge Format bundle with [`llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt), [`llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt), per-page Markdown (add `index.md` to any page address, or use the "View this page as Markdown" button), raw source at [`raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/index.md), and schema.org LearningResource records; see [For AI agents](about/ai-agents.md).
 
 <div class="carc-partners" markdown>
 [University of Arizona DUST Center](https://superfund.arizona.edu/){target=_blank}
@@ -148,5 +148,6 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 ## Browse the site
 
-* [Lessons](lessons/index.md) - The three 50-minute lessons.
+* [Lessons](lessons/index.md) - The three 50-minute lessons and their self-paced homework pages.
 * [About this site](about/index.md) - Who the training is for, resources, credits, the AI tutor guide, accessibility, guidance for AI agents, and the update log.
+* [llms.txt](https://unm-carc.github.io/dust-2026/llms.txt) - Linked outline of every page for AI agents, with the Markdown twin and raw GitHub source of each; [llms-full.txt](https://unm-carc.github.io/dust-2026/llms-full.txt) is the whole site in one file.

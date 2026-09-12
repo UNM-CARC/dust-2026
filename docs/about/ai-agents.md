@@ -37,11 +37,12 @@ these endpoints rather than scraping rendered HTML.
 
 | Endpoint | What you get |
 | -------- | ------------ |
-| [`llms.txt`](../llms.txt) | Linked outline of every page with one-line descriptions ([llms.txt convention](https://llmstxt.org){target=_blank}) |
-| [`llms-full.txt`](../llms-full.txt) | The entire corpus in one file: every page's Markdown with frontmatter, prefixed by its canonical URL, links made absolute |
-| Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter (for example `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`) |
-| `sitemap.xml`, `robots.txt` | Standard crawl surface; robots.txt repeats these pointers |
-| [Source repository](https://github.com/UNM-CARC/dust-2026){target=_blank} | The bundle itself, plus `AGENTS.md` with contribution rules for coding agents |
+| [`https://unm-carc.github.io/dust-2026/llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt) | Linked outline of every page with one-line descriptions ([llms.txt convention](https://llmstxt.org){target=_blank}); every entry lists the HTML page, its Markdown twin, and its raw GitHub source |
+| [`https://unm-carc.github.io/dust-2026/llms-full.txt`](https://unm-carc.github.io/dust-2026/llms-full.txt) | The entire corpus in one file: every page's Markdown with frontmatter, prefixed by its canonical URL, links made absolute (about 330 KB) |
+| Any page URL + `index.md` | That page's Markdown source with full OKF frontmatter, served as `text/markdown` (for example [`https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md`](https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md)); section listings too (`https://unm-carc.github.io/dust-2026/lessons/index.md`). Every rendered page links it from a "View this page as Markdown" button and from a "Machine-readable versions" line at the end of the article |
+| Raw source on GitHub | `https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/<path>.md`, where `<path>` is the site path without the trailing slash (for example [`https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science.md`](https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science.md)). Same content as the Markdown twin; reachable from sandboxes that allow `github.com` but not `*.github.io` |
+| [`sitemap.xml`](https://unm-carc.github.io/dust-2026/sitemap.xml), [`robots.txt`](https://unm-carc.github.io/dust-2026/robots.txt) | Standard crawl surface; robots.txt repeats all of these pointers |
+| [Source repository](https://github.com/UNM-CARC/dust-2026){target=_blank} | The bundle itself (`docs/` mirrors the site paths one to one), plus `AGENTS.md` with contribution rules for coding agents |
 | Lesson page `<head>` | A schema.org `LearningResource` JSON-LD record (objectives, duration, delivery format, accessibility profile) and `okf:lesson-*` meta tags, generated from the page's `lesson:` frontmatter block |
 
 Every rendered page also declares its Markdown twin and OKF signals in HTML:
@@ -56,6 +57,33 @@ Every rendered page also declares its Markdown twin and OKF signals in HTML:
 <meta name="okf:lesson-duration-minutes" content="50">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", ...}</script>
 ```
+
+!!! warning "The head tags are invisible to most fetch tools"
+    The `<link rel="alternate">`, `okf:*` meta tags, and JSON-LD live in `<head>`, which text-extracting fetchers discard, and a link-derived URL allowlist never sees them. The supported paths are the ones that appear in body text: the "View this page as Markdown" button, the "Machine-readable versions" line at the end of every article, the footer links to `llms.txt`, and the addresses listed in `llms.txt` itself. All of them are absolute.
+
+## If you cannot fetch this site
+
+Some harnesses allow only one or two fetches from a user-supplied address, or allow `github.com` and `raw.githubusercontent.com` but not `*.github.io`. In that case:
+
+1. **Use the raw source.** `docs/` in the repository mirrors the site paths one to one on branch `main`:
+
+    ```
+    Site page        https://unm-carc.github.io/dust-2026/<path>/
+    Markdown twin    https://unm-carc.github.io/dust-2026/<path>/index.md
+    Raw source       https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/<path>.md
+
+    Content page     /lessons/01-open-science-self-paced/  ->  https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/01-open-science-self-paced.md
+    Section listing  /lessons/                             ->  https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/lessons/index.md
+    Whole corpus     https://raw.githubusercontent.com/UNM-CARC/dust-2026/main/docs/llms-full.txt
+    ```
+
+    `main` moves; to cite a fixed version use `https://github.com/UNM-CARC/dust-2026/blob/<commit>/docs/<path>.md`, taking the commit from the repository's history.
+
+2. **Prefer one fetch over six.** `llms-full.txt` holds every page (about 330 KB); if you can make a single request, make that one.
+
+3. **Avoid the GitHub tree API** unless authenticated: `api.github.com` rate-limits anonymous calls per shared IP. Raw file paths do not.
+
+4. **If you reached only the landing page,** its footer links `llms.txt`, `llms-full.txt`, and this guide, and its "Browse the site" list links the section listings; all are absolute addresses that appear in extracted text.
 
 ## Reading the OKF frontmatter
 

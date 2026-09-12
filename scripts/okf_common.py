@@ -72,6 +72,23 @@ def page_url(base: str, rel: str) -> str:
     return base + rel[: -len(".md")] + "/"
 
 
+def repo_branch(cfg: dict) -> str:
+    """Branch named in edit_uri ("edit/main/docs/" -> "main"); default main."""
+    parts = str(cfg.get("edit_uri", "")).strip("/").split("/")
+    return parts[1] if len(parts) >= 2 and parts[0] in ("edit", "blob") else "main"
+
+
+def raw_source_url(cfg: dict, rel: str) -> str | None:
+    """Raw GitHub URL of docs/<rel> on the configured branch, or None if the
+    repo is not on github.com. Sandboxed agents often reach
+    raw.githubusercontent.com when they cannot reach *.github.io."""
+    repo = str(cfg.get("repo_url", "")).rstrip("/")
+    if not repo.startswith("https://github.com/"):
+        return None
+    owner_repo = repo[len("https://github.com/"):]
+    return f"https://raw.githubusercontent.com/{owner_repo}/{repo_branch(cfg)}/docs/{rel.replace(chr(92), '/')}"
+
+
 def is_external(target: str) -> bool:
     return target.startswith(EXTERNAL_PREFIXES)
 
