@@ -26,7 +26,9 @@ nav = [
     { "Lesson 1: Foundations of Open Science" = "lessons/01-open-science.md" },
     { "Lesson 1 homework: Open Science, self-paced" = "lessons/01-open-science-self-paced.md" },
     { "Lesson 2: Modern Data Management" = "lessons/02-data-management.md" },
+    { "Lesson 2 homework: Data Management, self-paced" = "lessons/02-data-management-self-paced.md" },
     { "Lesson 3: Ethics and Artificial Intelligence" = "lessons/03-ai-ethics.md" },
+    { "Lesson 3 homework: AI Ethics, self-paced" = "lessons/03-ai-ethics-self-paced.md" },
   ] },
   { "About" = [
     { "Contents" = "about/index.md" },

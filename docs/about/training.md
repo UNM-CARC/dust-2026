@@ -99,10 +99,10 @@ Work through the three lessons sequentially at your own pace. Each in-person les
 - Additional resources for deeper learning
 
 1. [Lesson 1: Foundations of Open Science](../lessons/01-open-science.md), then its [self-paced homework](../lessons/01-open-science-self-paced.md)
-2. [Lesson 2: Modern Data Management](../lessons/02-data-management.md)
-3. [Lesson 3: Ethics and Artificial Intelligence](../lessons/03-ai-ethics.md)
+2. [Lesson 2: Modern Data Management](../lessons/02-data-management.md), then its [self-paced homework](../lessons/02-data-management-self-paced.md)
+3. [Lesson 3: Ethics and Artificial Intelligence](../lessons/03-ai-ethics.md), then its [self-paced homework](../lessons/03-ai-ethics-self-paced.md)
 
-Lesson 1 comes in two parts. The lecture page is what an instructor covers in 50 minutes; the homework page holds the full material in twelve modules, each ending in a checkpoint question, and takes about 90 to 120 minutes. If you are learning alone, do both. You can also hand either page to an AI assistant and take it as a lecture, a tutorial, or a quiz: see [Learn with an AI tutor](ai-tutor.md).
+Each lesson comes in two parts. The lecture page is what an instructor covers in 50 minutes; the homework page holds the full material in twelve modules, each ending in a checkpoint question, and takes about 90 to 120 minutes. If you are learning alone, do both. You can also hand either page to an AI assistant and take it as a lecture, a tutorial, or a quiz: see [Learn with an AI tutor](ai-tutor.md).
 
 Set aside dedicated time for each lesson and complete the activities to maximize learning. The [Additional resources](resources.md) page collects further reading.
 
@@ -110,7 +110,7 @@ Set aside dedicated time for each lesson and complete the activities to maximize
 
 These materials can be used for:
 
-- **Workshops** - Three 50-minute lessons or a half-day intensive; assign the Lesson 1 homework page before or after the session
+- **Workshops** - Three 50-minute lessons or a half-day intensive; assign each homework page before or after its session
 - **Course modules** - Integrate into methods courses or research seminars
 - **Lab training** - Onboard new lab members to open science practices
 - **Professional development** - Departmental or institutional training programs
@@ -183,7 +183,7 @@ For questions, suggestions, or issues:
 
 **Version 2.1** (September 2026)
 
-- Lesson 1 split into a 50-minute in-person lecture and a self-paced homework page with twelve modules and checkpoints
+- Every lesson split into a 50-minute in-person lecture and a self-paced homework page with twelve modules and checkpoints
 - Gold Standard Science: the nine tenets mapped to open-science practices, the 2025 agency implementation plans, the September 2026 annual reports, and the debate
 - Learn with an AI tutor: lesson metadata (`lesson:` block, schema.org LearningResource) and prompts for lecture, tutor, and interactive modes
 - Accessibility statement, figure text descriptions, glossaries, plain-language summaries, focus and reduced-motion styles

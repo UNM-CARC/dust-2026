@@ -71,8 +71,9 @@ python3 scripts/externalize_links.py        # add {target=_blank} to external li
     (a summary, about 2,000 words of body text) and `NN-topic-self-paced.md`
     is the homework, split into numbered `## Module N:` sections that each
     end in a `??? question "Checkpoint N: ..."`. The lecture links each
-    section to its module anchor. Lesson 1 follows this pattern; Lessons 2
-    and 3 are still single pages.
+    section to its module anchor. All three lessons follow this pattern.
+    Lecture pages are text-only (`access_mode: [textual]`); figures live on
+    the self-paced pages.
 12. Every Lesson page carries a `lesson:` frontmatter block (`number`,
     `format` in-person|self-paced, `duration_minutes`, `companion`,
     `delivery_modes`, `objectives`, `key_terms`, `accessibility` with

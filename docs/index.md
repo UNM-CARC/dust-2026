@@ -47,7 +47,7 @@ hide:
 
     ---
 
-    The data life cycle, FAIR and CARE principles, the 2026 NIH and NSF data management and sharing plan formats, data rescue, and a two-site DMP exercise.
+    A 50-minute lecture on the data life cycle, FAIR and CARE, the 2026 NIH and NSF plan formats, repositories and licenses, and a two-site plan exercise, with a [self-paced homework page](lessons/02-data-management-self-paced.md) that carries the full material.
 
     [:octicons-arrow-right-24: Start Lesson 2](lessons/02-data-management.md)
 
@@ -55,7 +55,7 @@ hide:
 
     ---
 
-    AI bias, responsible and agentic AI use in research, NIH and journal AI rules, energy and water costs, the 2026 regulatory landscape, and six discussion scenarios.
+    A 50-minute lecture on AI bias, the NIH, NSF, and journal rules, what never goes into a consumer AI, and what changes when an agent can act, with a [self-paced homework page](lessons/03-ai-ethics-self-paced.md) that carries the full material, six scenarios, and the checklist.
 
     [:octicons-arrow-right-24: Start Lesson 3](lessons/03-ai-ethics.md)
 
@@ -93,7 +93,7 @@ Each in-person lesson follows the same learner-centered structure:
 | Hands-on activity | 15 min | Practical exercises and group discussion |
 | Wrap-up | 5 min | Key takeaways, self-assessment, next steps |
 
-Lesson 1 pairs the 50-minute lecture with a self-paced homework page (about 90 to 120 minutes) that holds the full material in twelve modules with checkpoints; Lessons 2 and 3 will follow the same pattern. Any lesson can be taken with an AI assistant as a lecture, a tutorial, or a quiz: see [Learn with an AI tutor](about/ai-tutor.md). The site's [Accessibility](about/accessibility.md) page describes support for screen-reader users, deaf and hard-of-hearing learners, and learners whose first language is not English.
+Every lesson pairs the 50-minute lecture with a self-paced homework page (about 90 to 120 minutes) that holds the full material in twelve modules with checkpoints. Any lesson can be taken with an AI assistant as a lecture, a tutorial, or a quiz: see [Learn with an AI tutor](about/ai-tutor.md). The site's [Accessibility](about/accessibility.md) page describes support for screen-reader users, deaf and hard-of-hearing learners, and learners whose first language is not English.
 
 **Prerequisites:** basic familiarity with research processes, a computer with an internet connection, and a willingness to discuss. No prior technical expertise is required.
 
@@ -125,9 +125,9 @@ Use the top navigation to move between lessons and resources. Each lesson stands
 - **Agentic AI.** Lesson 3 covers what changes when an AI can browse, run code, and act on your behalf, with current energy and water figures and a Southwest data-center angle.
 - **Repaired and refreshed links**, current article-processing charges, openRxiv and arXiv governance changes, and updated tool recommendations.
 - **Gold Standard Science.** Lesson 1 maps the nine tenets of Executive Order 14303 to open-science practices and follows the agencies' 2025 implementation plans and September 2026 annual reports.
-- **Lecture plus homework.** Lesson 1 is now a 50-minute in-person lecture with a self-paced companion page, so the session covers the highlights and the depth is done at home.
+- **Lecture plus homework.** Each lesson is now a 50-minute in-person lecture with a self-paced companion page, so the session covers the highlights and the depth is done at home.
 - **Learn with an AI tutor.** Each lesson declares its objectives, key terms, delivery modes, and accessibility profile in machine-readable form; [prompts for Claude, ChatGPT, Gemini, and NotebookLM](about/ai-tutor.md) turn a lesson into a lecture, a tutorial, or a quiz.
-- **Accessibility.** Plain-language summaries, text descriptions of every Lesson 1 figure, a glossary, keyboard-operable quizzes, and guidance for blind, deaf, and multilingual learners; see [Accessibility](about/accessibility.md).
+- **Accessibility.** Plain-language summaries, text descriptions of every figure, glossaries, keyboard-operable quizzes, and guidance for blind, deaf, and multilingual learners; see [Accessibility](about/accessibility.md).
 - **Built for people and for AI agents.** The site is an Open Knowledge Format bundle with `llms.txt`, per-page Markdown, and schema.org LearningResource records; see [For AI agents](about/ai-agents.md).
 
 <div class="carc-partners" markdown>

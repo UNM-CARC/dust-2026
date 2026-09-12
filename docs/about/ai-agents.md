@@ -96,13 +96,15 @@ These sites share the same agent conventions:
 
 ## Teaching a lesson
 
-The lessons are written to be delivered by an agent as well as read. Lesson 1
-is a pair: a 50-minute in-person lecture
-([`lessons/01-open-science/`](../lessons/01-open-science.md)) and its
-self-paced homework
-([`lessons/01-open-science-self-paced/`](../lessons/01-open-science-self-paced.md)),
-split into numbered modules that each end in a checkpoint question. Every
-lesson page carries a `lesson:` frontmatter block:
+The lessons are written to be delivered by an agent as well as read. Each
+lesson is a pair: a 50-minute in-person lecture (for example
+[`lessons/01-open-science/`](../lessons/01-open-science.md)) and its
+self-paced homework (for example
+[`lessons/01-open-science-self-paced/`](../lessons/01-open-science-self-paced.md)),
+split into twelve numbered modules that each end in a checkpoint question.
+The lecture pages are text-only; the self-paced pages carry the figures, each
+with a text description. Every lesson page carries a `lesson:` frontmatter
+block:
 
 ```yaml
 lesson:

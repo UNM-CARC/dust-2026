@@ -45,7 +45,7 @@ We aim to meet [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.
 
 **Images and media**
 
-- Every image has alternative text, and every figure in the lessons (starting with Lesson 1) is followed by a collapsible **"Text description of this figure"** that states everything the picture shows. The arrow that marks external links is hidden from screen readers.
+- Every image has alternative text, and every figure in the lessons is followed by a collapsible **"Text description of this figure"** that states everything the picture shows. The lecture pages contain no images at all. The arrow that marks external links is hidden from screen readers.
 - The lessons contain **no audio and no video**. If we add a video, it will carry captions and a transcript.
 
 **Language and reading**
@@ -86,8 +86,8 @@ AI assistants (Claude, ChatGPT, Gemini, NotebookLM, and the assistants built int
 
 ## Known limitations
 
-- Two images in Lesson 1 (the open-access and OER logos) and one comic (xkcd) load from third-party sites; their text descriptions are on our page, but the images themselves may not load if those sites are blocked.
-- Lessons 2 and 3 have alternative text on every image but do not yet carry the collapsible long descriptions, plain-language summaries, and glossaries that Lesson 1 has. They are next.
+- Four images load from third-party sites (the open-access and OER logos and the xkcd comic in Lesson 1, the 1956 Dartmouth photograph in Lesson 3); their text descriptions are on our page, but the images themselves may not load if those sites are blocked.
+- The file-naming examples in Lesson 2 are code blocks; screen readers read them character by character, so each is preceded by the pattern in prose.
 - Linked external sites (publishers, agencies, repositories) are outside our control and vary in accessibility.
 - Search results and the light/dark switch come from the site theme ([Zensical](https://zensical.org){target=_blank}); we report theme-level barriers upstream.
 - The site is in English. We welcome community translations under the CC BY 4.0 license.

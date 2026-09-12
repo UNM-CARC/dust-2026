@@ -3,7 +3,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Built with Zensical](https://img.shields.io/badge/built%20with-Zensical-ba0c2f)](https://zensical.org)
 
-Three 50-minute lessons (Lesson 1 with a self-paced homework page) for NIEHS
+Three 50-minute lessons, each with a self-paced homework page, for NIEHS
 Superfund Research Program trainees at the
 [University of Arizona DUST Center](https://superfund.arizona.edu/), the
 [UNM METALS Center](https://hsc.unm.edu/pharmacy/research/areas/metals/), and the
@@ -11,11 +11,14 @@ Superfund Research Program trainees at the
 
 1. **Foundations of Open Science** — principles, the six pillars, Gold
    Standard Science, and the 2026 US public-access and publication-cost
-   landscape; a 50-minute lecture plus a twelve-module self-paced page
-2. **Modern Data Management for Computational Research** — the data life
-   cycle, FAIR and CARE, the 2026 NIH and NSF plan formats, data rescue
+   landscape
+2. **Modern Data Management** — the data life cycle, FAIR and CARE, the 2026
+   NIH and NSF plan formats, data rescue
 3. **Ethics and Artificial Intelligence** — bias, responsible and agentic AI
    use, NIH and journal AI rules, energy and water costs, regulation
+
+Each lesson is a 50-minute lecture page plus a twelve-module self-paced
+homework page with checkpoints, written so an AI tutor can deliver it.
 
 **Website:** <https://unm-carc.github.io/dust-2026/>
 
@@ -41,7 +44,7 @@ zensical build --clean               # static site in ./site
 ├── docs/                      # The OKF knowledge bundle + site content
 │   ├── index.md               # Landing page (declares okf_version: "0.2")
 │   ├── log.md                 # OKF update log (reserved filename)
-│   ├── lessons/               # The three lessons (+ Lesson 1 self-paced) + listing
+│   ├── lessons/               # Three lecture pages + three self-paced pages + listing
 │   ├── about/                 # Overview, resources, credits, AI tutor, accessibility, AI-agent guide
 │   ├── assets/                # Images and logos
 │   ├── stylesheets/extra.css  # UNM cherry + turquoise theme, DUST additions

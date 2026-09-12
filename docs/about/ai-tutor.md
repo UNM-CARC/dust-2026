@@ -42,8 +42,10 @@ Every page on this site has a plain Markdown twin at its address plus `index.md`
 | --- | --- |
 | Lesson 1 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/01-open-science/index.md` |
 | Lesson 1 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/index.md` |
-| Lesson 2 | `https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md` |
-| Lesson 3 | `https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md` |
+| Lesson 2 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/02-data-management/index.md` |
+| Lesson 2 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/02-data-management-self-paced/index.md` |
+| Lesson 3 lecture (50 min) | `https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics/index.md` |
+| Lesson 3 homework (self-paced) | `https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics-self-paced/index.md` |
 | The whole site in one file | `https://unm-carc.github.io/dust-2026/llms-full.txt` |
 
 How to hand it over:
@@ -110,7 +112,7 @@ Each prompt below assumes you have already pasted the lesson address or text. Re
     ```
 
 !!! tip "One page at a time"
-    The lecture page is a 50-minute summary; the self-paced page is the full material. Tutor and interactive modes work best on the self-paced page because it has module checkpoints and the complete quiz.
+    Each lecture page is a 50-minute summary; its self-paced page is the full material. Tutor and interactive modes work best on the self-paced pages because they have module checkpoints and the complete quiz. Swap the lesson title in any prompt to use it for Lesson 2 or 3.
 
 ## Step 3: Add an accommodation
 
