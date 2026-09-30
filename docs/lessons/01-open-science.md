@@ -85,6 +85,8 @@ stale_after: "2027-03-01T00:00:00Z"
 
     **Structure:** Introduction (5 min), Core concepts (25 min), Hands-on activity (15 min), Wrap-up (5 min).
 
+    **Slides:** [Open the Lesson 1 slides](../assets/slides/01-open-science-slides.html){target=_blank} (23 slides with speaker notes; press N for notes, F for full screen). The deck is paced as about 30 minutes of lecture followed by 20 minutes of discussion.
+
     **Homework:** Every section below is a summary. The full material, with all the examples, figures, prices, and policy detail, is in [Lesson 1 homework: Open Science, self-paced](01-open-science-self-paced.md). Complete it before Lesson 2. Learners can also work through either page with an AI tutor: see [Learn with an AI tutor](../about/ai-tutor.md).
 
 !!! abstract "In brief"
