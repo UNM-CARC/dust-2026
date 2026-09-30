@@ -33,7 +33,7 @@ Section listing  /lessons/                  ->  https://raw.githubusercontent.co
 
 ## Meta
 
-- [Full corpus in one file](https://unm-carc.github.io/dust-2026/llms-full.txt): every page's Markdown with frontmatter, links made absolute; about 330 KB, roughly 85,000 tokens. Prefer it over fetching pages one at a time.
+- [Full corpus in one file](https://unm-carc.github.io/dust-2026/llms-full.txt): every page's Markdown with frontmatter, links made absolute; about 331 KB, roughly 85,000 tokens. Prefer it over fetching pages one at a time.
 - [Documentation update log](https://unm-carc.github.io/dust-2026/log/): dated history of changes to this bundle.
 - [For AI agents](https://unm-carc.github.io/dust-2026/about/ai-agents/): endpoints, trust signals, and how to teach a lesson; includes what to do if you cannot fetch this site.
 - [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/): learner-facing prompts for lecture, tutor, and interactive modes.

@@ -1,5 +1,9 @@
 # Documentation update log
 
+## 2026-09-30
+
+* **Creation**: Slide decks for the three lectures, in the CARC guest-lecture style (navy and cream, teal and crimson, Bebas Neue and Barlow Condensed): [Lesson 1](lessons/01-open-science.md), [Lesson 2](lessons/02-data-management.md), and [Lesson 3](lessons/03-ai-ethics.md) each link a self-contained HTML deck under `assets/slides/` with speaker notes, keyboard navigation, full screen, and print-to-PDF. Each deck is paced as about 30 minutes of lecture and 20 minutes of discussion built from the lesson's activity, and draws only on facts already on the lesson pages.
+
 ## 2026-09-11
 
 * **Update**: Agent discoverability, after a Claude.ai tutoring session could not reach the Markdown twins (its fetch tool only opens addresses seen as links in prior results, and the twins were code spans and head-only tags). Every rendered page now has a "View this page as Markdown" button beside "View source" and a "Machine-readable versions" line at the end of the article linking the Markdown twin, the raw GitHub source, `llms.txt`, and `llms-full.txt`; the site footer links `llms.txt`, `llms-full.txt`, and the agent guide; [`llms.txt`](https://unm-carc.github.io/dust-2026/llms.txt) lists the HTML, Markdown-twin, and raw-source address of every page, states the site-path to `docs/*.md` mapping, and gives the corpus size; [For AI agents](about/ai-agents.md) uses absolute links and gained "If you cannot fetch this site"; [Learn with an AI tutor](about/ai-tutor.md) links every address and adds a raw-source column; the landing page links the indexes in body text. Verified live: the Markdown twins, section-listing twins, `llms.txt`, `llms-full.txt`, `sitemap.xml`, and `robots.txt` all return 200.

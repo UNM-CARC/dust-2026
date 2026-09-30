@@ -91,6 +91,8 @@ stale_after: "2027-03-01T00:00:00Z"
 
     **Structure:** Introduction (5 min), Core concepts (25 min), Hands-on activity (15 min), Wrap-up (5 min).
 
+    **Slides:** [Open the Lesson 1 slides](https://unm-carc.github.io/dust-2026/assets/slides/01-open-science-slides.html){target=_blank} (23 slides with speaker notes; press N for notes, F for full screen). The deck is paced as about 30 minutes of lecture followed by 20 minutes of discussion.
+
     **Homework:** Every section below is a summary. The full material, with all the examples, figures, prices, and policy detail, is in [Lesson 1 homework: Open Science, self-paced](https://unm-carc.github.io/dust-2026/lessons/01-open-science-self-paced/). Complete it before Lesson 2. Learners can also work through either page with an AI tutor: see [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/).
 
 !!! abstract "In brief"
@@ -1162,6 +1164,8 @@ stale_after: "2027-03-01T00:00:00Z"
     **Format:** 50-minute in-person lecture with one group exercise.
 
     **Structure:** Introduction (5 min), Core concepts (25 min), Hands-on activity (15 min), Wrap-up (5 min).
+
+    **Slides:** [Open the Lesson 2 slides](https://unm-carc.github.io/dust-2026/assets/slides/02-data-management-slides.html){target=_blank} (26 slides with speaker notes; press N for notes, F for full screen). The deck is paced as about 30 minutes of lecture followed by 20 minutes of discussion.
 
     **Homework:** Every section below is a summary. The full material, with the figures, the file-naming examples, the metadata standards, the repository lists, the three self-assessments, and the complete quiz, is in [Lesson 2 homework: Data Management, self-paced](https://unm-carc.github.io/dust-2026/lessons/02-data-management-self-paced/). Complete it before Lesson 3. Learners can also work through either page with an AI tutor: see [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/).
 
@@ -2386,6 +2390,8 @@ stale_after: "2027-03-01T00:00:00Z"
     **Format:** 50-minute in-person lecture with one scenario discussion.
 
     **Structure:** Introduction (5 min), Core concepts (25 min), Discussion activity (15 min), Wrap-up (5 min).
+
+    **Slides:** [Open the Lesson 3 slides](https://unm-carc.github.io/dust-2026/assets/slides/03-ai-ethics-slides.html){target=_blank} (27 slides with speaker notes; press N for notes, F for full screen). The deck is paced as about 30 minutes of lecture followed by 20 minutes of discussion.
 
     **Homework:** Every section below is a summary. The full material, with the bias case studies and mitigation techniques, the journal policy table, the energy and water figures, the September 2026 regulatory landscape, all six discussion scenarios, the ethical AI checklist, and the complete quiz, is in [Lesson 3 homework: AI Ethics, self-paced](https://unm-carc.github.io/dust-2026/lessons/03-ai-ethics-self-paced/). Learners can also work through either page with an AI tutor: see [Learn with an AI tutor](https://unm-carc.github.io/dust-2026/about/ai-tutor/).
 
@@ -4736,6 +4742,10 @@ guess.
 ---8<--- https://unm-carc.github.io/dust-2026/log/
 
 # Documentation update log
+
+## 2026-09-30
+
+* **Creation**: Slide decks for the three lectures, in the CARC guest-lecture style (navy and cream, teal and crimson, Bebas Neue and Barlow Condensed): [Lesson 1](lessons/01-open-science.md), [Lesson 2](lessons/02-data-management.md), and [Lesson 3](lessons/03-ai-ethics.md) each link a self-contained HTML deck under `assets/slides/` with speaker notes, keyboard navigation, full screen, and print-to-PDF. Each deck is paced as about 30 minutes of lecture and 20 minutes of discussion built from the lesson's activity, and draws only on facts already on the lesson pages.
 
 ## 2026-09-11
 

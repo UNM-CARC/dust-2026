@@ -78,6 +78,8 @@ stale_after: "2027-03-01T00:00:00Z"
 
     **Structure:** Introduction (5 min), Core concepts (25 min), Discussion activity (15 min), Wrap-up (5 min).
 
+    **Slides:** [Open the Lesson 3 slides](../assets/slides/03-ai-ethics-slides.html){target=_blank} (27 slides with speaker notes; press N for notes, F for full screen). The deck is paced as about 30 minutes of lecture followed by 20 minutes of discussion.
+
     **Homework:** Every section below is a summary. The full material, with the bias case studies and mitigation techniques, the journal policy table, the energy and water figures, the September 2026 regulatory landscape, all six discussion scenarios, the ethical AI checklist, and the complete quiz, is in [Lesson 3 homework: AI Ethics, self-paced](03-ai-ethics-self-paced.md). Learners can also work through either page with an AI tutor: see [Learn with an AI tutor](../about/ai-tutor.md).
 
 !!! abstract "In brief"
